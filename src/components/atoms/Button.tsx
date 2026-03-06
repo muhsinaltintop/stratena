@@ -1,15 +1,20 @@
 import { ButtonHTMLAttributes } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "inverse";
+  size?: "sm" | "md" | "lg";
 };
 
-export function Button({ variant = "primary", className = "", ...props }: ButtonProps) {
-  const baseStyle = "rounded-lg px-4 py-2 text-sm font-semibold transition";
+export function Button({ variant = "primary", size = "md", className = "", ...props }: ButtonProps) {
+  const baseStyle = "rounded-xl font-bold transition-all";
+  const sizeStyle =
+    size === "sm" ? "px-6 py-2.5 text-sm" : size === "lg" ? "px-10 py-5 text-lg" : "px-8 py-4 text-base";
   const variantStyle =
     variant === "primary"
-      ? "bg-brand-500 text-white hover:bg-brand-700"
-      : "bg-slate-200 text-slate-800 hover:bg-slate-300";
+      ? "bg-navy text-white hover:bg-primary shadow-lg"
+      : variant === "secondary"
+        ? "border-2 border-slate-200 bg-white text-charcoal hover:bg-slate-50"
+        : "bg-white text-navy hover:bg-primary hover:text-white shadow-xl";
 
-  return <button className={`${baseStyle} ${variantStyle} ${className}`} {...props} />;
+  return <button className={`${baseStyle} ${sizeStyle} ${variantStyle} ${className}`} {...props} />;
 }

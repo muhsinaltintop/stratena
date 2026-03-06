@@ -9,12 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: "#f5f7ff",
-          100: "#e9edff",
-          500: "#5b72ff",
-          700: "#3446c9",
-        },
+        primary: "#564a64",
+        navy: "#1E2A38",
+        charcoal: "#14202B",
+        "background-light": "#f7f7f7",
+        "background-dark": "#19171b",
+      },
+      fontFamily: {
+        display: ["Manrope", "sans-serif"],
       },
     },
   },
