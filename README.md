@@ -19,6 +19,19 @@ npm run dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
+## Netlify Deployment
+
+This project is configured for static export deployment on Netlify:
+
+- `next.config.ts` uses `output: "export"` and `trailingSlash: true`
+- `netlify.toml` publishes the generated `out/` directory
+
+Build locally with:
+
+```bash
+npm run build
+```
+
 ## Project Structure
 
 ```text
