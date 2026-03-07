@@ -2,13 +2,13 @@ import { Button } from "@/components/atoms/Button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 py-16 lg:px-20">
+    <section className="relative bg-navy overflow-hidden px-6 py-16 lg:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:min-h-[75vh] lg:grid-cols-2">
         <div className="flex flex-col gap-8">
-          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+          <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-secondary">
             Boutique Strategic Consulting
           </div>
-          <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-charcoal lg:text-6xl">
+          <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-secondary lg:text-6xl">
             Business Plans Built for Serious Review
           </h1>
           <p className="max-w-lg text-xl leading-relaxed text-slate-500">

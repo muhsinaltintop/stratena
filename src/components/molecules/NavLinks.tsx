@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const links = ["Services", "Who We Work With", "Approach", "Insights", "Contact"];
+const links = ["Home", "About", "Consulting", "Blog", "Contact"];
 
 export function NavLinks() {
   return (

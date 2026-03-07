@@ -1,8 +1,9 @@
+import Image from "next/image";
+
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <div className={`flex items-center gap-2 ${light ? "text-white" : "text-charcoal"}`}>
-      <span className="text-primary material-symbols-outlined">account_balance</span>
-      <span className="font-extrabold uppercase tracking-tighter">Stratena</span>
+      <Image src="/Stratena.png" alt="Stratena Logo" width="180" height="20"/>
     </div>
   );
 }
