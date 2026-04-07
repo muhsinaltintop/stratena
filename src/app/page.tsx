@@ -1,14 +1,5 @@
-import { Metadata } from "next";
-import { ContentTemplate } from "@/components/templates/ContentTemplate";
-import { SITE_PAGES } from "@/lib/site-content";
-
-const homePage = SITE_PAGES["/"];
-
-export const metadata: Metadata = {
-  title: homePage.seoTitle,
-  description: homePage.metaDescription,
-};
+import { LandingTemplate } from "@/components/templates/LandingTemplate";
 
 export default function Home() {
-  return <ContentTemplate page={homePage} />;
+  return <LandingTemplate />;
 }
