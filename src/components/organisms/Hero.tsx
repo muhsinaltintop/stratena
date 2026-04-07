@@ -9,15 +9,14 @@ export function Hero() {
             Boutique Strategic Consulting
           </div>
           <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-secondary lg:text-6xl">
-            Business Plans Built for Serious Review
+            Structured Business Intelligence for High-Stakes Decisions
           </h1>
           <p className="max-w-lg text-xl leading-relaxed text-slate-500">
-            Premium strategic support for high-level corporate and legal clients. We transform complex visions into
-            investor-ready narratives.
+            Strategic business planning and advisory built for cases that require credibility, clarity, and institutional readiness.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button>See Samples</Button>
-            <Button variant="secondary">Contact Us</Button>
+            <Button>Request Consultation</Button>
+            <Button variant="secondary">See Sample Work</Button>
           </div>
         </div>
 

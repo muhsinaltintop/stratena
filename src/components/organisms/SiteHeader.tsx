@@ -1,4 +1,3 @@
-import { Button } from "@/components/atoms/Button";
 import { Logo } from "@/components/atoms/Logo";
 import { NavLinks } from "@/components/molecules/NavLinks";
 
@@ -8,7 +7,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         <Logo />
         <NavLinks />
-        <Button size="sm">Request Consultation</Button>
+        {/* <Button size="sm">Request Consultation</Button>S */}
       </div>
     </header>
   );
