@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { pageLookup } from "@/lib/navigation";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 
-export default function MenuPage({
+export default async function MenuPage({
   params,
 }: {
-  params: { slug: string[] };
+  params: Promise<{ slug: string[] }>;
 }) {
-  const currentPath = `/${params.slug.join("/")}`;
+  const { slug } = await params;
+  const currentPath = `/${slug.join("/")}`;
   const page = pageLookup[currentPath];
 
   if (!page) {
