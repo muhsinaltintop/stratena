@@ -42,7 +42,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-16 flex max-w-7xl flex-col justify-between gap-4 border-t border-slate-800 pt-8 text-xs md:flex-row">
-        <p>© 2024 Stratena Strategic Consulting. All rights reserved.</p>
+        <p>© 2026 Stratena Strategic Consulting. All rights reserved.</p>
         <div className="flex gap-6">
           <Link className="hover:text-white" href="#">Privacy Policy</Link>
           <Link className="hover:text-white" href="#">Terms of Service</Link>
