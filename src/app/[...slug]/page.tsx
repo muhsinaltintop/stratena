@@ -3,6 +3,14 @@ import { notFound } from "next/navigation";
 import { pageLookup } from "@/lib/navigation";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(pageLookup)
+    .filter((path) => path !== "/")
+    .map((path) => ({ slug: path.slice(1).split("/") }));
+}
+
 export default async function MenuPage({
   params,
 }: {
