@@ -2,20 +2,24 @@ import { ProcessStep } from "@/components/molecules/ProcessStep";
 
 const steps = [
   {
-    title: "Review & Analysis",
-    description: "Deep dive into existing business data and specific regulatory or funding requirements.",
+    title: "E-1 / E-2 Business Plans",
+    description:
+      "Plans built to explain trade or investment models, market opportunity, hiring logic, and practical growth.",
   },
   {
-    title: "Market Mapping",
-    description: "Comprehensive competitive analysis and demographic positioning to validate the model.",
+    title: "EB-1C / EB-2 NIW / EB-5 Plans",
+    description:
+      "Structured narratives connecting expansion strategy, proposed endeavors, job creation, and financial direction.",
   },
   {
-    title: "Narrative Construction",
-    description: "Crafting a compelling, data-backed story that resonates with high-level reviewers.",
+    title: "H-1B / L-1 Business Plans",
+    description:
+      "Clear operating models for startup and cross-border contexts that show commercial activity and execution readiness.",
   },
   {
-    title: "Final Delivery",
-    description: "Precision editing and professional formatting for immediate submission.",
+    title: "SBA Loan Business Plans",
+    description:
+      "Lender-facing plans with use-of-funds clarity, market context, operational detail, and disciplined projections.",
   },
 ];
 
@@ -32,7 +36,7 @@ export function ProcessSection() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <h3 className="mb-12 text-4xl font-bold text-charcoal">Our Methodical Approach</h3>
+          <h3 className="mb-12 text-4xl font-bold text-charcoal">Business Planning Services</h3>
           <div className="space-y-12">
             {steps.map((step, index) => (
               <ProcessStep key={step.title} index={index + 1} {...step} />

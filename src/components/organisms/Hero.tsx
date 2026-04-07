@@ -2,22 +2,23 @@ import { Button } from "@/components/atoms/Button";
 
 export function Hero() {
   return (
-    <section className="relative bg-navy overflow-hidden px-6 py-16 lg:px-20">
+    <section className="relative overflow-hidden bg-navy px-6 py-16 lg:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:min-h-[75vh] lg:grid-cols-2">
         <div className="flex flex-col gap-8">
           <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-secondary">
-            Boutique Strategic Consulting
+            Immigration-Grade Business Plans &amp; Consulting
           </div>
           <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-secondary lg:text-6xl">
-            Business Plans Built for Serious Review
+            Stratena helps founders, investors, attorneys, and growing businesses move from concept to credibility.
           </h1>
-          <p className="max-w-lg text-xl leading-relaxed text-slate-500">
-            Premium strategic support for high-level corporate and legal clients. We transform complex visions into
-            investor-ready narratives.
+          <p className="max-w-lg text-xl leading-relaxed text-slate-300">
+            We develop immigration-grade business plans, practical consulting solutions, and SBA loan readiness
+            materials designed to bring strategy, operations, and financial logic together in a clear and professional
+            way.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button>See Samples</Button>
-            <Button variant="secondary">Contact Us</Button>
+            <Button>Business Plans</Button>
+            <Button variant="secondary">Contact</Button>
           </div>
         </div>
 
@@ -35,8 +36,8 @@ export function Hero() {
                 <span className="material-symbols-outlined">verified</span>
               </div>
               <div>
-                <p className="text-sm font-bold text-charcoal">Certified Strategy</p>
-                <p className="text-xs text-slate-500">Industry Grade Delivery</p>
+                <p className="text-sm font-bold text-charcoal">Structured, Custom, Research-Based</p>
+                <p className="text-xs text-slate-500">Aligned with how serious businesses actually grow</p>
               </div>
             </div>
           </div>

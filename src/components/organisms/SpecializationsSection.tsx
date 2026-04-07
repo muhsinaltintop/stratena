@@ -2,19 +2,22 @@ import { SpecializationCard } from "@/components/molecules/SpecializationCard";
 
 const cards = [
   {
-    icon: "gavel",
-    title: "Immigration Law",
-    description: "Strategic business plans meticulously crafted for L-1, E-2, and EB-5 visa categories.",
+    icon: "description",
+    title: "Business Plans",
+    description:
+      "Custom plans that combine market research, operational structure, hiring logic, and financial projections.",
   },
   {
-    icon: "account_balance_wallet",
-    title: "SBA Lending",
-    description: "Comprehensive financial modeling and narratives designed to meet rigorous bank requirements.",
+    icon: "handshake",
+    title: "Consulting",
+    description:
+      "Practical consulting support focused on strategy, operations, and financial planning for real execution.",
   },
   {
-    icon: "insights",
-    title: "Strategic Acquisitions",
-    description: "Due diligence and growth projections for high-stakes mergers and acquisitions.",
+    icon: "balance",
+    title: "Attorney Hub",
+    description:
+      "Dedicated business-side materials for law firms including plans, research, valuation support, and RFE work.",
   },
 ];
 
@@ -22,7 +25,7 @@ export function SpecializationsSection() {
   return (
     <section className="bg-white px-6 py-24 lg:px-20">
       <div className="mx-auto max-w-7xl">
-        <h3 className="mb-12 text-center text-sm font-bold uppercase tracking-[0.2em] text-primary">Core Specializations</h3>
+        <h3 className="mb-12 text-center text-sm font-bold uppercase tracking-[0.2em] text-primary">Core Services</h3>
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card) => (
             <SpecializationCard key={card.title} {...card} />

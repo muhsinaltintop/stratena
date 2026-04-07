@@ -10,25 +10,58 @@ export function SiteFooter() {
             <Logo light />
           </div>
           <p className="text-sm leading-relaxed">
-            Strategic boutique consultancy providing premier business planning and advisory for high-stakes reviews.
+            Stratena provides immigration-grade business plans, consulting, and SBA loan readiness support for
+            founders, attorneys, investors, and growing businesses.
           </p>
         </div>
         <div>
-          <h6 className="mb-6 font-bold text-white">Services</h6>
+          <h6 className="mb-6 font-bold text-white">Business Plans</h6>
           <ul className="space-y-3 text-sm">
-            <li><Link className="hover:text-primary" href="#">Immigration Plans</Link></li>
-            <li><Link className="hover:text-primary" href="#">SBA Lending</Link></li>
-            <li><Link className="hover:text-primary" href="#">M&amp;A Strategy</Link></li>
-            <li><Link className="hover:text-primary" href="#">Corporate Advisory</Link></li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                E-1 Business Plan
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                E-2 Business Plan
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                EB-5 Business Plan
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                SBA Loan Business Plans
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
-          <h6 className="mb-6 font-bold text-white">Company</h6>
+          <h6 className="mb-6 font-bold text-white">Consulting</h6>
           <ul className="space-y-3 text-sm">
-            <li><Link className="hover:text-primary" href="#">About Us</Link></li>
-            <li><Link className="hover:text-primary" href="#">Our Process</Link></li>
-            <li><Link className="hover:text-primary" href="#">Insights</Link></li>
-            <li><Link className="hover:text-primary" href="#">Contact</Link></li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                Strategy Consulting
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                Operations Consulting
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                Financial Planning Support
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary" href="#">
+                Business Readiness Assessment
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -42,10 +75,14 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-16 flex max-w-7xl flex-col justify-between gap-4 border-t border-slate-800 pt-8 text-xs md:flex-row">
-        <p>© 2024 Stratena Strategic Consulting. All rights reserved.</p>
+        <p>© 2026 Stratena. All rights reserved.</p>
         <div className="flex gap-6">
-          <Link className="hover:text-white" href="#">Privacy Policy</Link>
-          <Link className="hover:text-white" href="#">Terms of Service</Link>
+          <Link className="hover:text-white" href="#">
+            Privacy Policy
+          </Link>
+          <Link className="hover:text-white" href="#">
+            Terms of Service
+          </Link>
         </div>
       </div>
     </footer>

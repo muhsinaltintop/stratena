@@ -6,15 +6,18 @@ export function ProofSection() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
           <div className="flex-1">
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">A Proven Track Record of Excellence</h2>
+            <h2 className="mb-4 text-3xl font-bold text-charcoal">
+              Strong business documents should reflect a strong business strategy.
+            </h2>
             <p className="text-slate-600">
-              Our results speak for the quality of our strategic interventions across diverse market sectors.
+              Stratena combines business planning, market research, operational thinking, and financial clarity to
+              create materials that are useful in real decision-making environments.
             </p>
           </div>
           <div className="flex flex-wrap gap-12">
-            <StatItem value="120+" label="Plans Delivered" />
-            <StatItem value="35+" label="Industries Served" />
-            <StatItem value="100%" label="High-Stakes Focus" />
+            <StatItem value="Immigration" label="Business Plans" />
+            <StatItem value="SBA" label="Loan Readiness" />
+            <StatItem value="Attorney" label="Hub Support" />
           </div>
         </div>
       </div>

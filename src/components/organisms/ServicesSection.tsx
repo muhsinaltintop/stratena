@@ -2,24 +2,28 @@ import { ServiceCard } from "@/components/molecules/ServiceCard";
 
 const services = [
   {
-    title: "Immigration-Grade Plans",
-    description: "Visa-specific documentation that adheres strictly to USCIS Matter of Ho requirements.",
-    bullets: ["5-Year Financial Projections", "Organizational Charts", "Staffing Plans"],
+    title: "Strategy Consulting",
+    description:
+      "Clarify positioning, evaluate opportunities, define priorities, and align decisions with realistic growth objectives.",
+    bullets: ["Market Direction", "Priority Setting", "Execution Planning"],
   },
   {
-    title: "SBA Readiness",
-    description: "Bank-grade financial packages and operational summaries for capital acquisition.",
-    bullets: ["Debt Service Coverage Analysis", "Use of Proceeds Detail", "Collateral Analysis"],
+    title: "Operations Consulting",
+    description:
+      "Translate business goals into practical operating structures, process design, role alignment, and workflow clarity.",
+    bullets: ["Process Design", "Role Alignment", "Scalable Execution"],
   },
   {
-    title: "Corporate Strategy",
-    description: "High-level advisory for market entry, expansion, and corporate restructuring.",
-    bullets: ["SWOT & GAP Analysis", "Market Entry Roadmaps", "Operational Efficiency Audits"],
+    title: "Financial Planning Support",
+    description:
+      "Organize assumptions, projections, and revenue logic so numbers align clearly with the operating story.",
+    bullets: ["Projection Discipline", "Revenue Logic", "Funding Readiness"],
   },
   {
-    title: "Legal Support",
-    description: "Expert witness and advisory services for complex commercial litigation cases.",
-    bullets: ["Economic Impact Reports", "Forensic Financial Review", "Expert Testimony Support"],
+    title: "Business Readiness Assessment",
+    description:
+      "Structured review of business model clarity, operations, staffing, market position, and execution readiness.",
+    bullets: ["Gap Identification", "Readiness Roadmap", "Strategic Next Steps"],
   },
 ];
 
@@ -28,7 +32,7 @@ export function ServicesSection() {
     <section className="bg-slate-50 px-6 py-24 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-charcoal">Service Excellence</h2>
+          <h2 className="mb-4 text-4xl font-bold text-charcoal">Consulting Services</h2>
           <div className="mx-auto h-1.5 w-24 rounded-full bg-primary" />
         </div>
 
