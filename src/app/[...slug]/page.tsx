@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { pageLookup } from "@/lib/navigation";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
@@ -161,6 +162,41 @@ export function generateStaticParams() {
     .map((path) => ({ slug: path.slice(1).split("/") }));
 }
 
+const pageImageBySection = {
+  about: {
+    src: "/images/pages/about-hero.svg",
+    alt: "Team planning session with strategy notes",
+  },
+  businessPlan: {
+    src: "/images/pages/business-plan-hero.svg",
+    alt: "Business planning dashboard with financial charts",
+  },
+  consulting: {
+    src: "/images/pages/consulting-hero.svg",
+    alt: "Consulting workshop with process mapping",
+  },
+  default: {
+    src: "/images/pages/insight-hero.svg",
+    alt: "Business growth insights and trend analysis",
+  },
+} as const;
+
+function getPageImage(currentPath: string) {
+  if (currentPath === "/about") {
+    return pageImageBySection.about;
+  }
+
+  if (currentPath.startsWith("/business-plan")) {
+    return pageImageBySection.businessPlan;
+  }
+
+  if (currentPath.startsWith("/consulting")) {
+    return pageImageBySection.consulting;
+  }
+
+  return pageImageBySection.default;
+}
+
 export default async function MenuPage({
   params,
 }: {
@@ -177,17 +213,28 @@ export default async function MenuPage({
   const paragraphs = pageContent[currentPath] ?? [
     "This page has been created and linked to the navigation menu. You can replace this placeholder content with your final copy and service details.",
   ];
+  const pageImage = getPageImage(currentPath);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <SiteHeader />
-      <main className="mx-auto max-w-5xl px-6 py-20 lg:px-20">
+      <main className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16 lg:px-20 lg:py-20">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
           {page.parent ? `${page.parent} · ${page.title}` : `${page.title}`}
         </p>
-        <h1 className="mt-4 text-4xl font-semibold text-slate-900">
+        <h1 className="mt-3 text-3xl font-semibold text-slate-900 sm:mt-4 sm:text-4xl">
           {page.title}
         </h1>
+        <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm sm:mt-8">
+          <Image
+            src={pageImage.src}
+            alt={pageImage.alt}
+            width={1200}
+            height={680}
+            className="h-52 w-full object-cover sm:h-64 md:h-72"
+            priority
+          />
+        </div>
         <div className="mt-6 max-w-3xl space-y-5 text-base leading-7 text-slate-600">
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
