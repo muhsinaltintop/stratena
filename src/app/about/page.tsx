@@ -1,0 +1,302 @@
+import { Newsreader } from "next/font/google";
+
+const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
+
+const pillars = [
+  {
+    icon: "lock",
+    title: "Discretion",
+    description:
+      "Handling sensitive corporate maneuvers with the utmost confidentiality and professional silence.",
+  },
+  {
+    icon: "target",
+    title: "Precision",
+    description:
+      "Meticulous attention to detail in technical documentation, leaving no room for ambiguity.",
+  },
+  {
+    icon: "gavel",
+    title: "Authority",
+    description:
+      "Crafting reports and strategies that command respect in boardrooms and courtrooms alike.",
+  },
+];
+
+const leaders = [
+  {
+    name: "Alexander Stratena",
+    title: "Founding Partner",
+    alt: "Alexander Stratena portrait",
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCHVVRN6tGS3mClqsyEjn5G6hrrpTBqkbqlZ2V1BkTkpiZce2qaZ6P11XtjfSg5Hsyvl_qivlMvPJHY5iMnkT-ijbDiIZYpd8g1DLXy6__Qd2dkBAdLfa9olOUHZK6hKF0XsAgUIpyxSMlOI4RwN8MnvL9UXyVHjxHA9M0tVW4ddtXDt_V6PBu1ezCTgc84g-RKQpn0UU_5Lsqy4kCLFiCxSGmFx9XCo4zeSLYvIP2t0xpKCIlr5TD76vAxpvrSEycS-vtxSCIPHz8z",
+  },
+  {
+    name: "Elizabeth Vance",
+    title: "Head of Strategy",
+    alt: "Elizabeth Vance portrait",
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDRMrgRUXARq4G5i-wMqVw9m4KULbsrX5GJCXiFHxre9f3wZaoCfNJyayNkzBCepNwJXAvbJQQcwyCgIhVvOYC-pSJI_ujzF48TpwVNMrO8_JoT5y8HBEf4C88weO64KGyAjts8OfHQgNlKTaw-y5oWCNWa0-4gJsPUHSXiU6pg7HzSdfG4DhaSh4-b5G-F6_VTqNaqYaL9GQL9blquKqIw-mELA89qDi23jaCch-ViOQUHs6bQPv3OmjziArvU_l7sAS8N9nraFa2J",
+  },
+  {
+    name: "Marcus Thorne",
+    title: "Director of Legal Documentation",
+    alt: "Marcus Thorne portrait",
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDf_iv0v219jm11uiQRprG-A1IpSHeVJLn_eXOSynzTfHoTKiBFuVY66j3NEu4JhAnGIytPfQFPlsmjgDkrwIlCuKyKaDScWKcdV3V2JUYEUpXAFMZSj99SVN10fQQIZf8VaRzpbvRGXi93Hiu2GyoTB2VX7kAlv679oZJeUHNTNGfJoJndkIvAHCpQHjPHx3hYMlDX6mZJzRR621illHmkPuW9OeV_s7dwo7MopSJkyG3Lj_EhGG-xxpIM_3_l4KCk5Z5AsTkpqCpO",
+  },
+];
+
+const logo = (
+  <svg className="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <path
+      clipRule="evenodd"
+      d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+      fill="currentColor"
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
+export default function AboutPage() {
+  return (
+    <div className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900 antialiased`}>
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 px-6 py-4 backdrop-blur-md lg:px-20">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="text-[#135bec]">{logo}</div>
+            <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "var(--font-newsreader)" }}>
+              Stratena
+            </span>
+          </div>
+          <nav className="hidden items-center gap-10 md:flex">
+            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
+              Our Services
+            </a>
+            <a className="border-b-2 border-[#135bec] text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
+              About Us
+            </a>
+            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
+              Case Studies
+            </a>
+            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
+              Insights
+            </a>
+          </nav>
+          <button className="rounded-lg border-2 border-[#1E2A38] bg-transparent px-6 py-2.5 text-sm font-bold text-[#1E2A38] transition-all hover:bg-[#1E2A38] hover:text-white">
+            Request Consultation
+          </button>
+        </div>
+      </header>
+
+      <section className="relative flex min-h-[50vh] flex-col items-center justify-center overflow-hidden bg-white px-6 py-20 text-center">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(#135bec_1px,transparent_1px)] [background-size:40px_40px]" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-4xl">
+          <h1 className="mb-6 text-5xl font-bold leading-[1.1] text-slate-900 md:text-7xl" style={{ fontFamily: "var(--font-newsreader)" }}>
+            A Legacy of Strategic Precision
+          </h1>
+          <p className="text-xl italic text-slate-600 md:text-2xl" style={{ fontFamily: "var(--font-newsreader)" }}>
+            Boutique expertise for high-stakes business documentation.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 md:grid-cols-2 lg:px-20">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-2xl">
+          <img
+            alt="Minimalist luxury corporate office interior"
+            className="h-full w-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl6ibOQEK22iWLxGsU-1OTJ2LOP8OFzRAxVj_YVNyP2MIHbfADvNf79TtHyxlGw-vYF6O5N9ZI5LosQ-WA1SJT6Iem7Rln0e3FNS95mHHrYnDzjAvc-I3rvClsnQWI6ujo9vH5chQsAJ1mn9lKHwTndwo-41fDazK9egwoBAsKpHZQFmuxf4efhQmeyYq-Lo_UfC6D33L3dLCkQWs2ao0Tgd6OWWruDCtsHKz3zK8LTBcF1K6OpTvf9DiAfhR4mLvHypCo9OFHgq9w"
+          />
+        </div>
+        <div className="space-y-8">
+          <h2 className="text-4xl font-bold text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+            Our Philosophy
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed text-slate-700" style={{ fontFamily: "var(--font-newsreader)" }}>
+            <p>
+              Stratena was founded on the principle that high-stakes business decisions require more than just data;
+              they require narrative clarity and institutional authority. We operate at the intersection of rigorous
+              analysis and persuasive communication.
+            </p>
+            <p>
+              Our brand is built on a commitment to evidence-driven planning and institutional credibility. We provide
+              sophisticated strategic guidance for high-level corporate and legal clients who require absolute precision
+              in every syllable and statistic.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-100 bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-20">
+          <div className="grid gap-12 md:grid-cols-3">
+            {pillars.map((pillar) => (
+              <div className="flex flex-col items-center text-center" key={pillar.title}>
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#135bec]/10 text-[#135bec]">
+                  <span className="material-symbols-outlined scale-125">{pillar.icon}</span>
+                </div>
+                <h3 className="mb-3 text-xl font-bold" style={{ fontFamily: "var(--font-newsreader)" }}>
+                  {pillar.title}
+                </h3>
+                <p className="text-slate-600">{pillar.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-20">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl font-bold text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+            Our Leadership
+          </h2>
+          <div className="mx-auto mt-4 h-1 w-20 bg-[#135bec]" />
+        </div>
+        <div className="grid gap-10 md:grid-cols-3">
+          {leaders.map((leader) => (
+            <div className="group" key={leader.name}>
+              <div className="mb-6 aspect-[3/4] overflow-hidden rounded-[12px] bg-slate-200">
+                <img
+                  alt={leader.alt}
+                  className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  src={leader.src}
+                />
+              </div>
+              <h4 className="text-2xl font-bold text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+                {leader.name}
+              </h4>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-[#135bec]">{leader.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#F7F9FC] py-24">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <span className="material-symbols-outlined mb-8 block text-6xl text-[#135bec]/40">format_quote</span>
+          <blockquote
+            className="text-3xl italic leading-snug text-slate-800 md:text-4xl"
+            style={{ fontFamily: "var(--font-newsreader)" }}
+          >
+            &ldquo;Our mission is to provide the institutional gravity that transforms bold ideas into unbreakable corporate
+            mandates. We don&apos;t just advise; we architect the evidence of excellence.&rdquo;
+          </blockquote>
+          <cite className="mt-8 block text-lg font-bold not-italic text-slate-900">— Alexander Stratena, 2014</cite>
+        </div>
+      </section>
+
+      <section className="bg-[#1E2A38] px-6 py-24 text-center text-white">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-8 text-4xl font-bold md:text-5xl" style={{ fontFamily: "var(--font-newsreader)" }}>
+            Begin a Strategic Partnership
+          </h2>
+          <p className="mb-12 text-lg text-slate-300">
+            Discuss your documentation and strategic needs with our senior consultants.
+          </p>
+          <button className="rounded-lg bg-white px-10 py-4 text-lg font-bold text-[#1E2A38] transition-all hover:bg-[#135bec] hover:text-white">
+            Schedule a Consultation
+          </button>
+        </div>
+      </section>
+
+      <footer className="border-t border-slate-200 bg-white px-6 pb-10 pt-20 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-20 grid gap-12 md:grid-cols-4">
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="text-[#135bec]">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      clipRule="evenodd"
+                      d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                      fill="currentColor"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span className="text-xl font-bold" style={{ fontFamily: "var(--font-newsreader)" }}>
+                  Stratena
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-slate-500">
+                Boutique strategic documentation and business planning for the world&apos;s most discerning firms.
+              </p>
+            </div>
+            <div>
+              <h5 className="mb-6 font-bold text-slate-900">Services</h5>
+              <ul className="space-y-4 text-sm text-slate-600">
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Strategic Planning
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Legal Documentation
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Corporate Governance
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Crisis Advisory
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="mb-6 font-bold text-slate-900">Company</h5>
+              <ul className="space-y-4 text-sm text-slate-600">
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Case Studies
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Insights
+                  </a>
+                </li>
+                <li>
+                  <a className="transition-colors hover:text-[#135bec]" href="#">
+                    Careers
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="mb-6 font-bold text-slate-900">Contact</h5>
+              <ul className="space-y-4 text-sm text-slate-600">
+                <li>advisory@stratena.com</li>
+                <li>+1 (212) 555-0198</li>
+                <li>Madison Avenue, New York</li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-10 text-xs text-slate-400 md:flex-row">
+            <p>© 2024 Stratena Strategic Consulting. All rights reserved.</p>
+            <div className="flex gap-8">
+              <a className="hover:text-slate-600" href="#">
+                Privacy Policy
+              </a>
+              <a className="hover:text-slate-600" href="#">
+                Terms of Service
+              </a>
+              <a className="hover:text-slate-600" href="#">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
