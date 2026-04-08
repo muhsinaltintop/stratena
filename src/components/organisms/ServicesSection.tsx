@@ -32,6 +32,14 @@ export function ServicesSection() {
           <div className="mx-auto h-1.5 w-24 rounded-full bg-primary" />
         </div>
 
+        <div className="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+          <img
+            className="h-52 w-full object-cover sm:h-72"
+            alt="Business advisor presenting strategic roadmap to executive stakeholders"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
+          />
+        </div>
+
         <div className="grid gap-8 md:grid-cols-2">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
