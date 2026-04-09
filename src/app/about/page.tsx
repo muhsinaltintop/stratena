@@ -1,4 +1,5 @@
 import { Newsreader } from "next/font/google";
+import { SiteHeader } from "@/components/organisms/SiteHeader";
 
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
 
@@ -44,47 +45,11 @@ const leaders = [
   },
 ];
 
-const logo = (
-  <svg className="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-    <path
-      clipRule="evenodd"
-      d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
-);
 
 export default function AboutPage() {
   return (
     <div className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900 antialiased`}>
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 px-6 py-4 backdrop-blur-md lg:px-20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="text-[#135bec]">{logo}</div>
-            <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: "var(--font-newsreader)" }}>
-              Stratena
-            </span>
-          </div>
-          <nav className="hidden items-center gap-10 md:flex">
-            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
-              Our Services
-            </a>
-            <a className="border-b-2 border-[#135bec] text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
-              About Us
-            </a>
-            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
-              Case Studies
-            </a>
-            <a className="text-sm font-medium transition-colors hover:text-[#135bec]" href="#">
-              Insights
-            </a>
-          </nav>
-          <button className="rounded-lg border-2 border-[#1E2A38] bg-transparent px-6 py-2.5 text-sm font-bold text-[#1E2A38] transition-all hover:bg-[#1E2A38] hover:text-white">
-            Request Consultation
-          </button>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="relative flex min-h-[50vh] flex-col items-center justify-center overflow-hidden bg-white px-6 py-20 text-center">
         <div className="absolute inset-0 opacity-5">
