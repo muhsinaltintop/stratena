@@ -1,9 +1,13 @@
 import Link from "next/link";
+import { Newsreader } from "next/font/google";
 import { notFound } from "next/navigation";
 import { pageLookup } from "@/lib/navigation";
+import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 
 export const dynamicParams = false;
+
+const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
 
 const pageContent: Record<string, string[]> = {
   "/about": [
@@ -147,17 +151,17 @@ const pageContent: Record<string, string[]> = {
     "Our role is to help turn weak or incomplete business-side presentation into something more structured and more persuasive. When additional explanation is required, quality matters. A better-organized business narrative can make the broader response package stronger, more coherent, and easier to understand.",
   ],
   "/stratena-scope": [
-    "Stratena Scope is our insight section covering business planning, immigration-related strategy, market trends, operational readiness, financial planning, and SBA loan preparation. It is a newsletter-style space where founders, attorneys, and business operators can explore practical perspectives on how businesses are built, positioned, and presented.", 
+    "Stratena Scope is our insight section covering business planning, immigration-related strategy, market trends, operational readiness, financial planning, and SBA loan preparation. It is a newsletter-style space where founders, attorneys, and business operators can explore practical perspectives on how businesses are built, positioned, and presented.",
 
     "Some articles will focus on planning strategy. Some will explore market and operational questions. Others will look at lender readiness, case support issues, or broader business decision-making. The purpose of Stratena Scope is not simply to publish content, but to share thinking that is useful, relevant, and grounded in real business situations.",
-    
+
     "Stratena Scope reflects how we work: commercially aware, detail-oriented, and focused on helping businesses move with greater clarity. It is where strategy, planning, and practical insight meet.",
   ],
 };
 
 export function generateStaticParams() {
   return Object.keys(pageLookup)
-    .filter((path) => path !== "/")
+    .filter((path) => path !== "/" && path !== "/about")
     .map((path) => ({ slug: path.slice(1).split("/") }));
 }
 
@@ -178,28 +182,55 @@ export default async function MenuPage({
     "This page has been created and linked to the navigation menu. You can replace this placeholder content with your final copy and service details.",
   ];
 
+  const title = page.parent ? `${page.parent} · ${page.title}` : page.title;
+
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900`}>
       <SiteHeader />
-      <main className="mx-auto max-w-5xl px-6 py-20 lg:px-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-          {page.parent ? `${page.parent} · ${page.title}` : `${page.title}`}
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold text-slate-900">
-          {page.title}
-        </h1>
-        <div className="mt-6 max-w-3xl space-y-5 text-base leading-7 text-slate-600">
-          {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-        <Link
-          href="/contact"
-          className="mt-10 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-        >
-          Contact Stratena
-        </Link>
+
+      <main>
+        <section className="relative overflow-hidden bg-white px-6 py-20 text-center lg:px-20">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(#564a64_1px,transparent_1px)] [background-size:40px_40px]" />
+          </div>
+          <div className="relative mx-auto max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{title}</p>
+            <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900 md:text-6xl" style={{ fontFamily: "var(--font-newsreader)" }}>
+              Strategic Clarity for {page.title}
+            </h1>
+            <p className="mx-auto mt-6 max-w-3xl text-lg italic text-slate-600 md:text-xl" style={{ fontFamily: "var(--font-newsreader)" }}>
+              Built for high-stakes decisions, legal precision, and confident execution.
+            </p>
+          </div>
+        </section>
+
+        <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:px-20">
+          <div className="space-y-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
+            {paragraphs.map((paragraph) => (
+              <p className="text-lg leading-relaxed text-slate-700" key={paragraph}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          <aside className="rounded-2xl bg-[#1E2A38] p-8 text-white shadow-sm">
+            <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-newsreader)" }}>
+              Need a custom scope?
+            </h2>
+            <p className="mt-4 text-sm leading-6 text-slate-200">
+              Every engagement is built around your legal context, strategic objective, and documentation standards.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1E2A38] transition-colors hover:bg-primary hover:text-white"
+            >
+              Request Consultation
+            </Link>
+          </aside>
+        </section>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }
