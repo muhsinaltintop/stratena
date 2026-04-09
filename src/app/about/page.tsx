@@ -8,47 +8,6 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
 });
 
-const pillars = [
-  {
-    icon: "lock",
-    title: "Discretion",
-    description:
-      "Handling sensitive corporate maneuvers with the utmost confidentiality and professional silence.",
-  },
-  {
-    icon: "target",
-    title: "Precision",
-    description:
-      "Meticulous attention to detail in technical documentation, leaving no room for ambiguity.",
-  },
-  {
-    icon: "gavel",
-    title: "Authority",
-    description:
-      "Crafting reports and strategies that command respect in boardrooms and courtrooms alike.",
-  },
-];
-
-const leaders = [
-  {
-    name: "Alexander Stratena",
-    title: "Founding Partner",
-    alt: "Alexander Stratena portrait",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCHVVRN6tGS3mClqsyEjn5G6hrrpTBqkbqlZ2V1BkTkpiZce2qaZ6P11XtjfSg5Hsyvl_qivlMvPJHY5iMnkT-ijbDiIZYpd8g1DLXy6__Qd2dkBAdLfa9olOUHZK6hKF0XsAgUIpyxSMlOI4RwN8MnvL9UXyVHjxHA9M0tVW4ddtXDt_V6PBu1ezCTgc84g-RKQpn0UU_5Lsqy4kCLFiCxSGmFx9XCo4zeSLYvIP2t0xpKCIlr5TD76vAxpvrSEycS-vtxSCIPHz8z",
-  },
-  {
-    name: "Elizabeth Vance",
-    title: "Head of Strategy",
-    alt: "Elizabeth Vance portrait",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDRMrgRUXARq4G5i-wMqVw9m4KULbsrX5GJCXiFHxre9f3wZaoCfNJyayNkzBCepNwJXAvbJQQcwyCgIhVvOYC-pSJI_ujzF48TpwVNMrO8_JoT5y8HBEf4C88weO64KGyAjts8OfHQgNlKTaw-y5oWCNWa0-4gJsPUHSXiU6pg7HzSdfG4DhaSh4-b5G-F6_VTqNaqYaL9GQL9blquKqIw-mELA89qDi23jaCch-ViOQUHs6bQPv3OmjziArvU_l7sAS8N9nraFa2J",
-  },
-  {
-    name: "Marcus Thorne",
-    title: "Director of Legal Documentation",
-    alt: "Marcus Thorne portrait",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDf_iv0v219jm11uiQRprG-A1IpSHeVJLn_eXOSynzTfHoTKiBFuVY66j3NEu4JhAnGIytPfQFPlsmjgDkrwIlCuKyKaDScWKcdV3V2JUYEUpXAFMZSj99SVN10fQQIZf8VaRzpbvRGXi93Hiu2GyoTB2VX7kAlv679oZJeUHNTNGfJoJndkIvAHCpQHjPHx3hYMlDX6mZJzRR621illHmkPuW9OeV_s7dwo7MopSJkyG3Lj_EhGG-xxpIM_3_l4KCk5Z5AsTkpqCpO",
-  },
-];
 
 export default function AboutPage() {
   return (
