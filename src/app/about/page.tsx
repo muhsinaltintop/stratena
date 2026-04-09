@@ -1,6 +1,7 @@
-import { Newsreader } from "next/font/google";
-import { SiteHeader } from "@/components/organisms/SiteHeader";
 import Link from "next/link";
+import { Newsreader } from "next/font/google";
+import { SiteFooter } from "@/components/organisms/SiteFooter";
+import { SiteHeader } from "@/components/organisms/SiteHeader";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -193,10 +194,11 @@ export default function AboutPage() {
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
             &ldquo;Our mission is to make business ideas credible under scrutiny.
-We develop plans and documentation that hold up in legal, financial, and operational contexts.&rdquo;
+            We develop plans and documentation that hold up in legal,
+            financial, and operational contexts.&rdquo;
           </blockquote>
           <cite className="mt-8 block text-lg font-bold not-italic text-slate-900">
-            — Albert S.Y. - 2026
+            Albert S.Y. - 2026
           </cite>
         </div>
       </section>
@@ -214,144 +216,14 @@ We develop plans and documentation that hold up in legal, financial, and operati
             consultants.
           </p>
           <Link href="/contact">
-          <button className="rounded-lg bg-white px-10 py-4 text-lg font-bold text-[#1E2A38] transition-all hover:bg-[#135bec] hover:text-white">
-            Schedule a Consultation
-          </button>
+            <button className="rounded-lg bg-white px-10 py-4 text-lg font-bold text-[#1E2A38] transition-all hover:bg-[#135bec] hover:text-white">
+              Schedule a Consultation
+            </button>
           </Link>
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white px-6 pb-10 pt-20 lg:px-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-20 grid gap-12 md:grid-cols-4">
-            <div>
-              <div className="mb-6 flex items-center gap-3">
-                <div className="text-[#135bec]">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 48 48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clipRule="evenodd"
-                      d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                      fill="currentColor"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <span
-                  className="text-xl font-bold"
-                  style={{ fontFamily: "var(--font-newsreader)" }}
-                >
-                  Stratena
-                </span>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-500">
-                Boutique strategic documentation and business planning for the
-                world&apos;s most discerning firms.
-              </p>
-            </div>
-            <div>
-              <h5 className="mb-6 font-bold text-slate-900">Services</h5>
-              <ul className="space-y-4 text-sm text-slate-600">
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Strategic Planning
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Legal Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Corporate Governance
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Crisis Advisory
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="mb-6 font-bold text-slate-900">Company</h5>
-              <ul className="space-y-4 text-sm text-slate-600">
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Case Studies
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Insights
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="transition-colors hover:text-[#135bec]"
-                    href="#"
-                  >
-                    Careers
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="mb-6 font-bold text-slate-900">Contact</h5>
-              <ul className="space-y-4 text-sm text-slate-600">
-                <li>advisory@stratena.com</li>
-                <li>+1 (212) 555-0198</li>
-                <li>Madison Avenue, New York</li>
-              </ul>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-10 text-xs text-slate-400 md:flex-row">
-            <p>© 2024 Stratena Strategic Consulting. All rights reserved.</p>
-            <div className="flex gap-8">
-              <a className="hover:text-slate-600" href="#">
-                Privacy Policy
-              </a>
-              <a className="hover:text-slate-600" href="#">
-                Terms of Service
-              </a>
-              <a className="hover:text-slate-600" href="#">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
