@@ -5,6 +5,7 @@ import { pageLookup } from "@/lib/navigation";
 import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
+import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 
 export const dynamicParams = false;
 
@@ -187,6 +188,10 @@ export default async function MenuPage({
 
   if (currentPath.startsWith("/business-plan")) {
     return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} />;
+  }
+
+  if (currentPath.startsWith("/consulting")) {
+    return <ConsultingTemplate title={page.title} paragraphs={paragraphs} />;
   }
 
   return (
