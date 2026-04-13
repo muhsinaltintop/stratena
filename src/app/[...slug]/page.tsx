@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
 import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
+import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
 
 export const dynamicParams = false;
 
@@ -192,6 +193,10 @@ export default async function MenuPage({
 
   if (currentPath.startsWith("/consulting")) {
     return <ConsultingTemplate title={page.title} paragraphs={paragraphs} />;
+  }
+
+  if (currentPath.startsWith("/sba-loan-readiness-packages")) {
+    return <SbaReadinessTemplate paragraphs={paragraphs} />;
   }
 
   return (
