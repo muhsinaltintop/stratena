@@ -3,7 +3,7 @@ import { StatItem } from "@/components/molecules/StatItem";
 export function ProofSection() {
   return (
     <section className="bg-slate-100 px-6 py-20 lg:px-20">
-      <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[1fr_auto] md:items-stretch md:gap-4">
+      <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[2fr_auto] md:items-center md:gap-4">
         <div className="flex flex-col gap-10 md:pl-4">
           <div>
             <h2 className="mb-4 text-3xl font-bold text-charcoal">A Proven Track Record of Excellence</h2>
