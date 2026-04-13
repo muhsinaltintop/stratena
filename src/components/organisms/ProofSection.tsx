@@ -21,7 +21,7 @@ export function ProofSection() {
           <img
             className="h-full w-full object-cover"
             alt="Business analyst reviewing performance charts and KPI dashboard"
-            src="https://images.unsplash.com/photo-1551281044-8d8d7d9f0a1c?auto=format&fit=crop&w=1200&q=80"
+            src="https://images.unsplash.com/photo-1711097383282-28097ae16b1d?auto=format&fit=crop&w=1200&q=80"
           />
         </div>
       </div>
