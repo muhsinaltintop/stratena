@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { pageLookup } from "@/lib/navigation";
 import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
+import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
 
 export const dynamicParams = false;
 
@@ -183,6 +184,10 @@ export default async function MenuPage({
   ];
 
   const title = page.parent ? `${page.parent} · ${page.title}` : page.title;
+
+  if (currentPath.startsWith("/business-plan")) {
+    return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} />;
+  }
 
   return (
     <div className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900`}>
