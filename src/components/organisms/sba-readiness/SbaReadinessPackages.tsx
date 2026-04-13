@@ -4,16 +4,12 @@ const tiers = [
   {
     title: "Initial Review",
     subtitle: "For businesses needing a gap analysis before formal application.",
-    price: "$2,500",
-    suffix: "/ flat fee",
     features: ["Lender-Ready Audit", "Financial Gap Analysis", "1-Year Forecast Review"],
     cta: "Get Started",
   },
   {
     title: "Full Package",
     subtitle: "The gold standard for SBA 7(a) and 504 loan applications.",
-    price: "$7,500",
-    suffix: "/ flat fee",
     features: [
       "Complete Narrative Plan",
       "5-Year Integrated Projections",
@@ -26,8 +22,6 @@ const tiers = [
   {
     title: "Accelerated Case",
     subtitle: "High-priority support for complex deals or rapid closings.",
-    price: "Custom",
-    suffix: "/ quote",
     features: ["10-Day Expedited Delivery", "Lender Introduction Support", "Unlimited Underwriting Q&A"],
     cta: "Consult with Us",
   },
@@ -64,11 +58,6 @@ export function SbaReadinessPackages() {
                 <h3 className={`text-2xl font-bold ${tier.featured ? "text-white" : "text-charcoal"}`}>{tier.title}</h3>
                 <p className={`mt-2 text-sm ${tier.featured ? "text-slate-400" : "text-slate-600"}`}>{tier.subtitle}</p>
               </div>
-
-              <div className={`mb-8 text-4xl font-extrabold ${tier.featured ? "text-white" : "text-charcoal"}`}>
-                {tier.price} <span className={`text-sm font-medium ${tier.featured ? "text-slate-400" : "text-slate-500"}`}>{tier.suffix}</span>
-              </div>
-
               <ul className="mb-10 flex-grow space-y-4">
                 {tier.features.map((feature) => (
                   <li key={feature} className={`flex items-center gap-3 text-sm font-medium ${tier.featured ? "text-white" : "text-charcoal"}`}>

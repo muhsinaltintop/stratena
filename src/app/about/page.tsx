@@ -156,9 +156,6 @@ export default function AboutPage() {
             We develop plans and documentation that hold up in legal,
             financial, and operational contexts.&rdquo;
           </blockquote>
-          <cite className="mt-8 block text-lg font-bold not-italic text-slate-900">
-            Albert S.Y. - 2026
-          </cite>
         </div>
       </section>
 
