@@ -203,6 +203,8 @@ export default async function MenuPage({
 
   if (currentPath === "/stratena-scope") {
     return <StratenaScopeTemplate />;
+  }
+
   if (currentPath.startsWith("/attorney-hub")) {
     return <AttorneyHubTemplate title={page.title} paragraphs={paragraphs} />;
   }
