@@ -28,8 +28,8 @@ export function AttorneyHubHero({ title, description }: AttorneyHubHeroProps) {
         <div className="relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVKdj_2zgBElojxPxke6IdUyJbVUreyRBWehtEHvmDGpnZdHS4esmba0Lk3pVyK5dggqOBfGGXc7aR8tz7BTMh4QRLjjvfbId_fr-zXj1H0SKTp2I3iZwGTo-jYMqwRNBMwLn_SUMFoEp7lvMLXtQ_5B-7Au2I58fgnYT8OBBEbRfVEyvTqbcCzJkC3pZ8-clLKCKjQi6RGtJ6vonI2Y3BCTg96422OFkg1v-r9havPr9JtzjqWZ_2oUVMXzJpXGp83LMmQvhXbJk_"
-            alt="Modern professional office interior"
+            src="https://images.unsplash.com/photo-1716840646010-e5622fd6683d?auto=format&fit=crop&fm=jpg&q=80&w=1600"
+            alt="A close-up of paper arrows and keyhole shapes"
             className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl grayscale"
           />
         </div>
