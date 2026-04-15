@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
 import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
+import { AttorneyHubTemplate } from "@/components/templates/AttorneyHubTemplate";
 
 export const dynamicParams = false;
 
@@ -139,7 +140,7 @@ const pageContent: Record<string, string[]> = {
 
     "Where a matter benefits from a stronger value story, we help organize supporting materials that make the business easier to understand and discuss. The result is clearer positioning and stronger business-side support for the broader legal or strategic objective.",
   ],
-  "/attorney-hub/market-search": [
+  "/attorney-hub/market-research": [
     "Market research at Stratena is designed to strengthen business plans, strategic decisions, legal matters, and funding preparation with targeted commercial insight. Strong research helps explain market demand, customer behavior, industry conditions, competition, location dynamics, and growth opportunity in a more credible way.",
 
     "Rather than relying on generic summaries, we focus on research that supports a real business story. The objective is to make the market context more useful, more relevant, and more directly connected to the business model being presented. This creates stronger planning materials and more convincing business narratives.",
@@ -197,6 +198,10 @@ export default async function MenuPage({
 
   if (currentPath.startsWith("/sba-loan-readiness-packages")) {
     return <SbaReadinessTemplate paragraphs={paragraphs} />;
+  }
+
+  if (currentPath.startsWith("/attorney-hub")) {
+    return <AttorneyHubTemplate title={page.title} paragraphs={paragraphs} />;
   }
 
   return (
