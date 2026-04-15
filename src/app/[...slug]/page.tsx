@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
 import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
+import { StratenaScopeTemplate } from "@/components/templates/StratenaScopeTemplate";
 
 export const dynamicParams = false;
 
@@ -197,6 +198,10 @@ export default async function MenuPage({
 
   if (currentPath.startsWith("/sba-loan-readiness-packages")) {
     return <SbaReadinessTemplate paragraphs={paragraphs} />;
+  }
+
+  if (currentPath === "/stratena-scope") {
+    return <StratenaScopeTemplate />;
   }
 
   return (
