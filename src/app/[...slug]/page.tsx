@@ -121,11 +121,11 @@ const pageContent: Record<string, string[]> = {
     "This service is especially useful for founder partnerships, family businesses, investor-backed ventures, and companies that are growing into more complex operating relationships. Our goal is to help businesses build partnership foundations that reduce ambiguity, improve coordination, and support stronger long-term execution.",
   ],
   "/sba-loan-readiness-packages": [
-    "SBA loan readiness packages are designed for businesses that want to approach lenders with stronger preparation and greater confidence. A business may need more than a loan business plan alone. It may also need clearer financial materials, stronger business positioning, and a more lender-ready overall presentation.",
+    "Get lender-ready with Stratena's SBA loan readiness packages for founders, franchise buyers, and existing businesses pursuing SBA 7(a), 504, or microloan financing. We combine SBA loan application help, lender-ready business plans, and SBA loan financial projections so your file is built for underwriting.",
 
-    "Stratena helps organize the strategic, operational, and financial components that support a serious loan application. This can include business narrative development, market context, financial planning, use-of-funds clarity, presentation logic, and broader readiness support before underwriting questions begin.",
+    "Our team delivers SBA funding preparation with practical execution: business plan narrative, use-of-funds clarity, repayment logic, and documentation packaging aligned to U.S. lender expectations. Every engagement is structured to reduce avoidable delays and improve approval readiness.",
 
-    "Our objective is to help borrowers look prepared, credible, and financing-ready from the start. By bringing planning, structure, and business logic together, we help clients enter the lending process with materials that feel more complete, more organized, and more professionally developed.",
+    "Whether you are a startup applying for your first loan or a borrower reapplying after a prior denial, Stratena helps you present a stronger, more credible file with clear strategy, complete support materials, and confident lender communication.",
   ],
   "/attorney-hub": [
     "Attorney Hub is Stratena’s dedicated support space for law firms and attorneys who need reliable business-side materials for client matters. We work alongside counsel to prepare business plans, market research, valuation-related support, and RFE response materials that are organized, strategic, and easy to integrate into a broader case strategy.",
@@ -163,6 +163,26 @@ const pageContent: Record<string, string[]> = {
     "Stratena Scope reflects how we work: commercially aware, detail-oriented, and focused on helping businesses move with greater clarity. It is where strategy, planning, and practical insight meet.",
   ],
 };
+
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string[] }>;
+}) {
+  const { slug } = await params;
+  const currentPath = `/${slug.join("/")}`;
+
+  if (currentPath === "/sba-loan-readiness-packages") {
+    return {
+      title: "SBA Loan Readiness Packages | Business Plans & Funding Support | Stratena",
+      description:
+        "Get lender-ready with Stratena's SBA loan readiness packages. Business plans, projections, documentation support, and expert guidance.",
+    };
+  }
+
+  return {};
+}
 
 export function generateStaticParams() {
   return Object.keys(pageLookup)
