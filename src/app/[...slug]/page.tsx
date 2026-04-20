@@ -181,6 +181,14 @@ export async function generateMetadata({
     };
   }
 
+  if (currentPath === "/attorney-hub") {
+    return {
+      title: "Attorney Hub | White-Label Business Plans for Immigration Attorneys | Stratena",
+      description:
+        "Partner with Stratena for premium E-2, L-1, EB-5 and investor visa business plans. White-label support for immigration attorneys and law firms.",
+    };
+  }
+
   return {};
 }
 
