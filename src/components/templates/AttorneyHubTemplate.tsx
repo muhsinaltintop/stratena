@@ -5,6 +5,7 @@ import { AttorneyHubCollaboration, AttorneyHubFinalCta } from "@/components/orga
 import { AttorneyHubHero } from "@/components/organisms/attorney-hub/AttorneyHubHero";
 import { AttorneyHubNarrative } from "@/components/organisms/attorney-hub/AttorneyHubNarrative";
 import { AttorneyHubServices } from "@/components/organisms/attorney-hub/AttorneyHubServices";
+import { AttorneyHubBusinessValuationPage } from "@/components/templates/AttorneyHubBusinessValuationPage";
 
 type AttorneyHubTemplateProps = {
   title: string;
@@ -375,6 +376,16 @@ export function AttorneyHubTemplate({ title, paragraphs }: AttorneyHubTemplatePr
       <main className="bg-background-light text-slate-900">
         <SiteHeader />
         <AttorneyHubLandingPage />
+        <SiteFooter />
+      </main>
+    );
+  }
+
+  if (title === "Business Valuation") {
+    return (
+      <main className="bg-background-light text-slate-900">
+        <SiteHeader />
+        <AttorneyHubBusinessValuationPage />
         <SiteFooter />
       </main>
     );

@@ -181,6 +181,14 @@ export async function generateMetadata({
     };
   }
 
+  if (currentPath === "/attorney-hub/business-valuation") {
+    return {
+      title: "Business Valuation Services | Professional Company Valuation | Stratena",
+      description:
+        "Get expert business valuation services for transactions, legal matters, planning, and growth. Professional reports for attorneys, owners, and investors.",
+    };
+  }
+
   if (currentPath === "/attorney-hub") {
     return {
       title: "Attorney Hub | White-Label Business Plans for Immigration Attorneys | Stratena",
