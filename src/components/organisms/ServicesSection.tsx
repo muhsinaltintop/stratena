@@ -36,8 +36,8 @@ export function ServicesSection() {
         <div className="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
           <Image
             className="h-52 w-full object-cover sm:h-72"
-            alt="Business advisor presenting strategic roadmap to executive stakeholders"
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
+            alt="Clean-shaven American business advisor presenting strategy to stakeholders"
+            src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600"
           
             width={1600}
             height={900}

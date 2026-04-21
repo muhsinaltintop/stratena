@@ -25,8 +25,8 @@ export function Hero() {
           <div className="aspect-[4/3] overflow-hidden rounded-xl border-8 border-white/50 shadow-2xl">
             <Image
               className="h-full w-full object-cover"
-              alt="Senior businessmen in suits shaking hands after a strategic agreement"
-              src="https://images.pexels.com/photos/5520301/pexels-photo-5520301.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Clean-shaven American business professionals shaking hands after a meeting"
+              src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600"
             
             width={1600}
             height={900}
