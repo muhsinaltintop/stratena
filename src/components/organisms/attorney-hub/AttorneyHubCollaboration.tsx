@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
+import Image from "next/image";
 
 const collaborationSteps = [
   {
@@ -42,11 +43,14 @@ export function AttorneyHubCollaboration() {
           </div>
 
           <div className="relative min-h-[360px] bg-navy">
-            <img
+            <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoEarJkPw4oBY59p02ll1TyQLaVM2bTlNJfAKTmxebBLOwJExqI_bhA_KgMfVS4vZV_VX66KwS967SD0wCHJYcbqSDFTDqvWZMJc6FBQu3YKjtpjbBZXFVZaJDKbdzcArRM7O8UU5cTDa-uik717s1fPzeTwldp2t1JYRP6yv83sM_earLBq2nXwAOmaY0FvO7p8jR8u_zrOt6g_Un4QqUpTEDA_noBOg_hd5yvW1VuOlVKxcPaFPtk4qvmY5ZSVxCCWF19_TsrLot"
               alt="Collaboration between legal and strategy teams"
               className="absolute inset-0 h-full w-full object-cover opacity-60 grayscale"
-            />
+            
+            width={1600}
+            height={900}
+          />
             <div className="absolute inset-0 flex flex-col justify-end p-10 text-white lg:p-12">
               <blockquote className="text-xl italic md:text-2xl">
                 &ldquo;Stratena&apos;s ability to translate complex business operations into the &lsquo;National Importance&rsquo; narrative is unparalleled.&rdquo;

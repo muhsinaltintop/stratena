@@ -1,4 +1,5 @@
 import { StatItem } from "@/components/molecules/StatItem";
+import Image from "next/image";
 
 export function ProofSection() {
   return (
@@ -18,10 +19,13 @@ export function ProofSection() {
           </div>
         </div>
         <div className="mx-auto aspect-square w-full max-w-[240px] overflow-hidden rounded-2xl border border-white/70 bg-white shadow-lg md:mx-0 md:mr-4 md:h-full md:max-h-[320px] md:w-auto">
-          <img
+          <Image
             className="h-full w-full object-cover"
-            alt="Business analyst reviewing performance charts and KPI dashboard"
-            src="https://images.unsplash.com/photo-1711097383282-28097ae16b1d?auto=format&fit=crop&w=1200&q=80"
+            alt="Clean-shaven American analyst reviewing performance dashboards"
+            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          
+            width={1600}
+            height={900}
           />
         </div>
       </div>

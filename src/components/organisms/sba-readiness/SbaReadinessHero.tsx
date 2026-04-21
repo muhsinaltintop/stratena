@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
+import Image from "next/image";
 
 type SbaReadinessHeroProps = {
   description: string;
@@ -42,10 +43,13 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
 
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-primary/5 blur-3xl" />
-          <img
+          <Image
             alt="Business owners reviewing SBA loan application documents"
             className="relative h-[430px] w-full rounded-xl object-cover shadow-2xl md:h-[500px]"
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+          
+            width={1600}
+            height={900}
           />
           <div className="absolute -bottom-6 -left-3 max-w-[230px] rounded-lg border border-slate-200 bg-white p-5 shadow-xl md:-left-8 md:-bottom-8">
             <div className="text-4xl font-extrabold text-primary">Lender-Ready</div>
