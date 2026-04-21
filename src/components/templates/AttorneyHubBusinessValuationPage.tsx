@@ -152,6 +152,13 @@ export function AttorneyHubBusinessValuationPage() {
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
             Know what your business is worth with confidence. Get a clear, professionally prepared company valuation report for transactions, disputes, planning, or investor decisions.
           </p>
+          <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&fm=jpg&q=80&w=1800"
+              alt="Financial valuation documents with calculator and charts"
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="mailto:partners@stratena.com?subject=Request%20Valuation"

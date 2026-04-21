@@ -179,6 +179,14 @@ function AttorneyHubLandingPage() {
             and responsive delivery built for legal workflows.
           </p>
 
+          <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&fm=jpg&q=80&w=1800"
+              alt="A legal team discussing case documents in a conference room"
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
@@ -371,6 +379,17 @@ export function AttorneyHubTemplate({ title, paragraphs }: AttorneyHubTemplatePr
     paragraphs[0] ??
     "Empowering law firms with institutional-grade business planning and evidentiary documentation for complex immigration and corporate filings.";
 
+  const heroImageByTitle: Record<string, { src: string; alt: string }> = {
+    "Market Research": {
+      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+      alt: "Business analytics charts and market research data on a desk",
+    },
+    "Request for Evidence (RFE) Response": {
+      src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+      alt: "A professional preparing legal response documents at a desk",
+    },
+  };
+
   if (title === "Attorney Hub") {
     return (
       <main className="bg-background-light text-slate-900">
@@ -394,7 +413,7 @@ export function AttorneyHubTemplate({ title, paragraphs }: AttorneyHubTemplatePr
   return (
     <main className="bg-background-light text-slate-900">
       <SiteHeader />
-      <AttorneyHubHero title={title} description={heroDescription} />
+      <AttorneyHubHero title={title} description={heroDescription} imageSrc={heroImageByTitle[title]?.src} imageAlt={heroImageByTitle[title]?.alt} />
       <AttorneyHubServices />
       <AttorneyHubNarrative paragraphs={paragraphs} />
       <AttorneyHubCollaboration />
