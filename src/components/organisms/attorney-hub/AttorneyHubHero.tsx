@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
 import { limitHeadingWords } from "@/lib/headings";
+import Image from "next/image";
 
 type AttorneyHubHeroProps = {
   title: string;
@@ -37,10 +38,13 @@ export function AttorneyHubHero({
 
         <div className="relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
-          <img
+          <Image
             src={imageSrc}
             alt={imageAlt}
             className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl grayscale"
+          
+            width={1600}
+            height={900}
           />
         </div>
       </div>

@@ -6,6 +6,7 @@ import { AttorneyHubHero } from "@/components/organisms/attorney-hub/AttorneyHub
 import { AttorneyHubNarrative } from "@/components/organisms/attorney-hub/AttorneyHubNarrative";
 import { AttorneyHubServices } from "@/components/organisms/attorney-hub/AttorneyHubServices";
 import { AttorneyHubBusinessValuationPage } from "@/components/templates/AttorneyHubBusinessValuationPage";
+import Image from "next/image";
 
 type AttorneyHubTemplateProps = {
   title: string;
@@ -198,11 +199,14 @@ function AttorneyHubLandingPage() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&fm=jpg&q=80&w=1800"
               alt="A legal team discussing case documents in a conference room"
               className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
-            />
+            
+            width={1600}
+            height={900}
+          />
           </div>
         </div>
 

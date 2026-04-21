@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
+import Image from "next/image";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -38,10 +39,13 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 md:grid-cols-2 lg:px-20">
         <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-2xl">
-          <img
+          <Image
             alt="Minimalist luxury corporate office interior"
             className="h-full w-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl6ibOQEK22iWLxGsU-1OTJ2LOP8OFzRAxVj_YVNyP2MIHbfADvNf79TtHyxlGw-vYF6O5N9ZI5LosQ-WA1SJT6Iem7Rln0e3FNS95mHHrYnDzjAvc-I3rvClsnQWI6ujo9vH5chQsAJ1mn9lKHwTndwo-41fDazK9egwoBAsKpHZQFmuxf4efhQmeyYq-Lo_UfC6D33L3dLCkQWs2ao0Tgd6OWWruDCtsHKz3zK8LTBcF1K6OpTvf9DiAfhR4mLvHypCo9OFHgq9w"
+          
+            width={1600}
+            height={900}
           />
         </div>
         <div className="space-y-8">
@@ -123,11 +127,14 @@ export default function AboutPage() {
           {leaders.map((leader) => (
             <div className="group" key={leader.name}>
               <div className="mb-6 aspect-[3/4] overflow-hidden rounded-[12px] bg-slate-200">
-                <img
+                <Image
                   alt={leader.alt}
                   className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                   src={leader.src}
-                />
+                
+            width={1600}
+            height={900}
+          />
               </div>
               <h4
                 className="text-2xl font-bold text-slate-900"

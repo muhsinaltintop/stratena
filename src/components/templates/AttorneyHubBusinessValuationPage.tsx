@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const trustBadges = ["Confidential Process", "Fast Turnaround", "Strategic Analysis", "Professional Reporting"];
 
@@ -171,11 +172,14 @@ export function AttorneyHubBusinessValuationPage() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&fm=jpg&q=80&w=1800"
               alt="Financial valuation documents with calculator and charts"
               className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
-            />
+            
+            width={1600}
+            height={900}
+          />
           </div>
         </div>
 

@@ -1,14 +1,18 @@
 import { Button } from "@/components/atoms/Button";
+import Image from "next/image";
 
 export function FinalCtaSection() {
   return (
     <section className="bg-navy px-6 py-20 lg:py-24">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
         <div className="overflow-hidden rounded-2xl border border-white/20">
-          <img
+          <Image
             className="h-56 w-full object-cover sm:h-72 lg:h-80"
             alt="Executive team collaborating over strategic planning documents"
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+          
+            width={1600}
+            height={900}
           />
         </div>
         <div className="text-center lg:text-left">

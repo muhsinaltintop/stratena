@@ -1,3 +1,4 @@
+import Image from "next/image";
 type ConsultingCaseStudyProps = {
   paragraphs: string[];
   serviceTitle: string;
@@ -56,11 +57,14 @@ export function ConsultingCaseStudy({ paragraphs, serviceTitle }: ConsultingCase
 
         <div className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-slate-800 shadow-2xl">
-            <img
+            <Image
               alt="Strategic Planning"
               className="h-full w-full object-cover opacity-60 mix-blend-overlay"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZzd0j6cOZwVeusg5gNvSPiKCOsy5-0jVsONEfEEM2OyVp2GhVTfpBzJ7AdWDxMtj6rqcypbeuVIfhgmpE7DNfGSnApU4S1pDRCR7kQYGmrvUGwlgAJKKJx1o9UXO1q58nikWgmN0MaMwk2xMjqKBKWTcNbxaKie-zQOOGcfrHFcbwuSN_rlAdglyiHazJiyA0BowpBFYkaVCX9x_GLGjMDBHntjbMdTEH02zyOhpGe0dgntqDh0IaXbaYb27d2i-wyTbydXtGCuiB"
-            />
+            
+            width={1600}
+            height={900}
+          />
             <div className="absolute inset-0 flex flex-col justify-end p-12">
               <div className="rounded-lg border border-white/10 bg-white/5 p-8 backdrop-blur-md">
                 <p className="mb-4 text-sm font-medium leading-relaxed text-slate-200">Strategic thinking has value only when it leads to practical outcomes. Stratena supports founders, firms, attorneys, lenders, and operators with commercially grounded advisory work built for real decisions. Every engagement is designed to improve clarity, strengthen positioning, and create forward momentum where it matters most.</p>

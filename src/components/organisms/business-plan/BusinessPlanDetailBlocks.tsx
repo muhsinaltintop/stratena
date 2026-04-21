@@ -1,3 +1,4 @@
+import Image from "next/image";
 const timeline = [
   {
     step: "1",
@@ -46,11 +47,14 @@ export function BusinessPlanDetailBlocks() {
                 <h3 className="mb-6 text-3xl font-bold">Market Analysis</h3>
                 <p className="leading-relaxed text-slate-300">Deep-dive competitive landscape and target demographic segmentation using institutional datasets.</p>
               </div>
-              <img
+              <Image
                 alt="Financial data visualization"
                 className="mt-8 rounded-lg opacity-50 grayscale"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAeX-yYeLdvQpAhQABmpTMUVzLXkFLnqiY_erK7Ex_pg9lDPhKsHCDd_rxaxDczoV5U5YGde7yx4eB0VG1hZaZlbsnDY2flMACd1H-TiA0Pms_8Sr3-_rtCrZeutfgGfkVrE6-rSxajA46exzSottl5LEX5fNFeef4JSMC_Cm7nwMJMbvdgLwFV7rCA-jXfAd8hd4z_P0rWOEEt7afoknXI4FWsK3EddrcgfNZxqVrem8om9Ium7vlQfQ6FuEe9zGpwQsgFwPQPtWo"
-              />
+              
+            width={1600}
+            height={900}
+          />
             </div>
           </div>
         </div>
