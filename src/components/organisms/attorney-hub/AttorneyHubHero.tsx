@@ -5,9 +5,16 @@ import { limitHeadingWords } from "@/lib/headings";
 type AttorneyHubHeroProps = {
   title: string;
   description: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
-export function AttorneyHubHero({ title, description }: AttorneyHubHeroProps) {
+export function AttorneyHubHero({
+  title,
+  description,
+  imageSrc = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+  imageAlt = "A legal team reviewing documents in an office",
+}: AttorneyHubHeroProps) {
   const conciseTitle = limitHeadingWords(title);
 
   return (
@@ -31,8 +38,8 @@ export function AttorneyHubHero({ title, description }: AttorneyHubHeroProps) {
         <div className="relative">
           <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
           <img
-            src="https://images.unsplash.com/photo-1716840646010-e5622fd6683d?auto=format&fit=crop&fm=jpg&q=80&w=1600"
-            alt="A close-up of paper arrows and keyhole shapes"
+            src={imageSrc}
+            alt={imageAlt}
             className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl grayscale"
           />
         </div>

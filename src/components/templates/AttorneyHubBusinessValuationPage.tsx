@@ -144,29 +144,43 @@ export function AttorneyHubBusinessValuationPage() {
         <div className="absolute inset-0 opacity-40">
           <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top,#0f172a12,transparent_55%)]" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Attorney Hub · Business Valuation Services</p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
-            Business Valuation for Legal Matters
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-            Know what your business is worth with confidence. Get a clear, professionally prepared company valuation report for transactions, disputes, planning, or investor decisions.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="mailto:partners@stratena.com?subject=Request%20Valuation"
-              className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
-            >
-              Request Valuation
-            </Link>
-            <Link
-              href="mailto:partners@stratena.com?subject=Business%20Valuation%20Consultation"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
-            >
-              Book Consultation
-            </Link>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Attorney Hub · Business Valuation Services</p>
+            <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
+              Business Valuation for Legal Matters
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+              Know what your business is worth with confidence. Get a clear, professionally prepared company valuation report for transactions, disputes, planning, or investor decisions.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="mailto:partners@stratena.com?subject=Request%20Valuation"
+                className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
+              >
+                Request Valuation
+              </Link>
+              <Link
+                href="mailto:partners@stratena.com?subject=Business%20Valuation%20Consultation"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
+              >
+                Book Consultation
+              </Link>
+            </div>
           </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&fm=jpg&q=80&w=1800"
+              alt="Financial valuation documents with calculator and charts"
+              className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
+            />
+          </div>
+        </div>
+
+        <div className="relative mx-auto mt-10 max-w-7xl px-6 lg:px-20">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {trustBadges.map((badge) => (
               <div key={badge} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
                 {badge}

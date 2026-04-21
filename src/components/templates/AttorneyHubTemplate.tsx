@@ -169,32 +169,45 @@ function AttorneyHubLandingPage() {
         <div className="absolute inset-0 opacity-40">
           <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top,#1e3a8a1a,transparent_55%)]" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-20">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Attorney Hub</p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
-            Trusted Immigration Plan Partner
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-            Support your E-2, L-1, EB-5, and investor visa clients with premium business plans, financial projections,
-            and responsive delivery built for legal workflows.
-          </p>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-20">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Attorney Hub</p>
+            <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
+              Trusted Immigration Plan Partner
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+              Support your E-2, L-1, EB-5, and investor visa clients with premium business plans, financial projections,
+              and responsive delivery built for legal workflows.
+            </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
-              className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
-            >
-              Book Partner Call
-            </Link>
-            <Link
-              href="mailto:partners@stratena.com?subject=Referral%20Partner%20Inquiry"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
-            >
-              Become a Referral Partner
-            </Link>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
+                className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
+              >
+                Book Partner Call
+              </Link>
+              <Link
+                href="mailto:partners@stratena.com?subject=Referral%20Partner%20Inquiry"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
+              >
+                Become a Referral Partner
+              </Link>
+            </div>
           </div>
 
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl" />
+            <img
+              src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&fm=jpg&q=80&w=1800"
+              alt="A legal team discussing case documents in a conference room"
+              className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl"
+            />
+          </div>
+        </div>
+
+        <div className="relative mx-auto mt-10 max-w-7xl px-6 lg:px-20">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {["Confidential White-Label Support", "Fast Turnaround", "USCIS-Focused Deliverables", "Dedicated Account Support"].map((badge) => (
               <div key={badge} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
                 {badge}
@@ -371,6 +384,17 @@ export function AttorneyHubTemplate({ title, paragraphs }: AttorneyHubTemplatePr
     paragraphs[0] ??
     "Empowering law firms with institutional-grade business planning and evidentiary documentation for complex immigration and corporate filings.";
 
+  const heroImageByTitle: Record<string, { src: string; alt: string }> = {
+    "Market Research": {
+      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+      alt: "Business analytics charts and market research data on a desk",
+    },
+    "Request for Evidence (RFE) Response": {
+      src: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&fm=jpg&q=80&w=1600",
+      alt: "A professional preparing legal response documents at a desk",
+    },
+  };
+
   if (title === "Attorney Hub") {
     return (
       <main className="bg-background-light text-slate-900">
@@ -394,7 +418,7 @@ export function AttorneyHubTemplate({ title, paragraphs }: AttorneyHubTemplatePr
   return (
     <main className="bg-background-light text-slate-900">
       <SiteHeader />
-      <AttorneyHubHero title={title} description={heroDescription} />
+      <AttorneyHubHero title={title} description={heroDescription} imageSrc={heroImageByTitle[title]?.src} imageAlt={heroImageByTitle[title]?.alt} />
       <AttorneyHubServices />
       <AttorneyHubNarrative paragraphs={paragraphs} />
       <AttorneyHubCollaboration />
