@@ -171,8 +171,8 @@ function AttorneyHubLandingPage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-20">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Attorney Hub</p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal md:text-6xl">
-            Trusted Business Plan Partner for Immigration Attorneys
+          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
+            Trusted Immigration Plan Partner
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
             Support your E-2, L-1, EB-5, and investor visa clients with premium business plans, financial projections,
@@ -333,7 +333,7 @@ function AttorneyHubLandingPage() {
 
       <section className="bg-white py-20 lg:py-24">
         <div className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-slate-50 px-6 py-12 text-center lg:px-16">
-          <h2 className="text-3xl font-extrabold text-charcoal md:text-5xl">Need a Reliable Business Plan Partner for Your Visa Cases?</h2>
+          <h2 className="text-4xl font-extrabold text-charcoal md:text-5xl">Need a Reliable Business Plan Partner for Your Visa Cases?</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
             Support your clients with premium documentation and dependable turnaround.
           </p>

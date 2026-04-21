@@ -32,7 +32,7 @@ export const navItems: NavItem[] = [
       { label: "Partnership Protocols", href: "/consulting/partnership-protocols" },
     ],
   },
-  { label: "SBA Loan Readiness Packages", href: "/sba-loan-readiness-packages" },
+  { label: "SBA Loan Readiness", href: "/sba-loan-readiness-packages" },
   {
     label: "Attorney Hub",
     href: "/attorney-hub",

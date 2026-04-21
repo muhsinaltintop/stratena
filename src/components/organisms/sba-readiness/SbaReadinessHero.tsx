@@ -13,10 +13,10 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 lg:gap-16">
         <div>
           <span className="rounded-full bg-primary/10 px-3 py-1 text-[12px] font-bold uppercase tracking-[0.2em] text-primary">
-            SBA Loan Readiness Packages
+            SBA Loan Readiness
           </span>
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-[-0.025em] text-charcoal md:text-6xl">
-            SBA Loan Readiness Packages That Help You Secure Funding Faster
+          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-charcoal">
+            SBA Loan Readiness
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">{description}</p>
 
@@ -48,7 +48,7 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
           />
           <div className="absolute -bottom-6 -left-3 max-w-[230px] rounded-lg border border-slate-200 bg-white p-5 shadow-xl md:-left-8 md:-bottom-8">
-            <div className="text-3xl font-extrabold text-primary">Lender-Ready</div>
+            <div className="text-4xl font-extrabold text-primary">Lender-Ready</div>
             <div className="mt-1 text-[12px] font-bold uppercase tracking-wider text-slate-600">
               SBA Loan Business Plan + Financial Projections + Document Packaging
             </div>

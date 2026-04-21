@@ -8,8 +8,8 @@ export function Hero() {
           <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-secondary">
             Boutique Strategic Consulting
           </div>
-          <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-secondary lg:text-6xl">
-            Structured Business Intelligence for High-Stakes Decisions
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-secondary">
+            Business Intelligence for Key Decisions
           </h1>
           <p className="max-w-lg text-xl leading-relaxed text-slate-500">
             Strategic business planning and advisory built for cases that require credibility, clarity, and institutional readiness.

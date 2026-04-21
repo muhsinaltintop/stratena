@@ -146,8 +146,8 @@ export function AttorneyHubBusinessValuationPage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-20">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Attorney Hub · Business Valuation Services</p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal md:text-6xl">
-            Professional Business Valuation Services for Attorneys, Owners, and Investors
+          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-charcoal">
+            Business Valuation for Legal Matters
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
             Know what your business is worth with confidence. Get a clear, professionally prepared company valuation report for transactions, disputes, planning, or investor decisions.
@@ -312,7 +312,7 @@ export function AttorneyHubBusinessValuationPage() {
 
       <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-slate-50 px-6 py-12 text-center lg:px-16">
-          <h2 className="text-3xl font-extrabold text-charcoal md:text-5xl">Need to Know What Your Business Is Worth?</h2>
+          <h2 className="text-4xl font-extrabold text-charcoal md:text-5xl">Need to Know What Your Business Is Worth?</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
             Get a professional valuation report built for decisions, negotiations, and growth.
           </p>

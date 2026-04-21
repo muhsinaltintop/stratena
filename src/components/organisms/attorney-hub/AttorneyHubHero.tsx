@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
+import { limitHeadingWords } from "@/lib/headings";
 
 type AttorneyHubHeroProps = {
   title: string;
@@ -7,12 +8,14 @@ type AttorneyHubHeroProps = {
 };
 
 export function AttorneyHubHero({ title, description }: AttorneyHubHeroProps) {
+  const conciseTitle = limitHeadingWords(title);
+
   return (
     <section className="relative overflow-hidden bg-white py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-20">
         <div>
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-primary">Legal Partnership Portal</p>
-          <h1 className="text-4xl font-extrabold leading-tight text-charcoal md:text-6xl">{title}</h1>
+          <h1 className="text-4xl font-extrabold leading-tight text-charcoal">{conciseTitle}</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button size="md">Request a Firm Briefing</Button>

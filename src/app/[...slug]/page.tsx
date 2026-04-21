@@ -9,6 +9,7 @@ import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
 import { StratenaScopeTemplate } from "@/components/templates/StratenaScopeTemplate";
 import { AttorneyHubTemplate } from "@/components/templates/AttorneyHubTemplate";
+import { limitHeadingWords } from "@/lib/headings";
 
 export const dynamicParams = false;
 
@@ -121,7 +122,7 @@ const pageContent: Record<string, string[]> = {
     "This service is especially useful for founder partnerships, family businesses, investor-backed ventures, and companies that are growing into more complex operating relationships. Our goal is to help businesses build partnership foundations that reduce ambiguity, improve coordination, and support stronger long-term execution.",
   ],
   "/sba-loan-readiness-packages": [
-    "Get lender-ready with Stratena's SBA loan readiness packages for founders, franchise buyers, and existing businesses pursuing SBA 7(a), 504, or microloan financing. We combine SBA loan application help, lender-ready business plans, and SBA loan financial projections so your file is built for underwriting.",
+    "Get lender-ready with Stratena's SBA loan readiness for founders, franchise buyers, and existing businesses pursuing SBA 7(a), 504, or microloan financing. We combine SBA loan application help, lender-ready business plans, and SBA loan financial projections so your file is built for underwriting.",
 
     "Our team delivers SBA funding preparation with practical execution: business plan narrative, use-of-funds clarity, repayment logic, and documentation packaging aligned to U.S. lender expectations. Every engagement is structured to reduce avoidable delays and improve approval readiness.",
 
@@ -175,9 +176,9 @@ export async function generateMetadata({
 
   if (currentPath === "/sba-loan-readiness-packages") {
     return {
-      title: "SBA Loan Readiness Packages | Business Plans & Funding Support | Stratena",
+      title: "SBA Loan Readiness | Business Plans & Funding Support | Stratena",
       description:
-        "Get lender-ready with Stratena's SBA loan readiness packages. Business plans, projections, documentation support, and expert guidance.",
+        "Get lender-ready with Stratena's SBA loan readiness. Business plans, projections, documentation support, and expert guidance.",
     };
   }
 
@@ -224,6 +225,7 @@ export default async function MenuPage({
   ];
 
   const title = page.parent ? `${page.parent} · ${page.title}` : page.title;
+  const conciseTitle = limitHeadingWords(page.title, 6);
 
   if (currentPath.startsWith("/business-plan")) {
     return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} />;
@@ -256,8 +258,8 @@ export default async function MenuPage({
           </div>
           <div className="relative mx-auto max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{title}</p>
-            <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900 md:text-6xl" style={{ fontFamily: "var(--font-newsreader)" }}>
-              Strategic Clarity for {page.title}
+            <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+              {conciseTitle}
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg italic text-slate-600 md:text-xl" style={{ fontFamily: "var(--font-newsreader)" }}>
               Built for high-stakes decisions, legal precision, and confident execution.

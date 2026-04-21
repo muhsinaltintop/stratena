@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { newsletterLookup, newsletters } from "@/lib/newsletters";
+import { limitHeadingWords } from "@/lib/headings";
 
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
 
@@ -48,6 +49,7 @@ export default async function NewsletterPage({
   }
 
   const relatedArticles = newsletters.filter((entry) => entry.slug !== article.slug).slice(0, 2);
+  const conciseHeading = limitHeadingWords(article.title);
 
   return (
     <main className={`${newsreader.variable} bg-[#f4f0e8] text-slate-900`}>
@@ -72,10 +74,10 @@ export default async function NewsletterPage({
             </div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#a55d36]">{article.accent}</p>
             <h1
-              className="max-w-4xl text-5xl font-semibold leading-[1.02] text-navy md:text-6xl"
+              className="max-w-4xl text-4xl font-semibold leading-tight text-navy"
               style={{ fontFamily: "var(--font-newsreader)" }}
             >
-              {article.title}
+              {conciseHeading}
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">{article.summary}</p>
 
@@ -143,7 +145,7 @@ export default async function NewsletterPage({
               {article.sections.map((section) => (
                 <section key={section.title}>
                   <h2
-                    className="text-3xl font-semibold leading-tight text-navy md:text-4xl"
+                    className="text-4xl font-semibold leading-tight text-navy md:text-4xl"
                     style={{ fontFamily: "var(--font-newsreader)" }}
                   >
                     {section.title}
