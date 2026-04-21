@@ -19,7 +19,7 @@ export function ConsultingTemplate({ title, paragraphs }: ConsultingTemplateProp
       <SiteHeader />
       <ConsultingHero description={paragraphs[0]} title={heroTitle} />
       <ConsultingEngagementAreas paragraphs={paragraphs} />
-      <ConsultingCaseStudy paragraphs={paragraphs} />
+      <ConsultingCaseStudy paragraphs={paragraphs} serviceTitle={title} />
       <ConsultingAdvantage />
       <ConsultingCta />
       <SiteFooter />
