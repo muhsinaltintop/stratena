@@ -19,8 +19,8 @@ export function BusinessPlanHero({ title, description }: BusinessPlanHeroProps) 
           </h1>
           <p className="mb-10 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="flex flex-wrap gap-4">
-            <Button>Schedule Consultation</Button>
-            <Button variant="secondary">Review Sample Plans</Button>
+            <Button>Start Engagement</Button>
+            <Button variant="secondary">Request Proposal</Button>
           </div>
         </div>
 

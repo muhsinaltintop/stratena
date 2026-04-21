@@ -15,8 +15,8 @@ export function Hero() {
             Strategic business planning and advisory built for cases that require credibility, clarity, and institutional readiness.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button>Request Consultation</Button>
-            <Button variant="secondary">See Sample Work</Button>
+            <Button>Book Consultation</Button>
+            <Button variant="secondary">Speak With Stratena</Button>
           </div>
         </div>
 
@@ -24,8 +24,8 @@ export function Hero() {
           <div className="aspect-[4/3] overflow-hidden rounded-xl border-8 border-white/50 shadow-2xl">
             <img
               className="h-full w-full object-cover"
-              alt="Sophisticated modern boardroom with large windows"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_a4ObikuKHT33TBXiaT5Wekwn7PU0YYW-keG7qh_wYX9MK-b8HpVYBu7gKolSxBgB8croToF-t5t3p1SXqukmdbIkUf1hMXmPgagczS6lBDYZC3qbjDC9NF3qbYWz_d6TUomSB6jsATgRQ1amIb6hAvvTomQEQW6D94IP1eTvoNBZ4U8jgMgzjbEiSCQtspAZGpvzFkYNy5LBQgVN3CkpmK2myjHm-dRuH9ciYHGOhakFl5BDuS63ChU_6rs6rg8nf8IpzNLpX8JY"
+              alt="Executive strategy team reviewing financial growth plans"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-white p-6 shadow-xl md:block">
