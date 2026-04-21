@@ -74,7 +74,7 @@ export default async function NewsletterPage({
             </div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#a55d36]">{article.accent}</p>
             <h1
-              className="max-w-4xl text-3xl font-semibold leading-tight text-navy"
+              className="max-w-4xl text-4xl font-semibold leading-tight text-navy"
               style={{ fontFamily: "var(--font-newsreader)" }}
             >
               {conciseHeading}
@@ -145,7 +145,7 @@ export default async function NewsletterPage({
               {article.sections.map((section) => (
                 <section key={section.title}>
                   <h2
-                    className="text-3xl font-semibold leading-tight text-navy md:text-4xl"
+                    className="text-4xl font-semibold leading-tight text-navy md:text-4xl"
                     style={{ fontFamily: "var(--font-newsreader)" }}
                   >
                     {section.title}

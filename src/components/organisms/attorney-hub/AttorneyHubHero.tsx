@@ -15,7 +15,7 @@ export function AttorneyHubHero({ title, description }: AttorneyHubHeroProps) {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-20">
         <div>
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-primary">Legal Partnership Portal</p>
-          <h1 className="text-3xl font-extrabold leading-tight text-charcoal">{conciseTitle}</h1>
+          <h1 className="text-4xl font-extrabold leading-tight text-charcoal">{conciseTitle}</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button size="md">Request a Firm Briefing</Button>

@@ -4,7 +4,7 @@ export default function AdminPage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-6xl gap-8 px-6 py-10">
       <aside className="w-full max-w-xs rounded-xl bg-white p-5 shadow-sm">
-        <h1 className="text-3xl font-bold">Stratena Admin</h1>
+        <h1 className="text-4xl font-bold">Stratena Admin</h1>
         <p className="mt-1 text-sm text-slate-600">Manage website content and settings.</p>
         <nav className="mt-6 space-y-2">
           {adminNavigation.map((item) => (

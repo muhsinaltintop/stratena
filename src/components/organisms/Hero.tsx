@@ -8,7 +8,7 @@ export function Hero() {
           <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-secondary">
             Boutique Strategic Consulting
           </div>
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-secondary">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-secondary">
             Business Intelligence for Key Decisions
           </h1>
           <p className="max-w-lg text-xl leading-relaxed text-slate-500">

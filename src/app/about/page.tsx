@@ -22,7 +22,7 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-4xl">
           <h1
-            className="mb-6 text-3xl font-bold leading-tight text-slate-900"
+            className="mb-6 text-4xl font-bold leading-tight text-slate-900"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
             Strategic Clarity, Delivered Precisely
