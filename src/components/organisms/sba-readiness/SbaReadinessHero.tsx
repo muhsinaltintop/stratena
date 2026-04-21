@@ -15,8 +15,8 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
           <span className="rounded-full bg-primary/10 px-3 py-1 text-[12px] font-bold uppercase tracking-[0.2em] text-primary">
             SBA Loan Readiness Packages
           </span>
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-[-0.025em] text-charcoal md:text-6xl">
-            SBA Loan Readiness Packages That Help You Secure Funding Faster
+          <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-charcoal">
+            SBA Loan Readiness Packages
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">{description}</p>
 

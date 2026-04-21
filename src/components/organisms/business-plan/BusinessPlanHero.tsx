@@ -1,4 +1,5 @@
 import { Button } from "@/components/atoms/Button";
+import { limitHeadingWords } from "@/lib/headings";
 
 type BusinessPlanHeroProps = {
   title: string;
@@ -6,14 +7,15 @@ type BusinessPlanHeroProps = {
 };
 
 export function BusinessPlanHero({ title, description }: BusinessPlanHeroProps) {
+  const conciseTitle = limitHeadingWords(title, 5);
+
   return (
     <section className="relative flex min-h-[820px] items-center overflow-hidden bg-white">
       <div className="mx-auto grid w-full max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 lg:px-20">
         <div>
           <span className="mb-6 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Strategic Institutional Advisory</span>
-          <h1 className="mb-8 text-5xl font-extrabold leading-tight tracking-tight text-charcoal lg:text-6xl">
-            Immigration-Grade <br />
-            <span className="text-primary">{title}</span>
+          <h1 className="mb-8 text-3xl font-extrabold leading-tight tracking-tight text-charcoal">
+            <span className="text-primary">Immigration-Grade {conciseTitle}</span>
           </h1>
           <p className="mb-10 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="flex flex-wrap gap-4">

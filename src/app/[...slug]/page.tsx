@@ -9,6 +9,7 @@ import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
 import { StratenaScopeTemplate } from "@/components/templates/StratenaScopeTemplate";
 import { AttorneyHubTemplate } from "@/components/templates/AttorneyHubTemplate";
+import { limitHeadingWords } from "@/lib/headings";
 
 export const dynamicParams = false;
 
@@ -224,6 +225,7 @@ export default async function MenuPage({
   ];
 
   const title = page.parent ? `${page.parent} · ${page.title}` : page.title;
+  const conciseTitle = limitHeadingWords(page.title, 6);
 
   if (currentPath.startsWith("/business-plan")) {
     return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} />;
@@ -256,8 +258,8 @@ export default async function MenuPage({
           </div>
           <div className="relative mx-auto max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{title}</p>
-            <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900 md:text-6xl" style={{ fontFamily: "var(--font-newsreader)" }}>
-              Strategic Clarity for {page.title}
+            <h1 className="mt-4 text-3xl font-bold leading-tight text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+              {conciseTitle}
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg italic text-slate-600 md:text-xl" style={{ fontFamily: "var(--font-newsreader)" }}>
               Built for high-stakes decisions, legal precision, and confident execution.
