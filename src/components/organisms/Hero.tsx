@@ -24,8 +24,8 @@ export function Hero() {
           <div className="aspect-[4/3] overflow-hidden rounded-xl border-8 border-white/50 shadow-2xl">
             <img
               className="h-full w-full object-cover"
-              alt="Executive strategy team reviewing financial growth plans"
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
+              alt="Senior businessmen in suits shaking hands after a strategic agreement"
+              src="https://images.pexels.com/photos/5520301/pexels-photo-5520301.jpeg?auto=compress&cs=tinysrgb&w=1600"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-white p-6 shadow-xl md:block">
