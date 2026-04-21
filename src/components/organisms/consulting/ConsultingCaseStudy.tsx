@@ -63,7 +63,7 @@ export function ConsultingCaseStudy({ paragraphs, serviceTitle }: ConsultingCase
             />
             <div className="absolute inset-0 flex flex-col justify-end p-12">
               <div className="rounded-lg border border-white/10 bg-white/5 p-8 backdrop-blur-md">
-                <p className="mb-4 text-sm font-medium leading-relaxed text-slate-200">{caseContent}</p>
+                <p className="mb-4 text-sm font-medium leading-relaxed text-slate-200">Strategic thinking has value only when it leads to practical outcomes. Stratena supports founders, firms, attorneys, lenders, and operators with commercially grounded advisory work built for real decisions. Every engagement is designed to improve clarity, strengthen positioning, and create forward momentum where it matters most.</p>
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-300">— Stratena Advisory</p>
               </div>
             </div>
