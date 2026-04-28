@@ -6,9 +6,13 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export function Button({ variant = "primary", size = "md", className = "", ...props }: ButtonProps) {
-  const baseStyle = "rounded-xl font-bold transition-all";
+  const baseStyle = "rounded-xl font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50";
   const sizeStyle =
-    size === "sm" ? "px-6 py-2.5 text-sm" : size === "lg" ? "px-10 py-5 text-lg" : "px-8 py-4 text-base";
+    size === "sm"
+      ? "px-5 py-2.5 text-sm sm:px-6"
+      : size === "lg"
+        ? "px-7 py-4 text-base sm:px-10 sm:py-5 sm:text-lg"
+        : "px-6 py-3.5 text-sm sm:px-8 sm:py-4 sm:text-base";
   const variantStyle =
     variant === "primary"
       ? "bg-navy text-white hover:bg-primary shadow-lg"

@@ -26,10 +26,10 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="bg-slate-50 px-6 py-24 lg:px-20">
+    <section className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-charcoal">Service Excellence</h2>
+        <div className="mb-12 text-center sm:mb-16">
+          <h2 className="mb-4 text-3xl font-bold text-charcoal sm:text-4xl">Service Excellence</h2>
           <div className="mx-auto h-1.5 w-24 rounded-full bg-primary" />
         </div>
 
