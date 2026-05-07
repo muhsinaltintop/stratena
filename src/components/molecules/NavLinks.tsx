@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { navItems } from "@/lib/navigation";
 
@@ -12,6 +12,28 @@ export function NavLinks() {
     setIsMenuOpen(false);
     setOpenSubmenu(null);
   };
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    const onKeydown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener("keydown", onKeydown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeydown);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -50,7 +72,7 @@ export function NavLinks() {
         })}
       </nav>
 
-      <div className="relative md:hidden">
+      <div className="md:hidden">
         <button
           type="button"
           aria-controls="mobile-navigation"
@@ -66,65 +88,73 @@ export function NavLinks() {
         </button>
 
         {isMenuOpen ? (
-          <nav
-            id="mobile-navigation"
-            className="absolute right-0 top-full z-50 mt-3 max-h-[calc(100vh-6rem)] w-[calc(100vw-3rem)] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
-          >
-            <ul className="space-y-2">
-              {navItems.map((item) => {
-                const hasChildren = Boolean(item.children?.length);
-                const isSubmenuOpen = openSubmenu === item.label;
+          <div className="fixed inset-0 z-50 md:hidden">
+            <button
+              type="button"
+              aria-label="Close navigation menu"
+              className="absolute inset-0 bg-slate-950/35 backdrop-blur-[1px]"
+              onClick={closeMenu}
+            />
+            <nav
+              id="mobile-navigation"
+              className="absolute right-3 top-3 max-h-[calc(100vh-1.5rem)] w-[min(24rem,calc(100vw-1.5rem))] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
+            >
+              <ul className="space-y-2">
+                {navItems.map((item) => {
+                  const hasChildren = Boolean(item.children?.length);
+                  const isSubmenuOpen = openSubmenu === item.label;
 
-                return (
-                  <li key={item.label} className="rounded-xl bg-slate-50/70">
-                    <div className="flex items-center">
-                      <Link
-                        href={item.href}
-                        className="flex-1 rounded-l-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-colors hover:text-primary"
-                        onClick={closeMenu}
-                      >
-                        {item.label}
-                      </Link>
-
-                      {hasChildren ? (
-                        <button
-                          type="button"
-                          aria-controls={`mobile-submenu-${item.label.replace(/\s+/g, "-").toLowerCase()}`}
-                          aria-expanded={isSubmenuOpen}
-                          aria-label={`${isSubmenuOpen ? "Close" : "Open"} ${item.label} submenu`}
-                          className="flex h-11 w-12 items-center justify-center rounded-r-xl border-l border-slate-200 text-slate-600 transition-colors hover:bg-white hover:text-primary"
-                          onClick={() => setOpenSubmenu(isSubmenuOpen ? null : item.label)}
+                  return (
+                    <li key={item.label} className="rounded-xl bg-slate-50/70">
+                      <div className="flex items-center">
+                        <Link
+                          href={item.href}
+                          className="flex-1 rounded-l-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-colors hover:text-primary"
+                          onClick={closeMenu}
                         >
-                          <span className="material-symbols-outlined text-base">
-                            {isSubmenuOpen ? "expand_less" : "expand_more"}
-                          </span>
-                        </button>
-                      ) : null}
-                    </div>
+                          {item.label}
+                        </Link>
 
-                    {hasChildren && isSubmenuOpen ? (
-                      <ul
-                        id={`mobile-submenu-${item.label.replace(/\s+/g, "-").toLowerCase()}`}
-                        className="border-t border-slate-200 px-2 pb-2"
-                      >
-                        {item.children?.map((child) => (
-                          <li key={child.href}>
-                            <Link
-                              href={child.href}
-                              className="block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-white hover:text-primary"
-                              onClick={closeMenu}
-                            >
-                              {child.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+                        {hasChildren ? (
+                          <button
+                            type="button"
+                            aria-controls={`mobile-submenu-${item.label.replace(/\s+/g, "-").toLowerCase()}`}
+                            aria-expanded={isSubmenuOpen}
+                            aria-label={`${isSubmenuOpen ? "Close" : "Open"} ${item.label} submenu`}
+                            className="flex h-11 w-12 items-center justify-center rounded-r-xl border-l border-slate-200 text-slate-600 transition-colors hover:bg-white hover:text-primary"
+                            onClick={() => setOpenSubmenu(isSubmenuOpen ? null : item.label)}
+                          >
+                            <span className="material-symbols-outlined text-base">
+                              {isSubmenuOpen ? "expand_less" : "expand_more"}
+                            </span>
+                          </button>
+                        ) : null}
+                      </div>
+
+                      {hasChildren && isSubmenuOpen ? (
+                        <ul
+                          id={`mobile-submenu-${item.label.replace(/\s+/g, "-").toLowerCase()}`}
+                          className="border-t border-slate-200 px-2 pb-2"
+                        >
+                          {item.children?.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                className="block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-white hover:text-primary"
+                                onClick={closeMenu}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
         ) : null}
       </div>
     </>

@@ -20,9 +20,9 @@ const cards = [
 
 export function SpecializationsSection() {
   return (
-    <section className="bg-white px-6 py-24 lg:px-20">
+    <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <h3 className="mb-12 text-center text-sm font-bold uppercase tracking-[0.2em] text-primary">Core Specializations</h3>
+        <h3 className="mb-10 text-center text-xs font-bold uppercase tracking-[0.2em] text-primary sm:mb-12 sm:text-sm">Core Specializations</h3>
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card) => (
             <SpecializationCard key={card.title} {...card} />

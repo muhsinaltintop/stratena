@@ -22,8 +22,8 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="bg-white px-6 py-24 lg:px-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-2">
+    <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-20 lg:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-14 lg:grid-cols-2 lg:gap-20">
         <div className="order-2 lg:order-1">
           <Image
             className="rounded-2xl shadow-2xl grayscale transition-all duration-700 hover:grayscale-0"
@@ -36,8 +36,8 @@ export function ProcessSection() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <h3 className="mb-12 text-4xl font-bold text-charcoal">Our Methodical Approach</h3>
-          <div className="space-y-12">
+          <h3 className="mb-8 text-3xl font-bold text-charcoal sm:mb-12 sm:text-4xl">Our Methodical Approach</h3>
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
             {steps.map((step, index) => (
               <ProcessStep key={step.title} index={index + 1} {...step} />
             ))}

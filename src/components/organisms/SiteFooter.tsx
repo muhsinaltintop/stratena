@@ -3,8 +3,8 @@ import { Logo } from "@/components/atoms/Logo";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-slate-800 bg-charcoal px-6 py-16 text-slate-400 lg:px-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-12 md:grid-cols-4">
+    <footer className="border-t border-slate-800 bg-charcoal px-4 py-12 text-slate-400 sm:px-6 sm:py-16 lg:px-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4 md:gap-12">
         <div>
           <div className="mb-6">
             <Logo light />
@@ -41,9 +41,9 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-16 flex max-w-7xl flex-col justify-between gap-4 border-t border-slate-800 pt-8 text-xs md:flex-row">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col justify-between gap-4 border-t border-slate-800 pt-8 text-xs md:mt-16 md:flex-row">
         <p>© 2026 Stratena Strategic Consulting. All rights reserved.</p>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap gap-6">
           <Link className="hover:text-white" href="#">Privacy Policy</Link>
           <Link className="hover:text-white" href="#">Terms of Service</Link>
         </div>

@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export function ProofSection() {
   return (
-    <section className="bg-slate-100 px-6 py-20 lg:px-20">
+    <section className="bg-slate-100 px-4 py-14 sm:px-6 sm:py-20 lg:px-20">
       <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[2fr_auto] md:items-center md:gap-4">
-        <div className="flex flex-col gap-10 md:pl-4">
+        <div className="flex flex-col gap-8 md:pl-4 md:gap-10">
           <div>
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">A Proven Track Record of Excellence</h2>
+            <h2 className="mb-4 text-2xl font-bold text-charcoal sm:text-3xl">A Proven Track Record of Excellence</h2>
             <p className="text-slate-600">
               Our results speak for the quality of our strategic interventions across diverse market sectors.
             </p>

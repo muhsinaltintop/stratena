@@ -8,4 +8,5 @@
 
 body {
   @apply bg-background-light font-display text-slate-900 antialiased;
+  overflow-x: hidden;
 }
