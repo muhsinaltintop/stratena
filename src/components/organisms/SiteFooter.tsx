@@ -16,25 +16,25 @@ export function SiteFooter() {
         <div>
           <h6 className="mb-6 font-bold text-white">Services</h6>
           <ul className="space-y-3 text-sm">
-            <li><Link className="hover:text-primary" href="#">Immigration Plans</Link></li>
-            <li><Link className="hover:text-primary" href="#">SBA Lending</Link></li>
-            <li><Link className="hover:text-primary" href="#">M&amp;A Strategy</Link></li>
-            <li><Link className="hover:text-primary" href="#">Corporate Advisory</Link></li>
+            <li><Link className="hover:text-primary" href="/business-plan">Business Plan</Link></li>
+            <li><Link className="hover:text-primary" href="/sba-loan-readiness-packages">SBA Lending</Link></li>
+            <li><Link className="hover:text-primary" href="/consulting">M&amp;A Strategy</Link></li>
+            <li><Link className="hover:text-primary" href="/attorney-hub">Business Immigration Plan</Link></li>
           </ul>
         </div>
         <div>
           <h6 className="mb-6 font-bold text-white">Company</h6>
           <ul className="space-y-3 text-sm">
-            <li><Link className="hover:text-primary" href="#">About Us</Link></li>
+            <li><Link className="hover:text-primary" href="/about">About Us</Link></li>
             <li><Link className="hover:text-primary" href="#">Our Process</Link></li>
-            <li><Link className="hover:text-primary" href="#">Insights</Link></li>
-            <li><Link className="hover:text-primary" href="#">Contact</Link></li>
+            <li><Link className="hover:text-primary" href="/stratena-scope">Insights</Link></li>
+            <li><Link className="hover:text-primary" href="/contact">Contact</Link></li>
           </ul>
         </div>
         <div>
           <h6 className="mb-6 font-bold text-white">Contact</h6>
-          <p className="mb-2 text-sm">hello@stratena.consulting</p>
-          <p className="text-sm">+1 (555) 987-6543</p>
+          <p className="mb-2 text-sm">info@stratena.com</p>
+          <p className="text-sm">+1 (832) 270-5239</p>
           <div className="mt-6 flex gap-4">
             <span className="material-symbols-outlined cursor-pointer hover:text-white">language</span>
             <span className="material-symbols-outlined cursor-pointer hover:text-white">share</span>
