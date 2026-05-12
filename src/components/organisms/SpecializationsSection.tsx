@@ -2,19 +2,22 @@ import { SpecializationCard } from "@/components/molecules/SpecializationCard";
 
 const cards = [
   {
-    icon: "gavel",
-    title: "Immigration Law",
-    description: "Strategic business plans meticulously crafted for L-1, E-2, and EB-5 visa categories.",
+    icon: "business_center",
+    title: "Business Plan",
+    description: "Comprehensive business plans developed to support funding, growth, and strategic execution with confidence.",
+    href: "/business-plan",
   },
   {
     icon: "account_balance_wallet",
     title: "SBA Lending",
     description: "Comprehensive financial modeling and narratives designed to meet rigorous bank requirements.",
+    href: "/sba-loan-readiness-packages",
   },
   {
     icon: "insights",
     title: "Strategic Acquisitions",
     description: "Due diligence and growth projections for high-stakes mergers and acquisitions.",
+    href: "/consulting",
   },
 ];
 
