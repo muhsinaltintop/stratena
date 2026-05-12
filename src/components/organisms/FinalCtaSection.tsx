@@ -1,10 +1,11 @@
 import { Button } from "@/components/atoms/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function FinalCtaSection() {
   return (
-    <section className="bg-navy px-4 py-14 sm:px-6 sm:py-20 lg:py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+    <section className="bg-navy px-4 py-14 sm:px-6 sm:py-20 lg:px-20 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
         <div className="overflow-hidden rounded-2xl border border-white/20">
           <Image
             className="h-56 w-full object-cover sm:h-72 lg:h-80"
@@ -21,7 +22,7 @@ export function FinalCtaSection() {
             Join the ranks of successful corporations and legal firms that trust Stratena for their most critical
             documentation.
           </p>
-          <Button variant="inverse" size="lg" className="w-full sm:w-auto">
+          <Button as={Link} href="/contact" variant="inverse" size="lg" className="inline-flex w-full items-center justify-center sm:w-auto">
             Contact Stratena
           </Button>
         </div>
