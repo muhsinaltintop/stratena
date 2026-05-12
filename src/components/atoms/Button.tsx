@@ -1,11 +1,20 @@
-import { ButtonHTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, ElementType } from "react";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps<T extends ElementType = "button"> = {
+  as?: T;
   variant?: "primary" | "secondary" | "inverse";
   size?: "sm" | "md" | "lg";
-};
+  className?: string;
+} & ComponentPropsWithoutRef<T>;
 
-export function Button({ variant = "primary", size = "md", className = "", ...props }: ButtonProps) {
+export function Button<T extends ElementType = "button">({
+  as,
+  variant = "primary",
+  size = "md",
+  className = "",
+  ...props
+}: ButtonProps<T>) {
+  const Component = as ?? "button";
   const baseStyle = "rounded-xl font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50";
   const sizeStyle =
     size === "sm"
@@ -20,5 +29,5 @@ export function Button({ variant = "primary", size = "md", className = "", ...pr
         ? "border-2 border-slate-200 bg-white text-charcoal hover:bg-slate-50"
         : "bg-white text-navy hover:bg-primary hover:text-white shadow-xl";
 
-  return <button className={`${baseStyle} ${sizeStyle} ${variantStyle} ${className}`} {...props} />;
+  return <Component className={`${baseStyle} ${sizeStyle} ${variantStyle} ${className}`} {...props} />;
 }

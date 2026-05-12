@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -16,8 +17,10 @@ export function Hero() {
             Strategic business planning and advisory built for cases that require credibility, clarity, and institutional readiness.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-            <Button className="w-full sm:w-auto">Book Consultation</Button>
-            <Button variant="secondary" className="w-full sm:w-auto">
+            <Button as={Link} href="/contact" className="w-full sm:w-auto">
+              Book Consultation
+            </Button>
+            <Button as={Link} href="/contact" variant="secondary" className="w-full sm:w-auto">
               Speak With Stratena
             </Button>
           </div>
