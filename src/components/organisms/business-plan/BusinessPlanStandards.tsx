@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type BusinessPlanStandardsProps = {
   lead: string;
 };
@@ -26,6 +28,13 @@ export function BusinessPlanStandards({ lead }: BusinessPlanStandardsProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-end">
           <div className="md:w-2/3">
+            <Image
+              alt="Regulatory compliance review visual"
+              className="mb-6 h-40 w-full rounded-xl object-cover"
+              src="/business-plan-2.png"
+              width={1400}
+              height={500}
+            />
             <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Regulatory Compliance</span>
             <h2 className="text-4xl font-extrabold text-charcoal lg:text-5xl">The Standard of Review</h2>
           </div>
