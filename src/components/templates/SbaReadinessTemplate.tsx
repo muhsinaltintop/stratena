@@ -30,7 +30,7 @@ export function SbaReadinessTemplate({ paragraphs }: SbaReadinessTemplateProps) 
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 p-3 backdrop-blur md:hidden">
         <Link
-          href="#book-consultation"
+          href="/contact"
           className="block rounded-xl bg-navy px-4 py-3 text-center text-sm font-bold text-white shadow-lg hover:bg-primary"
         >
           Book Free Consultation
