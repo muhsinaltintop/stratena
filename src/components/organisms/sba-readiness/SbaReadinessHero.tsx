@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
 import Image from "next/image";
+import { BalancedSplitSection } from "@/components/layout/BalancedSplitSection";
 
 type SbaReadinessHeroProps = {
   description: string;
@@ -10,8 +11,7 @@ const trustIndicators = ["Fast Turnaround", "U.S. Market Expertise", "Lender-Foc
 
 export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
   return (
-    <section className="relative overflow-hidden px-6 pb-16 pt-20 lg:px-20 lg:pb-24 lg:pt-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 lg:gap-16">
+    <BalancedSplitSection className="relative overflow-hidden pt-20 lg:pt-24" contentClassName="items-center">
         <div>
           <span className="rounded-full bg-primary/10 px-3 py-1 text-[12px] font-bold uppercase tracking-[0.2em] text-primary">
             SBA Loan Readiness
@@ -41,11 +41,11 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
           </ul>
         </div>
 
-        <div className="relative">
+        <div className="relative flex h-full items-center">
           <div className="absolute -inset-4 rounded-3xl bg-primary/5 blur-3xl" />
           <Image
             alt="Business owners reviewing SBA loan application documents"
-            className="relative h-[430px] w-full rounded-xl object-cover shadow-2xl md:h-[500px]"
+            className="relative media-aspect rounded-xl shadow-2xl"
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
           
             width={1600}
@@ -58,7 +58,6 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </BalancedSplitSection>
   );
 }

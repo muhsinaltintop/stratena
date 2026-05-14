@@ -10,3 +10,25 @@ body {
   @apply bg-background-light font-display text-slate-900 antialiased;
   overflow-x: hidden;
 }
+
+@layer components {
+  .section-shell {
+    @apply px-4 py-16 sm:px-6 sm:py-20 lg:px-20 lg:py-24;
+  }
+
+  .section-content {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  .section-grid-balanced {
+    @apply grid items-stretch gap-8 lg:grid-cols-2 lg:gap-14;
+  }
+
+  .media-frame {
+    @apply h-full overflow-hidden rounded-2xl border border-slate-200/70 shadow-lg;
+  }
+
+  .media-aspect {
+    @apply aspect-[4/3] h-full w-full object-cover;
+  }
+}
