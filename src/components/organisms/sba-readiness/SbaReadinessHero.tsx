@@ -25,11 +25,6 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
             <Link href="/contact">
               <Button size="lg">Book Free Consultation</Button>
             </Link>
-            <Link href="#packages">
-              <Button variant="secondary" size="lg">
-                Get Started Today
-              </Button>
-            </Link>
           </div>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -51,12 +46,6 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
             width={1600}
             height={900}
           />
-          <div className="absolute -bottom-6 -left-3 max-w-[230px] rounded-lg border border-slate-200 bg-white p-5 shadow-xl md:-left-8 md:-bottom-8">
-            <div className="text-4xl font-extrabold text-primary">Lender-Ready</div>
-            <div className="mt-1 text-[12px] font-bold uppercase tracking-wider text-slate-600">
-              SBA Loan Business Plan + Financial Projections + Document Packaging
-            </div>
-          </div>
         </div>
     </BalancedSplitSection>
   );
