@@ -1,5 +1,6 @@
 import { limitHeadingWords } from "@/lib/headings";
 import Image from "next/image";
+import Link from "next/link";
 
 type ConsultingHeroProps = {
   title: string;
@@ -28,9 +29,9 @@ export function ConsultingHero({ title, description }: ConsultingHeroProps) {
           <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-white/70">Corporate Strategy Division</span>
           <h1 className="mb-8 text-4xl font-extrabold leading-tight tracking-tight text-white">{conciseTitle}</h1>
           <p className="mb-12 max-w-2xl text-xl font-medium leading-relaxed text-slate-300">{description}</p>
-          <button className="rounded-lg bg-white px-8 py-4 font-bold text-navy shadow-2xl transition-all hover:bg-slate-50">
+          <Link href="/contact" className="rounded-lg bg-white px-8 py-4 font-bold text-navy shadow-2xl transition-all hover:bg-slate-50">
             Request Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </section>

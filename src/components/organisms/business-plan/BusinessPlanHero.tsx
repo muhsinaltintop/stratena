@@ -1,6 +1,7 @@
 import { Button } from "@/components/atoms/Button";
 import { limitHeadingWords } from "@/lib/headings";
 import Image from "next/image";
+import Link from "next/link";
 
 type BusinessPlanHeroProps = {
   title: string;
@@ -21,8 +22,8 @@ export function BusinessPlanHero({ title, description, imageSrc }: BusinessPlanH
           </h1>
           <p className="mb-10 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="flex flex-wrap gap-4">
-            <Button>Start Engagement</Button>
-            <Button variant="secondary">Request Proposal</Button>
+            <Button as={Link} href="/contact">Start Engagement</Button>
+            <Button as={Link} href="/contact" variant="secondary">Request Proposal</Button>
           </div>
         </div>
 

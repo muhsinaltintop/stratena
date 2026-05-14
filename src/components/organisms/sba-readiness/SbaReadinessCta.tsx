@@ -18,7 +18,7 @@ export function SbaReadinessCta() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-            <Link href="/consulting">
+            <Link href="/contact">
               <Button variant="inverse" size="lg" className="hover:scale-[1.02]">
                 Book Consultation
               </Button>

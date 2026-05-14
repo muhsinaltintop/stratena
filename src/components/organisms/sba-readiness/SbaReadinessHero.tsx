@@ -22,7 +22,7 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">{description}</p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#book-consultation">
+            <Link href="/contact">
               <Button size="lg">Book Free Consultation</Button>
             </Link>
             <Link href="#packages">

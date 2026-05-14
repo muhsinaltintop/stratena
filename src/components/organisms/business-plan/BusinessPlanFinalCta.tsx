@@ -1,4 +1,5 @@
 import { Button } from "@/components/atoms/Button";
+import Link from "next/link";
 
 export function BusinessPlanFinalCta() {
   return (
@@ -12,7 +13,7 @@ export function BusinessPlanFinalCta() {
             Don&apos;t leave your immigration status to chance. Partner with consultants attorneys trust for complex cases.
           </p>
           <div className="relative z-10">
-            <Button variant="inverse" size="lg">Begin Your Case</Button>
+            <Button as={Link} href="/contact" variant="inverse" size="lg">Begin Your Case</Button>
           </div>
         </div>
       </div>
