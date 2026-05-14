@@ -8,13 +8,25 @@ import { BusinessPlanStandards } from "@/components/organisms/business-plan/Busi
 type BusinessPlanTemplateProps = {
   title: string;
   paragraphs: string[];
+  isSubpage?: boolean;
 };
 
-export function BusinessPlanTemplate({ title, paragraphs }: BusinessPlanTemplateProps) {
-  const description = paragraphs[0] ?? "High-stakes business planning built for USCIS compliance, legal strategy, and confident execution.";
+const fallbackDescription = "High-stakes business planning built for USCIS compliance, legal strategy, and confident execution.";
+
+function toExcerpt(text: string, maxLength = 260) {
+  if (text.length <= maxLength) return text;
+  const clipped = text.slice(0, maxLength);
+  const safeCut = clipped.lastIndexOf(" ");
+  return `${clipped.slice(0, safeCut > 80 ? safeCut : maxLength).trimEnd()}...`;
+}
+
+export function BusinessPlanTemplate({ title, paragraphs, isSubpage = false }: BusinessPlanTemplateProps) {
+  const descriptionSource = paragraphs[0] ?? fallbackDescription;
+  const description = isSubpage ? toExcerpt(descriptionSource) : descriptionSource;
   const standardLead = paragraphs[1] ?? "A Stratena plan is not just a document; it is a legal defense engineered to pre-emptively address RFE triggers.";
   const businessPlanImages = ["/business-plan.png", "/business-plan-2.png"];
   const heroImage = businessPlanImages[Math.floor(Math.random() * businessPlanImages.length)];
+  const bodyParagraphs = isSubpage ? paragraphs.slice(1) : paragraphs;
 
   return (
     <main className="bg-background-light text-slate-900">
@@ -25,7 +37,7 @@ export function BusinessPlanTemplate({ title, paragraphs }: BusinessPlanTemplate
         <div className="mx-auto max-w-4xl px-6 lg:px-20">
           <h2 className="mb-10 text-3xl font-extrabold leading-tight text-charcoal md:text-4xl">{title}</h2>
           <div className="space-y-8">
-            {paragraphs.map((paragraph) => (
+            {bodyParagraphs.map((paragraph) => (
               <p className="text-lg leading-relaxed text-slate-700" key={paragraph}>
                 {paragraph}
               </p>

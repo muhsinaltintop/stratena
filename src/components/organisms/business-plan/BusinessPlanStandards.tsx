@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type BusinessPlanStandardsProps = {
   lead: string;
 };
@@ -24,12 +26,21 @@ export function BusinessPlanStandards({ lead }: BusinessPlanStandardsProps) {
   return (
     <section className="bg-background-light py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
-        <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-end">
-          <div className="md:w-2/3">
+        <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-stretch">
+          <div className="flex md:w-2/3 md:min-h-[260px] md:flex-col">
+            <Image
+              alt="Regulatory compliance review visual"
+              className="mb-6 h-40 w-full rounded-xl object-cover md:h-auto md:flex-1"
+              src="/business-plan-2.png"
+              width={1400}
+              height={500}
+            />
             <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Regulatory Compliance</span>
             <h2 className="text-4xl font-extrabold text-charcoal lg:text-5xl">The Standard of Review</h2>
           </div>
-          <p className="leading-relaxed text-slate-600 md:w-1/3">{lead}</p>
+          <div className="flex md:w-1/3 md:items-end">
+            <p className="leading-relaxed text-slate-600">{lead}</p>
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">

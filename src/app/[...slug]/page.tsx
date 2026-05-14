@@ -231,7 +231,7 @@ export default async function MenuPage({
   const conciseTitle = limitHeadingWords(page.title, 6);
 
   if (currentPath.startsWith("/business-plan")) {
-    return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} />;
+    return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} isSubpage={currentPath !== "/business-plan"} />;
   }
 
   if (currentPath.startsWith("/consulting")) {
