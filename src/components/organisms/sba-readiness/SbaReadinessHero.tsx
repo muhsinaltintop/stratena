@@ -25,11 +25,6 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
             <Link href="/contact">
               <Button size="lg">Book Free Consultation</Button>
             </Link>
-            <Link href="#packages">
-              <Button variant="secondary" size="lg">
-                Get Started Today
-              </Button>
-            </Link>
           </div>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-3">
