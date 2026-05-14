@@ -99,8 +99,8 @@ const partnerships = [
     cta: "Discuss Referral Model",
   },
   {
-    title: "White-Label Strategic Partner",
-    subtitle: "For firms wanting seamless outsourced support",
+    title: "White-Label Strategy",
+    subtitle: "Seamless outsourced support",
     cta: "Build White-Label Program",
   },
 ];
@@ -186,13 +186,7 @@ function AttorneyHubLandingPage() {
                 href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
                 className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
               >
-                Book Partner Call
-              </Link>
-              <Link
-                href="mailto:partners@stratena.com?subject=Referral%20Partner%20Inquiry"
-                className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
-              >
-                Become a Referral Partner
+                Book a Call
               </Link>
             </div>
           </div>
@@ -310,7 +304,7 @@ function AttorneyHubLandingPage() {
           <h2 className="text-3xl font-extrabold text-charcoal md:text-4xl">How it works</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {["Send case details", "We scope timeline & requirements", "We build documentation package", "You file confidently"].map((step, index) => (
-              <article key={step} className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+              <article key={step} className="flex min-h-[170px] flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Step {index + 1}</p>
                 <h3 className="mt-3 text-lg font-bold text-charcoal">{step}</h3>
               </article>
@@ -359,7 +353,7 @@ function AttorneyHubLandingPage() {
               href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
               className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
             >
-              Book Partner Call
+              Book a Call
             </Link>
             <Link
               href="mailto:partners@stratena.com?subject=Start%20First%20Case"
@@ -376,7 +370,7 @@ function AttorneyHubLandingPage() {
           href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
           className="inline-flex w-full items-center justify-center rounded-lg bg-navy px-4 py-3 text-sm font-bold text-white"
         >
-          Book Partner Call
+          Book a Call
         </Link>
       </div>
     </>
