@@ -26,11 +26,11 @@ export function BusinessPlanHero({ title, description, imageSrc }: BusinessPlanH
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 rotate-3 rounded-[2rem] bg-primary/5" />
+        <div className="relative flex items-center justify-center md:justify-end">
+          <div className="absolute inset-4 rotate-3 rounded-[2rem] bg-primary/5" />
           <Image
             alt="Business planning strategy visual"
-            className="relative z-10 aspect-[4/5] w-full rounded-xl object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0"
+            className="relative z-10 aspect-[4/3] w-full max-w-md rounded-xl object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0 lg:max-w-lg"
             src={imageSrc}
             width={1600}
             height={900}
