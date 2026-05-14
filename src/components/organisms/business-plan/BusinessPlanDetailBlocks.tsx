@@ -33,18 +33,18 @@ export function BusinessPlanDetailBlocks() {
             <div className="mx-auto h-1 w-24 bg-primary" />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-12">
+          <div className="grid gap-8 md:grid-cols-12 md:items-stretch">
             <div className="group overflow-hidden rounded-xl bg-background-light md:col-span-7">
-              <div className="p-12">
+              <div className="flex h-full flex-col p-12">
                 <Image
                   alt="Financial planning narrative visual"
-                  className="mb-6 h-40 w-full rounded-xl object-cover"
+                  className="mb-6 h-40 w-full rounded-xl object-cover md:h-auto md:flex-1"
                   src="/business-plan.png"
                   width={1400}
                   height={500}
                 />
                 <h3 className="mb-6 text-4xl font-bold text-charcoal">Financial Narrative</h3>
-                <p className="mb-8 max-w-md text-lg text-slate-600">
+                <p className="max-w-md text-lg text-slate-600">
                   5-year pro-forma projections including P&amp;L, Cash Flow, and Balance Sheets, cross-referenced with industry benchmarks.
                 </p>
               </div>
