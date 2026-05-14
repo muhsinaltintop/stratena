@@ -28,15 +28,22 @@ export function BusinessPlanStandards({ lead }: BusinessPlanStandardsProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-stretch">
           <div className="flex md:w-2/3 md:min-h-[260px] md:flex-col">
-            <Image
+            {/* <Image
               alt="Regulatory compliance review visual"
-              className="mb-6 h-40 w-full rounded-xl object-cover md:h-auto md:flex-1"
+              className="mb-6 h-40 w-full rounded-xl object-cover md:h-[160px] lg:h-[200px]"
               src="/business-plan-2.png"
               width={1400}
               height={500}
-            />
-            <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-primary">Regulatory Compliance</span>
-            <h2 className="text-4xl font-extrabold text-charcoal lg:text-5xl">The Standard of Review</h2>
+            /> */}
+            <span className="md:mt-20">
+
+            <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Regulatory Compliance
+            </span>
+            <h2 className="text-4xl font-extrabold text-charcoal lg:text-5xl">
+              The Standard of Review
+            </h2>
+            </span>
           </div>
           <div className="flex md:w-1/3 md:items-end">
             <p className="leading-relaxed text-slate-600">{lead}</p>
@@ -45,10 +52,19 @@ export function BusinessPlanStandards({ lead }: BusinessPlanStandardsProps) {
 
         <div className="grid gap-8 md:grid-cols-3">
           {standards.map((item) => (
-            <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm" key={item.title}>
-              <span className="material-symbols-outlined mb-6 text-4xl text-primary">{item.icon}</span>
-              <h3 className="mb-4 text-xl font-bold text-charcoal">{item.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-600">{item.text}</p>
+            <div
+              className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm"
+              key={item.title}
+            >
+              <span className="material-symbols-outlined mb-6 text-4xl text-primary">
+                {item.icon}
+              </span>
+              <h3 className="mb-4 text-xl font-bold text-charcoal">
+                {item.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>

@@ -38,7 +38,7 @@ export function BusinessPlanDetailBlocks() {
               <div className="flex h-full flex-col p-12">
                 <Image
                   alt="Financial planning narrative visual"
-                  className="mb-6 h-40 w-full rounded-xl object-cover md:h-auto md:flex-1"
+                  className="mb-6 h-40 w-full rounded-xl object-cover md:h-64 lg:h-80"
                   src="/business-plan.png"
                   width={1400}
                   height={500}
