@@ -30,7 +30,7 @@ export function BusinessPlanHero({ title, description, imageSrc }: BusinessPlanH
           <div className="absolute inset-4 rotate-3 rounded-[2rem] bg-primary/5" />
           <Image
             alt="Business planning strategy visual"
-            className="relative z-10 aspect-[4/3] w-full max-w-md rounded-xl object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0 lg:max-w-lg"
+            className="relative z-10 aspect-[9/2] w-full max-w-[25.25rem] rounded-xl object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0 lg:max-w-[28.75rem]"
             src={imageSrc}
             width={1600}
             height={900}
