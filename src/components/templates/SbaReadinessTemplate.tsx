@@ -5,7 +5,6 @@ import { SbaReadinessCta } from "@/components/organisms/sba-readiness/SbaReadine
 import { SbaReadinessDeliverables } from "@/components/organisms/sba-readiness/SbaReadinessDeliverables";
 import { SbaReadinessFaq } from "@/components/organisms/sba-readiness/SbaReadinessFaq";
 import { SbaReadinessHero } from "@/components/organisms/sba-readiness/SbaReadinessHero";
-import { SbaReadinessPackages } from "@/components/organisms/sba-readiness/SbaReadinessPackages";
 import { SbaReadinessTestimonials } from "@/components/organisms/sba-readiness/SbaReadinessTestimonials";
 
 type SbaReadinessTemplateProps = {
@@ -22,7 +21,6 @@ export function SbaReadinessTemplate({ paragraphs }: SbaReadinessTemplateProps) 
       <SiteHeader />
       <SbaReadinessHero description={description} />
       <SbaReadinessDeliverables />
-      <SbaReadinessPackages />
       <SbaReadinessTestimonials />
       <SbaReadinessFaq />
       <SbaReadinessCta />
