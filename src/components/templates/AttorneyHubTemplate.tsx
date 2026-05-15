@@ -183,7 +183,7 @@ function AttorneyHubLandingPage() {
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
               >
                 Book a Call
@@ -350,13 +350,13 @@ function AttorneyHubLandingPage() {
           </p>
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-colors hover:bg-primary"
             >
               Book a Call
             </Link>
             <Link
-              href="mailto:partners@stratena.com?subject=Start%20First%20Case"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-100"
             >
               Start First Case
@@ -367,7 +367,7 @@ function AttorneyHubLandingPage() {
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 p-3 shadow-2xl backdrop-blur sm:hidden">
         <Link
-          href="mailto:partners@stratena.com?subject=Partner%20Call%20Request"
+          href="/contact"
           className="inline-flex w-full items-center justify-center rounded-lg bg-navy px-4 py-3 text-sm font-bold text-white"
         >
           Book a Call
