@@ -76,12 +76,12 @@ export function AttorneyHubFinalCta() {
         </p>
         <div className="mt-12 inline-flex flex-col gap-6 sm:flex-row">
           <Link
-            href="mailto:partners@stratena.com"
+            href="/contact"
             className="inline-flex items-center justify-center rounded-xl bg-primary px-10 py-5 text-lg font-bold text-white shadow-lg transition-colors hover:bg-primary/90"
           >
             Request a Firm Briefing
           </Link>
-          <Button variant="secondary" size="lg">Schedule a Call</Button>
+          <Button as={Link} href="/contact" variant="secondary" size="lg">Schedule a Call</Button>
         </div>
         <p className="mt-8 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">
           Institutional Grade • Attorney Led • Case Centric
