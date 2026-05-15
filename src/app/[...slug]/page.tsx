@@ -206,7 +206,7 @@ export async function generateMetadata({
 
 export function generateStaticParams() {
   return Object.keys(pageLookup)
-    .filter((path) => path !== "/" && path !== "/about")
+    .filter((path) => path !== "/" && path !== "/about" && path !== "/contact")
     .map((path) => ({ slug: path.slice(1).split("/") }));
 }
 
