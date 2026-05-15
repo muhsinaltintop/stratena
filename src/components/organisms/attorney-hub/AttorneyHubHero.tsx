@@ -26,7 +26,9 @@ export function AttorneyHubHero({
           <h1 className="text-4xl font-extrabold leading-tight text-charcoal">{conciseTitle}</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-600">{description}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button size="md">Request a Firm Briefing</Button>
+            <Button as={Link} href="/contact" size="md">
+              Request a Firm Briefing
+            </Button>
             <Link
               href="#services"
               className="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 px-8 py-4 text-base font-bold text-charcoal transition-colors hover:bg-slate-50"
