@@ -26,7 +26,7 @@ export function BusinessPlanTemplate({ title, paragraphs, isSubpage = false }: B
   const standardLead = paragraphs[1] ?? "A Stratena plan is not just a document; it is a legal defense engineered to pre-emptively address RFE triggers.";
   const businessPlanImages = ["/business-plan.png", "/business-plan-2.png"];
   const heroImage = businessPlanImages[Math.floor(Math.random() * businessPlanImages.length)];
-  const bodyParagraphs = isSubpage ? paragraphs.slice(1) : paragraphs;
+  const bodyParagraphs = isSubpage ? paragraphs.slice(2) : paragraphs;
 
   return (
     <main className="bg-background-light text-slate-900">
