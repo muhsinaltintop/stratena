@@ -39,7 +39,7 @@ export function BusinessPlanDetailBlocks() {
                 <Image
                   alt="Financial planning narrative visual"
                   className="mb-6 h-40 w-full rounded-xl object-cover md:h-64 lg:h-80"
-                  src="/business-plan.png"
+                  src="/financial-narative.png"
                   width={1400}
                   height={500}
                 />
