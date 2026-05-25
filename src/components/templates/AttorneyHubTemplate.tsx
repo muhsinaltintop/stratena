@@ -304,9 +304,9 @@ function AttorneyHubLandingPage() {
           <h2 className="text-3xl font-extrabold text-charcoal md:text-4xl">How it works</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {["Send case details", "We scope timeline & requirements", "We build documentation package", "You file confidently"].map((step, index) => (
-              <article key={step} className="flex min-h-[170px] flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+              <article key={step} className="flex min-h-[170px] flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Step {index + 1}</p>
-                <h3 className="mt-3 text-lg font-bold text-charcoal">{step}</h3>
+                <h3 className="mt-3 flex flex-1 items-center text-lg font-bold text-charcoal">{step}</h3>
               </article>
             ))}
           </div>
