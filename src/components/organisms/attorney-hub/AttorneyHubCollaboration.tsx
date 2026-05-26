@@ -55,9 +55,7 @@ export function AttorneyHubCollaboration() {
               <blockquote className="text-xl italic md:text-2xl">
                 &ldquo;Stratena&apos;s ability to translate complex business operations into the &lsquo;National Importance&rsquo; narrative is unparalleled.&rdquo;
               </blockquote>
-              <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-200">
-                — Senior Partner, Global Mobility Law Group
-              </p>
+              
             </div>
           </div>
         </div>
