@@ -95,11 +95,21 @@ export function NavLinks() {
               className="absolute inset-0 bg-slate-950/35 backdrop-blur-[1px]"
               onClick={closeMenu}
             />
-            <nav
-              id="mobile-navigation"
-              className="absolute right-3 top-3 max-h-[calc(100vh-1.5rem)] w-[min(24rem,calc(100vw-1.5rem))] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
-            >
-              <ul className="space-y-2">
+            <div className="absolute right-3 top-3 w-[min(24rem,calc(100vw-1.5rem))]">
+              <button
+                type="button"
+                aria-label="Close navigation menu"
+                className="absolute -right-2 -top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-md transition-colors hover:border-primary hover:text-primary"
+                onClick={closeMenu}
+              >
+                <span className="material-symbols-outlined text-base">close</span>
+              </button>
+
+              <nav
+                id="mobile-navigation"
+                className="max-h-[calc(100vh-1.5rem)] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
+              >
+                <ul className="space-y-2">
                 {navItems.map((item) => {
                   const hasChildren = Boolean(item.children?.length);
                   const isSubmenuOpen = openSubmenu === item.label;
@@ -152,8 +162,9 @@ export function NavLinks() {
                     </li>
                   );
                 })}
-              </ul>
-            </nav>
+                </ul>
+              </nav>
+            </div>
           </div>
         ) : null}
       </div>
