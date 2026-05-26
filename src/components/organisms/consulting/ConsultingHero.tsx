@@ -5,9 +5,10 @@ import Link from "next/link";
 type ConsultingHeroProps = {
   title: string;
   description: string;
+  imageSrc?: string;
 };
 
-export function ConsultingHero({ title, description }: ConsultingHeroProps) {
+export function ConsultingHero({ title, description, imageSrc = "/company-checkup.png" }: ConsultingHeroProps) {
   const conciseTitle = limitHeadingWords(title);
 
   return (
@@ -16,7 +17,7 @@ export function ConsultingHero({ title, description }: ConsultingHeroProps) {
         <Image
           alt="Executive Boardroom"
           className="h-full w-full object-cover grayscale brightness-50"
-          src="/company-checkup.png"
+          src={imageSrc}
         
             width={1600}
             height={900}
