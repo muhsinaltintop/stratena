@@ -107,10 +107,10 @@ export function SbaReadinessDeliverables() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
               <article key={benefit} className="rounded-xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                <div className="mb-3 inline-flex rounded-full bg-primary/10 p-2 text-primary">
-                  <span className="material-symbols-outlined">verified</span>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal">{benefit}</h3>
+                <h3 className="flex items-start gap-2 text-lg font-semibold text-charcoal">
+                  <span className="material-symbols-outlined text-primary">verified</span>
+                  <span>{benefit}</span>
+                </h3>
               </article>
             ))}
           </div>
