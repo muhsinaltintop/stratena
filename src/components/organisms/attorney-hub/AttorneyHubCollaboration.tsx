@@ -44,7 +44,7 @@ export function AttorneyHubCollaboration() {
 
           <div className="relative min-h-[360px] bg-navy">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoEarJkPw4oBY59p02ll1TyQLaVM2bTlNJfAKTmxebBLOwJExqI_bhA_KgMfVS4vZV_VX66KwS967SD0wCHJYcbqSDFTDqvWZMJc6FBQu3YKjtpjbBZXFVZaJDKbdzcArRM7O8UU5cTDa-uik717s1fPzeTwldp2t1JYRP6yv83sM_earLBq2nXwAOmaY0FvO7p8jR8u_zrOt6g_Un4QqUpTEDA_noBOg_hd5yvW1VuOlVKxcPaFPtk4qvmY5ZSVxCCWF19_TsrLot"
+              src="/strategy.png"
               alt="Collaboration between legal and strategy teams"
               className="absolute inset-0 h-full w-full object-cover opacity-60 grayscale"
             
