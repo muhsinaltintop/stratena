@@ -99,6 +99,17 @@ export function NavLinks() {
               id="mobile-navigation"
               className="absolute right-3 top-3 max-h-[calc(100vh-1.5rem)] w-[min(24rem,calc(100vw-1.5rem))] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 shadow-xl"
             >
+              <div className="mb-3 flex justify-end">
+                <button
+                  type="button"
+                  aria-label="Close navigation menu"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition-colors hover:border-primary hover:text-primary"
+                  onClick={closeMenu}
+                >
+                  <span className="material-symbols-outlined text-base">close</span>
+                </button>
+              </div>
+
               <ul className="space-y-2">
                 {navItems.map((item) => {
                   const hasChildren = Boolean(item.children?.length);
