@@ -30,7 +30,7 @@ export function SbaReadinessHero({ description }: SbaReadinessHeroProps) {
           <ul className="mt-8 grid gap-3 sm:grid-cols-3">
             {trustIndicators.map((item) => (
               <li key={item} className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm">
-                <span className="material-symbols-outlined text-[18px] text-primary">check</span>
+                <span className="material-symbols-outlined text-[18px] text-green-600">check</span>
                 <span>{item}</span>
               </li>
             ))}
