@@ -235,7 +235,7 @@ export default async function MenuPage({
   }
 
   if (currentPath.startsWith("/consulting")) {
-    return <ConsultingTemplate title={page.title} paragraphs={paragraphs} />;
+    return <ConsultingTemplate title={page.title} paragraphs={paragraphs} currentPath={currentPath} />;
   }
 
   if (currentPath.startsWith("/sba-loan-readiness-packages")) {
