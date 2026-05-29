@@ -13,7 +13,10 @@ import { limitHeadingWords } from "@/lib/headings";
 
 export const dynamicParams = false;
 
-const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+});
 
 const pageContent: Record<string, string[]> = {
   "/about": [
@@ -45,40 +48,61 @@ const pageContent: Record<string, string[]> = {
 
     "Stratena develops EB-1C business plans that organize company structure, expansion strategy, market opportunity, staffing plans, and management responsibilities into a clear and credible business narrative. We focus on showing that the U.S. operation has substance, direction, and a practical role within the larger organization.",
 
-    "Our goal is to strengthen the business side of a complex petition by creating a plan that is detailed enough to be useful, but clear enough to be persuasive. The final result is a structured document that supports both business logic and case presentation.",
+    "An immigration-grade EB-1C business plan should support a broader corporate narrative centered on multinational growth, executive or managerial leadership, and the strategic importance of the U.S. entity. It should explain how the U.S. company fits within the larger international enterprise and why its existence serves a legitimate commercial function. A strong EB-1C business plan helps present the U.S. operation not as an isolated startup concept, but as an intentional extension of an established business structure with a defined purpose, management framework, and long-term growth strategy.",
+
+    "A well-developed EB-1C business plan should clearly describe the relationship between the foreign company and the U.S. entity. This includes the ownership structure, operational connection, business purpose, and commercial coordination between the two organizations. The plan should explain how the U.S. business contributes to the overall enterprise, whether through expansion, market development, client servicing, distribution, administration, or strategic growth. By showing how the companies work together as part of a larger business platform, the plan helps reinforce the seriousness and legitimacy of the multinational operation.",
+    "The document should also place strong emphasis on management and organizational structure. Since EB-1C matters often involve executive or managerial roles, the business plan should carefully explain how the U.S. entity will be staffed, how functions will be delegated, and how leadership responsibilities will be carried out. It should present a practical operating model that shows the company is positioned for real business activity and meaningful development. This includes explaining team growth, departmental responsibilities, service or product delivery, and the business logic behind the expansion of the U.S. operation.",
+    "A strong EB-1C visa business plan should also include realistic financial direction and measurable commercial objectives. Revenue strategy, market positioning, operational milestones, and staffing growth should work together to show that the business has a defined path forward. When prepared correctly, an immigration-grade EB-1C business plan becomes more than a standard company summary. It becomes a structured business narrative that supports the commercial purpose of the U.S. entity, the logic of multinational expansion, and the strategic leadership role within the broader enterprise.",
   ],
   "/business-plan/eb-2-niw-business-plan": [
     "An EB-2 NIW business plan should introduce the proposed endeavor as a structured venture with identifiable services, market need, and implementation milestones. The opening paragraph works best when it translates a professional concept into an executable business framework, showing how the work will be carried out, monetized, and sustained in practical commercial terms.",
     "Stratena prepares EB-2 NIW business plans that combine business strategy, market analysis, operational milestones, and financial direction into a thoughtful and organized document. We focus on helping clients articulate what they plan to build, how they plan to build it, and why the business model is commercially sound.",
-    "Our EB-2 NIW business plans are especially useful for professionals, founders, and independent operators who need their proposed venture to feel clear, serious, and actionable. The result is a business plan that supports both credibility and clarity from the very first page.",
+    "An immigration-grade EB-2 NIW business plan should turn a professional vision into a structured and commercially credible business narrative. It should clearly define the proposed endeavor, explain what problem it addresses, and show how the work creates practical, economic, scientific, professional, or industry-related value. A strong EB-2 NIW business plan helps translate expertise, innovation, and long-term goals into a format that feels organized, actionable, and grounded in real-world execution. It should show that the proposed endeavor is more than an abstract idea and that it has a meaningful framework for development.",
+    "A well-prepared EB-2 NIW business plan should describe the nature of the endeavor in detail, including the services, solutions, products, initiatives, or systems the applicant intends to develop. It should explain who benefits from the work, what sector or market it impacts, and why the endeavor has practical relevance. Whether the case involves healthcare, engineering, technology, education, consulting, public-interest innovation, research commercialization, or another specialized field, the plan should connect professional background to a clear strategic direction. The goal is to present the endeavor as thoughtful, needed, and realistically positioned for advancement.",
+    "Operational planning is equally important in an EB-2 NIW business plan. The document should explain how the endeavor will be carried out, what business or professional model supports it, what resources are needed, and how the work will progress over time. It should show implementation logic, development phases, and a clear path from concept to measurable activity. Even when the proposed endeavor is highly specialized or mission-driven, the plan should still feel commercially and operationally coherent. This helps create a stronger impression of seriousness, structure, and readiness.",
+    "A strong EB-2 NIW business plan should also include financial and strategic direction that supports the broader narrative. Revenue opportunities, funding logic, operational expenses, partnerships, scalability, and market relevance should all align with the proposed endeavor. When drafted properly, an immigration-grade EB-2 NIW business plan becomes a valuable tool for presenting both professional purpose and business discipline. It helps show that the applicant has not only a strong idea, but also a credible plan to execute, grow, and create meaningful impact through a structured endeavor.",
   ],
   "/business-plan/eb-5-business-plan": [
     "An EB-5 business plan should open with a clear explanation of the project structure, deployment of capital, and the operating assumptions that support planned job creation. The introductory narrative needs to align investment mechanics with real business execution so the reader can evaluate how the enterprise is expected to launch, scale, and produce measurable economic activity over time.",
 
     "Stratena develops EB-5 business plans that bring together market opportunity, business structure, use of funds, hiring plans, operational strategy, and financial projections in one cohesive document. We focus on consistency, realism, and clarity so that the plan reads like a serious business case rather than a generic planning exercise.",
 
-    "Our EB-5 work is designed to help translate complex projects into organized and defensible narratives. The final business plan supports a stronger overall presentation by making the business itself easier to understand and evaluate.",
+    "An immigration-grade EB-5 business plan requires a comprehensive and well-organized presentation of the enterprise, the investment structure, the operating model, and the job creation strategy. It should clearly explain what the business will do, how the investment capital will be used, how operations will be launched and expanded, and how the company expects to create measurable economic activity over time. A strong EB-5 business plan is not simply a narrative description. It is a detailed business document that should present the enterprise as credible, commercially viable, and supported by a realistic implementation roadmap.",
+    "A well-developed EB-5 business plan should provide a clear explanation of the business concept, market opportunity, target customer base, operational strategy, and competitive landscape. It should show why the enterprise has a place in the market and how it intends to generate revenue in a sustainable way. Whether the business involves hospitality, retail, logistics, healthcare, manufacturing, franchising, construction, food service, technology, or another industry, the plan should align the investment with a logical commercial model. The reader should come away with a clear understanding of how the business functions and how growth will occur.",
+
+    "Operational detail is especially important in an EB-5 visa business plan. The plan should explain how the company will open, who will manage key functions, what equipment or infrastructure will be needed, how staffing will be phased, and how the business will move from startup or expansion stage into stable operations. A strong plan should also present a detailed hiring roadmap that matches the size, nature, and development stage of the business. This level of specificity helps support the larger business case by showing that the enterprise is planned with seriousness and practical foresight.",
+
+    "Financial presentation and job creation logic are central to an effective EB-5 business plan. Capital allocation, projected revenues, operating expenses, staffing growth, and timing assumptions should all align with the company’s operational narrative. The business plan should make clear how the investment supports development and how the business expects to generate the jobs associated with its growth. When properly prepared, an immigration-grade EB-5 business plan becomes a strategic document that presents the enterprise as organized, investment-ready, and capable of moving forward with structure, discipline, and measurable commercial progress.",
   ],
   "/business-plan/h1-b-business-plan": [
     "For founder-led and growth-stage companies, an H-1B business plan should introduce the business as an active commercial operation with defined services, internal structure, and revenue strategy. The first paragraph should set up how the company functions today and how planned growth, staffing, and operations support a credible long-term business trajectory.",
 
     "Stratena prepares H-1B business plans that describe the company’s services, market position, staffing approach, revenue model, and projected growth in a clear and professional way. We focus on building a document that helps the business look credible, structured, and commercially grounded.",
 
-    "Our approach is especially useful when a business needs to present itself more clearly as part of a broader legal or strategic matter. The final result is a practical business plan that improves both business communication and overall case presentation.",
+    "In startup, founder-led, or growth-stage business contexts, an immigration-grade H-1B business plan can play an important role in explaining the company’s commercial substance, operating model, and long-term strategic direction. It should present the business as organized, active, and commercially grounded, rather than informal or speculative. A strong H-1B business plan helps explain what the company does, how it generates value, how it is structured operationally, and how its business activities support its broader objectives in the market.", 
+    "A well-written H-1B business plan should describe the company’s products or services, market focus, customer strategy, and operational workflow in a way that makes the business easy to understand. The document should show that the enterprise has a real commercial purpose, a functioning business model, and a clear reason for growth. For startups and founder-led businesses in particular, this kind of planning helps present the company as disciplined and professionally structured. It moves the narrative beyond general ambition and into practical business reality.",
+    "The plan should also explain how the business is organized internally and how responsibilities are managed. This may include team structure, department functions, operational oversight, service delivery, sales processes, and expansion plans. A thoughtful H-1B business plan should show that the company is capable of carrying out its business strategy with consistency and professional management. It should also demonstrate that the business is positioned for continuity and development, rather than existing only as an early concept or loosely defined venture.",
+    "From a strategic and financial perspective, an immigration-grade H-1B business plan should include realistic revenue expectations, operating expenses, business milestones, and growth plans. These elements should support the overall message that the company has business substance, commercial direction, and a clear operating purpose. When properly developed, an H-1B business plan becomes more than a supporting business summary. It becomes a professional presentation of the company’s structure, activity, and growth potential, helping communicate the seriousness and legitimacy of the business itself.",
   ],
   "/business-plan/l-1-business-plan": [
     "An L-1 business plan should begin by explaining the U.S. expansion in operational terms: what the new entity will do, how it will be staffed, and how it integrates with the foreign company’s existing business activity. This framing helps establish that the transfer supports a real commercial buildout with defined management needs, not a speculative market entry.",
 
     "Stratena creates L-1 business plans that connect company background, U.S. expansion plans, organizational structure, market opportunity, operational detail, and financial projections into one structured narrative. We focus on helping clients present a U.S. operation that feels purposeful, credible, and execution-ready.",
 
-    "Each L-1 business plan is tailored to the company’s industry, growth plans, and cross-border business structure. The result is a document that helps clarify the logic of the expansion while presenting the business in a more organized and persuasive way.",
+    "An immigration-grade L-1 business plan should clearly explain how the U.S. entity will operate, grow, and support the transfer of a qualifying employee within a legitimate business framework. It should present the company as a real commercial operation with a defined structure, practical growth plan, and meaningful role in the U.S. market. A strong L-1 business plan helps show that the business is more than an idea or a placeholder. It is a functioning or soon-to-be functioning enterprise with clear operational direction and strategic intent.", 
+    "A high-quality L-1 business plan should describe the nature of the U.S. company, its products or services, target market, competitive position, and business objectives. It should also explain how the U.S. entity relates to the foreign company and why the expansion or transfer makes commercial sense. Whether the U.S. office is being established to expand sales, manage operations, serve clients, coordinate distribution, or develop a new market presence, the plan should present that purpose in a clear and commercially logical way. The business narrative should feel organized, realistic, and connected to actual growth goals.",
+    "The operational section of an L-1 visa business plan should be especially detailed. It should explain how the company will function on a day-to-day basis, how staffing will grow over time, and how management responsibilities will be structured. This includes presenting a practical hiring roadmap, internal reporting logic, service or product delivery methods, and the overall operating model of the U.S. office. A strong plan should demonstrate that the business will not remain minimal or inactive, but is positioned to evolve into a stable and productive operation.",
+    "Financially, an immigration-grade L-1 business plan should support the business narrative with realistic projections and measurable milestones. Revenue strategy, operating costs, staffing growth, and market development assumptions should all align with the broader commercial purpose of the entity. When properly written, an L-1 business plan becomes a strategic document that helps explain the business rationale behind the U.S. operation, the structure needed for growth, and the seriousness of the company’s expansion plans in the United States.",
   ],
   "/business-plan/sba-loan-business-plans": [
     "An SBA loan business plan should open with a lender-focused explanation of the business model, financing purpose, and repayment logic tied to expected operations. The introduction should make clear why the requested capital is necessary, how it will be applied in the business, and how projected performance supports a responsible borrowing case.",
 
     "Stratena prepares SBA loan business plans with lender-facing structure, market research, operational detail, and disciplined financial projections. We develop plans for new businesses, acquisitions, expansions, refinancing scenarios, and working capital needs, always focusing on clarity and business logic.",
 
-    "Our SBA loan business plans are designed to help borrowers enter funding conversations with stronger materials and a more professional presentation. By combining business narrative with practical financial planning, we help businesses communicate readiness, purpose, and commercial viability more effectively.",
+    "An SBA loan business plan should help a lender understand not only what the business does, but also how it operates, how the requested funds will be used, and how repayment is expected to be supported over time. It should present the company as organized, commercially sound, and financially disciplined. A strong SBA business plan is a critical part of the borrower’s overall credibility. It helps show that the business owner understands the market, has a practical operating strategy, and is prepared to manage growth with clarity and responsibility.", 
+    "A well-prepared SBA loan business plan should clearly describe the company’s products or services, target customers, market opportunity, industry positioning, and competitive strengths. It should explain how the business makes money, what demand it serves, and why it is well-positioned for continued activity or expansion. Whether the loan is being used for startup costs, equipment, working capital, inventory, renovations, acquisitions, or business expansion, the plan should connect the requested funds directly to a logical business purpose. The lender should be able to understand not just the need for financing, but also the business logic behind it.", 
+    "Operational detail is another major strength in an effective SBA business plan. The document should explain how the business runs, who manages key functions, how staff and operations are organized, and what systems are in place to support daily performance. It should also show how the company plans to maintain service quality, manage expenses, and achieve its next phase of development. A thoughtful and well-structured operations section helps create confidence that the business is not only viable on paper, but also manageable in practice.", 
+    "A strong SBA loan business plan should also include credible financial projections and a realistic repayment narrative. Revenue forecasts, cost assumptions, cash flow expectations, and growth plans should work together to demonstrate financial awareness and operational readiness. When drafted correctly, an SBA loan business plan becomes far more than a descriptive company overview. It becomes a lender-facing business presentation that supports trust, preparedness, and long-term commercial sustainability.",
   ],
   "/consulting": [
     "Stratena’s consulting services are built for businesses that need more than a document. We help clients strengthen the strategy, operations, and financial logic behind the business so that it is not only well presented, but also better prepared to perform and grow.",
@@ -168,7 +192,6 @@ const pageContent: Record<string, string[]> = {
   ],
 };
 
-
 export async function generateMetadata({
   params,
 }: {
@@ -187,7 +210,8 @@ export async function generateMetadata({
 
   if (currentPath === "/attorney-hub/business-valuation") {
     return {
-      title: "Business Valuation Services | Professional Company Valuation | Stratena",
+      title:
+        "Business Valuation Services | Professional Company Valuation | Stratena",
       description:
         "Get expert business valuation services for transactions, legal matters, planning, and growth. Professional reports for attorneys, owners, and investors.",
     };
@@ -195,7 +219,8 @@ export async function generateMetadata({
 
   if (currentPath === "/attorney-hub") {
     return {
-      title: "Attorney Hub | White-Label Business Plans for Immigration Attorneys | Stratena",
+      title:
+        "Attorney Hub | White-Label Business Plans for Immigration Attorneys | Stratena",
       description:
         "Partner with Stratena for premium E-2, L-1, EB-5 and investor visa business plans. White-label support for immigration attorneys and law firms.",
     };
@@ -231,11 +256,23 @@ export default async function MenuPage({
   const conciseTitle = limitHeadingWords(page.title, 6);
 
   if (currentPath.startsWith("/business-plan")) {
-    return <BusinessPlanTemplate title={page.title} paragraphs={paragraphs} isSubpage={currentPath !== "/business-plan"} />;
+    return (
+      <BusinessPlanTemplate
+        title={page.title}
+        paragraphs={paragraphs}
+        isSubpage={currentPath !== "/business-plan"}
+      />
+    );
   }
 
   if (currentPath.startsWith("/consulting")) {
-    return <ConsultingTemplate title={page.title} paragraphs={paragraphs} currentPath={currentPath} />;
+    return (
+      <ConsultingTemplate
+        title={page.title}
+        paragraphs={paragraphs}
+        currentPath={currentPath}
+      />
+    );
   }
 
   if (currentPath.startsWith("/sba-loan-readiness-packages")) {
@@ -251,7 +288,9 @@ export default async function MenuPage({
   }
 
   return (
-    <div className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900`}>
+    <div
+      className={`${newsreader.variable} min-h-screen bg-[#f6f6f8] text-slate-900`}
+    >
       <SiteHeader />
 
       <main>
@@ -260,12 +299,21 @@ export default async function MenuPage({
             <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(#564a64_1px,transparent_1px)] [background-size:40px_40px]" />
           </div>
           <div className="relative mx-auto max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{title}</p>
-            <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900" style={{ fontFamily: "var(--font-newsreader)" }}>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              {title}
+            </p>
+            <h1
+              className="mt-4 text-4xl font-bold leading-tight text-slate-900"
+              style={{ fontFamily: "var(--font-newsreader)" }}
+            >
               {conciseTitle}
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-lg italic text-slate-600 md:text-xl" style={{ fontFamily: "var(--font-newsreader)" }}>
-              Built for high-stakes decisions, legal precision, and confident execution.
+            <p
+              className="mx-auto mt-6 max-w-3xl text-lg italic text-slate-600 md:text-xl"
+              style={{ fontFamily: "var(--font-newsreader)" }}
+            >
+              Built for high-stakes decisions, legal precision, and confident
+              execution.
             </p>
           </div>
         </section>
@@ -273,18 +321,25 @@ export default async function MenuPage({
         <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:px-20">
           <div className="space-y-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
             {paragraphs.map((paragraph) => (
-              <p className="text-lg leading-relaxed text-slate-700" key={paragraph}>
+              <p
+                className="text-lg leading-relaxed text-slate-700"
+                key={paragraph}
+              >
                 {paragraph}
               </p>
             ))}
           </div>
 
           <aside className="rounded-2xl bg-[#1E2A38] p-8 text-white shadow-sm">
-            <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-newsreader)" }}>
+            <h2
+              className="text-2xl font-bold"
+              style={{ fontFamily: "var(--font-newsreader)" }}
+            >
               Need a custom scope?
             </h2>
             <p className="mt-4 text-sm leading-6 text-slate-200">
-              Every engagement is built around your legal context, strategic objective, and documentation standards.
+              Every engagement is built around your legal context, strategic
+              objective, and documentation standards.
             </p>
             <Link
               href="/contact"
