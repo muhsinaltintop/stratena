@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { SiteFooter } from "@/components/organisms/SiteFooter";
+import { SocialMediaLinks } from "@/components/molecules/SocialMediaLinks";
 
 type FormStatus = {
   tone: "success" | "error";
@@ -67,6 +68,10 @@ export default function ContactPage() {
               <p className="mt-2 text-slate-300">
                 <span className="font-medium text-white">Phone:</span> +1 (832) 270-5239
               </p>
+              <div className="mt-6 border-t border-slate-700 pt-6">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Social media</h3>
+                <SocialMediaLinks className="mt-4" linkClassName="px-4 py-2" showLabels />
+              </div>
             </aside>
 
             <form onSubmit={handleSubmit} className="rounded-2xl border border-slate-700 bg-slate-900/30 p-6 sm:p-8">

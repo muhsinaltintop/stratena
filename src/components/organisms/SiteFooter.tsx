@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/atoms/Logo";
+import { SocialMediaLinks } from "@/components/molecules/SocialMediaLinks";
 
 export function SiteFooter() {
   return (
@@ -35,10 +36,7 @@ export function SiteFooter() {
           <h6 className="mb-6 font-bold text-white">Contact</h6>
           <p className="mb-2 text-sm">info@stratena.com</p>
           <p className="text-sm">+1 (832) 270-5239</p>
-          <div className="mt-6 flex gap-4">
-            <span className="material-symbols-outlined cursor-pointer hover:text-white">language</span>
-            <span className="material-symbols-outlined cursor-pointer hover:text-white">share</span>
-          </div>
+          <SocialMediaLinks className="mt-6" linkClassName="hover:text-white" />
         </div>
       </div>
       <div className="mx-auto mt-12 flex max-w-7xl flex-col justify-between gap-4 border-t border-slate-800 pt-8 text-xs md:mt-16 md:flex-row">
