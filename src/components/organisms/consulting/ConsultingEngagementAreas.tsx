@@ -35,8 +35,12 @@ export function ConsultingEngagementAreas({ paragraphs }: ConsultingEngagementAr
         <div className="grid grid-cols-1 gap-px bg-slate-200 md:grid-cols-3">
           {areaItems.map((item, index) => (
             <article className="bg-white p-12 transition-colors duration-500 hover:bg-slate-50" key={item.title}>
-              <span className="material-symbols-outlined mb-8 text-4xl text-primary">{item.icon}</span>
-              <h3 className="mb-4 text-2xl font-bold">{item.title}</h3>
+              <h3 className="mb-4 flex items-center gap-3 text-2xl font-bold">
+                <span className="material-symbols-outlined text-4xl text-primary" aria-hidden="true">
+                  {item.icon}
+                </span>
+                <span>{item.title}</span>
+              </h3>
               <p className="mb-8 leading-relaxed text-slate-600">{paragraphs[index] ?? paragraphs[0]}</p>
               <ul className="space-y-3 text-sm font-semibold text-navy">
                 {item.bullets.map((bullet) => (
