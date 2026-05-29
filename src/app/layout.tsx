@@ -7,6 +7,11 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 export const metadata: Metadata = {
   title: "Stratena",
   description: "Premium strategic consulting and business planning",
+  icons: {
+    icon: "/stratenaIcon.png",
+    shortcut: "/stratenaIcon.png",
+    apple: "/stratenaIcon.png",
+  },
 };
 
 export default function RootLayout({
