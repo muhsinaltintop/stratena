@@ -28,10 +28,12 @@ export function ConsultingAdvantage() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {advantageItems.map((item) => (
             <article className="group text-center" key={item.title}>
-              <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 group-hover:bg-navy group-hover:text-white">
-                <span className="material-symbols-outlined text-3xl">{item.icon}</span>
-              </div>
-              <h3 className="mb-4 text-xl font-extrabold uppercase tracking-tighter">{item.title}</h3>
+              <h3 className="mb-4 inline-flex items-center justify-center gap-3 text-xl font-extrabold uppercase tracking-tighter">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 group-hover:bg-navy group-hover:text-white" aria-hidden="true">
+                  <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+                </span>
+                <span>{item.title}</span>
+              </h3>
               <p className="leading-relaxed text-slate-600">{item.text}</p>
             </article>
           ))}

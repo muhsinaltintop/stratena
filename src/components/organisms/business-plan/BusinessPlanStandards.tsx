@@ -54,11 +54,11 @@ export function BusinessPlanStandards({ lead }: BusinessPlanStandardsProps) {
               className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm"
               key={item.title}
             >
-              <span className="material-symbols-outlined mb-6 text-4xl text-primary">
-                {item.icon}
-              </span>
-              <h3 className="mb-4 text-xl font-bold text-charcoal">
-                {item.title}
+              <h3 className="mb-4 flex items-center gap-3 text-xl font-bold text-charcoal">
+                <span className="material-symbols-outlined text-4xl text-primary" aria-hidden="true">
+                  {item.icon}
+                </span>
+                <span>{item.title}</span>
               </h3>
               <p className="text-sm leading-relaxed text-slate-600">
                 {item.text}

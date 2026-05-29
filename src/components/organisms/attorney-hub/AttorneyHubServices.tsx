@@ -37,10 +37,12 @@ export function AttorneyHubServices() {
               key={card.title}
               className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-                <span className="material-symbols-outlined">{card.icon}</span>
-              </div>
-              <h3 className="text-xl font-bold text-charcoal">{card.title}</h3>
+              <h3 className="flex items-center gap-3 text-xl font-bold text-charcoal">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white" aria-hidden="true">
+                  <span className="material-symbols-outlined">{card.icon}</span>
+                </span>
+                <span>{card.title}</span>
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-slate-600">{card.description}</p>
               <ul className="mt-6 space-y-3 text-xs font-bold uppercase tracking-[0.16em] text-charcoal">
                 {card.bullets.map((item) => (
