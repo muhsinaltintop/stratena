@@ -1,58 +1,79 @@
 import { NextResponse } from "next/server";
+import { sendContactEmails } from "@/lib/contact/email-service";
+import { checkContactRateLimit } from "@/lib/contact/rate-limit";
+import { contactFormSchema, flattenContactValidationErrors } from "@/lib/contact/schema";
+import { sanitizeContactSubmission } from "@/lib/contact/sanitize";
+import { verifyTurnstileToken } from "@/lib/contact/turnstile";
 
-type ContactPayload = {
-  name?: string;
-  email?: string;
-  phone?: string;
-  message?: string;
+export const dynamic = "force-dynamic";
+
+type ContactApiResponse = {
+  ok?: true;
+  error?: string;
+  fieldErrors?: Record<string, string>;
 };
 
-export async function POST(request: Request) {
-  const payload = (await request.json()) as ContactPayload;
+function getClientIp(request: Request) {
+  const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  const realIp = request.headers.get("x-real-ip")?.trim();
+  const cfConnectingIp = request.headers.get("cf-connecting-ip")?.trim();
 
-  if (!payload.name || !payload.email || !payload.message) {
-    return NextResponse.json({ error: "Name, email, and message are required." }, { status: 400 });
-  }
+  return cfConnectingIp || forwardedFor || realIp || "anonymous";
+}
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM, CONTACT_TO } = process.env;
-
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-    return NextResponse.json(
-      {
-        error:
-          "SMTP is not configured. Add SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM, and CONTACT_TO in your environment."
-      },
-      { status: 500 }
-    );
-  }
-
+async function readJson(request: Request) {
   try {
-    const dynamicImporter = new Function("return import('nodemailer')");
-    const nodemailer = await dynamicImporter();
-
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(SMTP_PORT),
-      secure: Number(SMTP_PORT) === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS }
-    });
-
-    await transporter.sendMail({
-      from: SMTP_FROM ?? SMTP_USER,
-      to: CONTACT_TO ?? "info@stratena.com",
-      replyTo: payload.email,
-      subject: `New contact form submission from ${payload.name}`,
-      text: `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone ?? "N/A"}\n\nMessage:\n${payload.message}`
-    });
-
-    return NextResponse.json({ ok: true });
+    return await request.json();
   } catch {
-    return NextResponse.json(
+    return null;
+  }
+}
+
+export async function POST(request: Request) {
+  const clientIp = getClientIp(request);
+  const rateLimit = checkContactRateLimit(clientIp);
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json<ContactApiResponse>(
+      { error: "Too many contact form attempts. Please wait a few minutes and try again." },
       {
-        error:
-          "Unable to send email. Ensure nodemailer is installed and SMTP credentials are valid. Run: npm install nodemailer"
+        status: 429,
+        headers: { "Retry-After": String(rateLimit.retryAfterSeconds) }
+      }
+    );
+  }
+
+  const payload = await readJson(request);
+  const validation = contactFormSchema.safeParse(payload);
+
+  if (!validation.success) {
+    return NextResponse.json<ContactApiResponse>(
+      {
+        error: "Please correct the highlighted fields and try again.",
+        fieldErrors: flattenContactValidationErrors(validation.error)
       },
+      { status: 400 }
+    );
+  }
+
+  const submission = sanitizeContactSubmission(validation.data);
+  const turnstile = await verifyTurnstileToken(submission.turnstileToken, clientIp === "anonymous" ? undefined : clientIp);
+
+  if (!turnstile.success) {
+    return NextResponse.json<ContactApiResponse>(
+      { error: turnstile.message ?? "Security check failed. Please try again." },
+      { status: 400 }
+    );
+  }
+
+  const emailResult = await sendContactEmails(submission);
+
+  if (!emailResult.success) {
+    return NextResponse.json<ContactApiResponse>(
+      { error: emailResult.message ?? "Unable to send your message right now. Please try again later." },
       { status: 500 }
     );
   }
+
+  return NextResponse.json<ContactApiResponse>({ ok: true });
 }
