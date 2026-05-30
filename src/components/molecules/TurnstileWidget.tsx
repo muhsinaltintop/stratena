@@ -34,7 +34,7 @@ const scriptId = "cloudflare-turnstile-script";
 
 export function TurnstileWidget({ onVerify, onExpire, onError }: TurnstileWidgetProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string>();
+  const widgetIdRef = useRef<string | null>(null);
   const [siteKey, setSiteKey] = useState<string | null>(null);
   const [configError, setConfigError] = useState<string | null>(null);
 
@@ -112,7 +112,7 @@ export function TurnstileWidget({ onVerify, onExpire, onError }: TurnstileWidget
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current);
       }
-      widgetIdRef.current = undefined;
+      widgetIdRef.current = null;
     };
   }, [renderWidget, siteKey]);
 
