@@ -1,18 +1,18 @@
 import { WiseInsightCard } from "@/components/molecules/WiseInsightCard";
-import { newsletters } from "@/lib/newsletters";
+import { stratenaWiseIssues } from "@/lib/stratena-wise-issues";
 
 export function WiseInsightsGrid() {
   return (
     <section className="mx-auto mb-24 max-w-7xl px-6 lg:px-20">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {newsletters.map((insight) => (
+        {stratenaWiseIssues.map((issue) => (
           <WiseInsightCard
-            key={insight.slug}
-            category={insight.category}
-            title={`${insight.issue}: ${insight.title}`}
-            description={insight.summary}
-            date={insight.publication}
-            href={`/stratena-Wise/${insight.slug}`}
+            key={issue.slug}
+            category={issue.publication}
+            title={`${issue.issue}: ${issue.title}`}
+            description={issue.summary}
+            date={issue.publication}
+            href={`/stratena-wise/${issue.slug}`}
           />
         ))}
       </div>
