@@ -7,6 +7,7 @@ export type StratenaWiseIssue = {
   slug: string;
   date?: string;
   summary: string;
+  videoId?: string;
   body: string;
 };
 
@@ -20,6 +21,7 @@ export const stratenaWiseIssues: StratenaWiseIssue[] = [
     slug: "the-era-of-expensive-growth",
     summary:
       "Markets continue to offer opportunities, but those opportunities now require greater selectivity, stronger balance sheets, and more realistic valuation discipline.",
+    videoId: "daj-LhOEtVg",
     body: `# Stratena Wise  
 ## Issue 1  
 # The Era of Expensive Growth
