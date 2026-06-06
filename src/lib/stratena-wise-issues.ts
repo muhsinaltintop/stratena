@@ -8,6 +8,7 @@ export type StratenaWiseIssue = {
   date?: string;
   summary: string;
   videoId?: string;
+  videoAfterParagraph?: string;
   body: string;
 };
 
@@ -22,6 +23,8 @@ export const stratenaWiseIssues: StratenaWiseIssue[] = [
     summary:
       "Markets continue to offer opportunities, but those opportunities now require greater selectivity, stronger balance sheets, and more realistic valuation discipline.",
     videoId: "daj-LhOEtVg",
+    videoAfterParagraph:
+      "This distinction matters. In an environment where interest rates remain elevated, stocks priced on future earnings expectations become more sensitive.",
     body: `# Stratena Wise  
 ## Issue 1  
 # The Era of Expensive Growth
