@@ -36,8 +36,16 @@ export async function generateMetadata({
 }
 
 function renderIssueBody(body: string) {
-  return body.split("\n").map((line, index) => {
+  const bodyLines = body.split("\n");
+  const firstContentLine = bodyLines.findIndex((line) => line.trim() !== "");
+  const duplicateIntroHeadingIndexes = new Set([firstContentLine, firstContentLine + 1, firstContentLine + 2]);
+
+  return bodyLines.map((line, index) => {
     const key = `${index}-${line}`;
+
+    if (duplicateIntroHeadingIndexes.has(index)) {
+      return null;
+    }
 
     if (line === "---") {
       return <hr key={key} className="my-7 border-slate-200" />;
