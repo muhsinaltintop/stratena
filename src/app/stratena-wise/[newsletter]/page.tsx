@@ -100,7 +100,7 @@ export default async function NewsletterPage({
       <section className="relative isolate overflow-hidden border-b border-black/5 bg-[linear-gradient(180deg,#fbf7f0_0%,#f1ebe1_100%)]">
         <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#dcae65]/20 blur-3xl" />
         <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-[#564a64]/12 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[minmax(0,1.1fr)_420px] lg:px-20 lg:py-20">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-20 lg:py-20">
           <div className="relative">
             <Link
               href="/stratena-wise"
@@ -109,9 +109,8 @@ export default async function NewsletterPage({
               <span className="material-symbols-outlined text-base">west</span>
               Back to Stratena Wise
             </Link>
-            <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-slate-500">
-              <span className="rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-primary">{issue.issue}</span>
-              <span>{issue.publication}</span>
+            <div className="mb-5 inline-flex rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
+              {issue.publication} {issue.issue}
             </div>
             <h1
               className="max-w-4xl text-4xl font-semibold leading-tight text-navy md:text-6xl"
@@ -122,11 +121,16 @@ export default async function NewsletterPage({
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">{issue.summary}</p>
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-black/10 bg-navy shadow-[0_30px_80px_rgba(30,42,56,0.18)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(220,174,101,0.35),_transparent_55%)]" />
-            <div className="relative aspect-[4/5]">
-              <Image src={issue.image} alt={`${issue.title} header image`} fill className="object-cover" sizes="420px" />
-            </div>
+          <div className="relative mt-12 overflow-hidden rounded-[2rem] border border-black/10 bg-navy shadow-[0_30px_80px_rgba(30,42,56,0.18)]">
+            <Image
+              src={issue.image}
+              alt={`${issue.title} header image`}
+              width={1920}
+              height={1080}
+              className="h-auto w-full"
+              sizes="(min-width: 1280px) 1120px, calc(100vw - 48px)"
+              priority
+            />
           </div>
         </div>
       </section>
