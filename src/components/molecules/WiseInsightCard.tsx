@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type ScopeInsightCardProps = {
+type WiseInsightCardProps = {
   category: string;
   title: string;
   description: string;
@@ -8,7 +8,7 @@ type ScopeInsightCardProps = {
   href?: string;
 };
 
-export function ScopeInsightCard({ category, title, description, date, href = "#" }: ScopeInsightCardProps) {
+export function WiseInsightCard({ category, title, description, date, href = "#" }: WiseInsightCardProps) {
   return (
     <article className="group flex h-full flex-col border border-slate-100 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <span className="mb-6 text-[11px] font-bold uppercase tracking-widest text-primary">{category}</span>

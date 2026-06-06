@@ -26,12 +26,12 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Newsletter Not Found | Stratena Scope",
+      title: "Newsletter Not Found | Stratena Wise",
     };
   }
 
   return {
-    title: `${article.issue} | ${article.title} | Stratena Scope`,
+    title: `${article.issue} | ${article.title} | Stratena Wise`,
     description: article.summary,
   };
 }
@@ -61,11 +61,11 @@ export default async function NewsletterPage({
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[minmax(0,1.2fr)_360px] lg:px-20 lg:py-20">
           <div className="relative">
             <Link
-              href="/stratena-scope"
+              href="/stratena-wise"
               className="mb-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-slate-500 transition-colors hover:text-primary"
             >
               <span className="material-symbols-outlined text-base">west</span>
-              Back to Stratena Scope
+              Back to Stratena Wise
             </Link>
             <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-slate-500">
               <span className="rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-primary">{article.issue}</span>
@@ -97,7 +97,7 @@ export default async function NewsletterPage({
               <Image src={article.heroImage} alt={article.heroAlt} fill className="object-cover mix-blend-luminosity opacity-70" sizes="360px" />
             </div>
             <div className="relative border-t border-white/10 px-7 py-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">BND Scope</p>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">BND Wise</p>
               <p className="mt-3 text-2xl leading-tight" style={{ fontFamily: "var(--font-newsreader)" }}>
                 How markets absorb conflict-driven shocks when inflation risk is already elevated.
               </p>
@@ -122,7 +122,7 @@ export default async function NewsletterPage({
               </div>
               <div>
                 <dt className="font-semibold text-slate-900">Series</dt>
-                <dd>BND Scope</dd>
+                <dd>BND Wise</dd>
               </div>
             </dl>
           </div>
@@ -183,10 +183,10 @@ export default async function NewsletterPage({
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-slate-500">Continue Reading</p>
               <h2 className="mt-3 text-4xl text-navy" style={{ fontFamily: "var(--font-newsreader)" }}>
-                More from Stratena Scope
+                More from Stratena Wise
               </h2>
             </div>
-            <Link href="/stratena-scope" className="text-sm font-semibold text-primary transition-colors hover:text-navy">
+            <Link href="/stratena-wise" className="text-sm font-semibold text-primary transition-colors hover:text-navy">
               View all issues
             </Link>
           </div>
@@ -195,7 +195,7 @@ export default async function NewsletterPage({
             {relatedArticles.map((relatedArticle) => (
               <Link
                 key={relatedArticle.slug}
-                href={`/stratena-scope/${relatedArticle.slug}`}
+                href={`/stratena-wise/${relatedArticle.slug}`}
                 className="group rounded-[1.75rem] border border-black/8 bg-white p-7 shadow-sm transition-transform duration-300 hover:-translate-y-1"
               >
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">

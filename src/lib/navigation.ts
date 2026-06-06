@@ -45,7 +45,7 @@ export const navItems: NavItem[] = [
       },
     ],
   },
-  { label: "Stratena Scope", href: "/stratena-scope" },
+  { label: "Stratena Wise", href: "/stratena-wise" },
   { label: "Contact", href: "/contact" },
 ];
 

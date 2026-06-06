@@ -28,7 +28,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm">
             <li><Link className="hover:text-primary" href="/about">About Us</Link></li>
             <li><Link className="hover:text-primary" href="#">Our Process</Link></li>
-            <li><Link className="hover:text-primary" href="/stratena-scope">Insights</Link></li>
+            <li><Link className="hover:text-primary" href="/stratena-wise">Insights</Link></li>
             <li><Link className="hover:text-primary" href="/contact">Contact</Link></li>
           </ul>
         </div>

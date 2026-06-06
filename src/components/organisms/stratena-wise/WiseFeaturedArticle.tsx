@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { featuredNewsletter } from "@/lib/newsletters";
 
-export function ScopeFeaturedArticle() {
+export function WiseFeaturedArticle() {
   return (
     <section className="mx-auto mb-24 max-w-7xl px-6 lg:px-20">
       <article className="overflow-hidden rounded-xl border border-slate-100 bg-white shadow-2xl">
@@ -19,7 +19,7 @@ export function ScopeFeaturedArticle() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href={`/stratena-scope/${featuredNewsletter.slug}`}
+                href={`/stratena-wise/${featuredNewsletter.slug}`}
                 className="inline-flex items-center gap-2 rounded-xl bg-navy px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-primary"
               >
                 Read Full Analysis

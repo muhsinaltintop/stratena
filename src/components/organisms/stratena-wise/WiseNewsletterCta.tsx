@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/atoms/Button";
 
-export function ScopeNewsletterCta() {
+export function WiseNewsletterCta() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-20">
       <div className="relative overflow-hidden rounded-xl bg-navy p-10 md:p-16">

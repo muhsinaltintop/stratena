@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { BusinessPlanTemplate } from "@/components/templates/BusinessPlanTemplate";
 import { ConsultingTemplate } from "@/components/templates/ConsultingTemplate";
 import { SbaReadinessTemplate } from "@/components/templates/SbaReadinessTemplate";
-import { StratenaScopeTemplate } from "@/components/templates/StratenaScopeTemplate";
+import { StratenaWiseTemplate } from "@/components/templates/StratenaWiseTemplate";
 import { AttorneyHubTemplate } from "@/components/templates/AttorneyHubTemplate";
 import { limitHeadingWords } from "@/lib/headings";
 
@@ -183,12 +183,12 @@ const pageContent: Record<string, string[]> = {
 
     "Our role is to help turn weak or incomplete business-side presentation into something more structured and more persuasive. When additional explanation is required, quality matters. A better-organized business narrative can make the broader response package stronger, more coherent, and easier to understand.",
   ],
-  "/stratena-scope": [
-    "Stratena Scope is our insight section covering business planning, immigration-related strategy, market trends, operational readiness, financial planning, and SBA loan preparation. It is a newsletter-style space where founders, attorneys, and business operators can explore practical perspectives on how businesses are built, positioned, and presented.",
+  "/stratena-wise": [
+    "Stratena Wise is our insight section covering business planning, immigration-related strategy, market trends, operational readiness, financial planning, and SBA loan preparation. It is a newsletter-style space where founders, attorneys, and business operators can explore practical perspectives on how businesses are built, positioned, and presented.",
 
-    "Some articles will focus on planning strategy. Some will explore market and operational questions. Others will look at lender readiness, case support issues, or broader business decision-making. The purpose of Stratena Scope is not simply to publish content, but to share thinking that is useful, relevant, and grounded in real business situations.",
+    "Some articles will focus on planning strategy. Some will explore market and operational questions. Others will look at lender readiness, case support issues, or broader business decision-making. The purpose of Stratena Wise is not simply to publish content, but to share thinking that is useful, relevant, and grounded in real business situations.",
 
-    "Stratena Scope reflects how we work: commercially aware, detail-oriented, and focused on helping businesses move with greater clarity. It is where strategy, planning, and practical insight meet.",
+    "Stratena Wise reflects how we work: commercially aware, detail-oriented, and focused on helping businesses move with greater clarity. It is where strategy, planning, and practical insight meet.",
   ],
 };
 
@@ -279,8 +279,8 @@ export default async function MenuPage({
     return <SbaReadinessTemplate paragraphs={paragraphs} />;
   }
 
-  if (currentPath === "/stratena-scope") {
-    return <StratenaScopeTemplate />;
+  if (currentPath === "/stratena-wise") {
+    return <StratenaWiseTemplate />;
   }
 
   if (currentPath.startsWith("/attorney-hub")) {

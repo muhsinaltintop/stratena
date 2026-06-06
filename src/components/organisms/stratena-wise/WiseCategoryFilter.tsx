@@ -1,6 +1,6 @@
 const categories = ["All Insights", "Regulatory", "M&A", "SBA Strategy", "Immigration", "Finance"];
 
-export function ScopeCategoryFilter() {
+export function WiseCategoryFilter() {
   return (
     <section className="mx-auto mb-12 max-w-7xl px-6 lg:px-20">
       <div className="flex flex-wrap items-center justify-between gap-6 border-b-2 border-slate-100 pb-6">
