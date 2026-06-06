@@ -35,7 +35,7 @@ export async function generateMetadata({
   };
 }
 
-function renderIssueBody(body: string, videoId?: string) {
+function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: string) {
   const bodyLines = body.split("\n");
   const firstContentLine = bodyLines.findIndex((line) => line.trim() !== "");
   const duplicateIntroHeadingIndexes = new Set([firstContentLine, firstContentLine + 1, firstContentLine + 2]);
@@ -83,10 +83,13 @@ function renderIssueBody(body: string, videoId?: string) {
 
     renderedParagraphCount += 1;
 
+    const shouldRenderVideo =
+      videoId && (videoAfterParagraph ? line === videoAfterParagraph : renderedParagraphCount === 1);
+
     return (
       <div key={key}>
         <p className="mb-4 text-lg leading-8 text-slate-700">{line}</p>
-        {videoId && renderedParagraphCount === 1 ? (
+        {shouldRenderVideo ? (
           <div className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
             <iframe
               className="aspect-video w-full"
@@ -158,7 +161,7 @@ export default async function NewsletterPage({
 
       <section className="mx-auto max-w-5xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
         <article>
-          <div>{renderIssueBody(issue.body, issue.videoId)}</div>
+          <div>{renderIssueBody(issue.body, issue.videoId, issue.videoAfterParagraph)}</div>
         </article>
       </section>
 
