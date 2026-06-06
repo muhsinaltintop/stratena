@@ -40,14 +40,14 @@ function renderIssueBody(body: string) {
     const key = `${index}-${line}`;
 
     if (line === "---") {
-      return <hr key={key} className="my-10 border-slate-200" />;
+      return <hr key={key} className="my-7 border-slate-200" />;
     }
 
     if (line.startsWith("## ")) {
       return (
         <h2
           key={key}
-          className="mb-5 mt-12 text-3xl font-semibold leading-tight text-navy md:text-4xl"
+          className="mb-4 mt-9 text-3xl font-semibold leading-tight text-navy md:text-4xl"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
           {line.replace(/^## /, "")}
@@ -59,7 +59,7 @@ function renderIssueBody(body: string) {
       return (
         <h1
           key={key}
-          className="mb-5 mt-10 text-4xl font-semibold leading-tight text-navy md:text-5xl"
+          className="mb-4 mt-8 text-4xl font-semibold leading-tight text-navy md:text-5xl"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
           {line.replace(/^# /, "")}
@@ -72,7 +72,7 @@ function renderIssueBody(body: string) {
     }
 
     return (
-      <p key={key} className="mb-5 text-lg leading-8 text-slate-700">
+      <p key={key} className="mb-4 text-lg leading-8 text-slate-700">
         {line}
       </p>
     );
@@ -97,19 +97,17 @@ export default async function NewsletterPage({
     <main className={`${newsreader.variable} bg-[#f4f0e8] text-slate-900`}>
       <SiteHeader />
 
-      <section className="relative isolate overflow-hidden border-b border-black/5 bg-[linear-gradient(180deg,#fbf7f0_0%,#f1ebe1_100%)]">
-        <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#dcae65]/20 blur-3xl" />
-        <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-[#564a64]/12 blur-3xl" />
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-20 lg:py-20">
+      <section>
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-10 lg:px-20 lg:pb-10 lg:pt-14">
           <div className="relative">
             <Link
               href="/stratena-wise"
-              className="mb-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-slate-500 transition-colors hover:text-primary"
+              className="mb-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-slate-500 transition-colors hover:text-primary"
             >
               <span className="material-symbols-outlined text-base">west</span>
               Back to Stratena Wise
             </Link>
-            <div className="mb-5 inline-flex rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
+            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
               {issue.publication} {issue.issue}
             </div>
             <h1
@@ -118,10 +116,10 @@ export default async function NewsletterPage({
             >
               {issue.title}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">{issue.summary}</p>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">{issue.summary}</p>
           </div>
 
-          <div className="relative mt-12 overflow-hidden rounded-[2rem] border border-black/10 bg-navy shadow-[0_30px_80px_rgba(30,42,56,0.18)]">
+          <div className="mt-8">
             <Image
               src={issue.image}
               alt={`${issue.title} header image`}
@@ -135,14 +133,14 @@ export default async function NewsletterPage({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-14 lg:px-20 lg:py-20">
-        <article className="overflow-hidden rounded-[2rem] border border-black/8 bg-white shadow-[0_24px_60px_rgba(20,32,43,0.08)]">
-          <div className="px-7 py-10 md:px-12 md:py-14">{renderIssueBody(issue.body)}</div>
+      <section className="mx-auto max-w-4xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
+        <article>
+          <div>{renderIssueBody(issue.body)}</div>
         </article>
       </section>
 
       {relatedIssues.length > 0 ? (
-        <section className="border-t border-black/5 bg-[#efe7dc] px-6 py-16 lg:px-20">
+        <section className="px-6 pb-16 pt-8 lg:px-20">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
