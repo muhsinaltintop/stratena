@@ -35,10 +35,12 @@ export async function generateMetadata({
   };
 }
 
-function renderIssueBody(body: string) {
+function renderIssueBody(body: string, videoId?: string) {
   const bodyLines = body.split("\n");
   const firstContentLine = bodyLines.findIndex((line) => line.trim() !== "");
   const duplicateIntroHeadingIndexes = new Set([firstContentLine, firstContentLine + 1, firstContentLine + 2]);
+
+  let renderedParagraphCount = 0;
 
   return bodyLines.map((line, index) => {
     const key = `${index}-${line}`;
@@ -79,10 +81,23 @@ function renderIssueBody(body: string) {
       return null;
     }
 
+    renderedParagraphCount += 1;
+
     return (
-      <p key={key} className="mb-4 text-lg leading-8 text-slate-700">
-        {line}
-      </p>
+      <div key={key}>
+        <p className="mb-4 text-lg leading-8 text-slate-700">{line}</p>
+        {videoId && renderedParagraphCount === 1 ? (
+          <div className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
+            <iframe
+              className="aspect-video w-full"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title="Embedded Stratena Wise video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        ) : null}
+      </div>
     );
   });
 }
@@ -106,7 +121,7 @@ export default async function NewsletterPage({
       <SiteHeader />
 
       <section>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-10 lg:px-20 lg:pb-10 lg:pt-14">
+        <div className="mx-auto max-w-5xl px-6 pb-8 pt-10 lg:px-20 lg:pb-10 lg:pt-14">
           <div className="relative">
             <Link
               href="/stratena-wise"
@@ -119,12 +134,12 @@ export default async function NewsletterPage({
               {issue.publication} {issue.issue}
             </div>
             <h1
-              className="max-w-4xl text-4xl font-semibold leading-tight text-navy md:text-6xl"
+              className="max-w-3xl text-4xl font-semibold leading-tight text-navy md:text-6xl"
               style={{ fontFamily: "var(--font-newsreader)" }}
             >
               {issue.title}
             </h1>
-            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">{issue.summary}</p>
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">{issue.summary}</p>
           </div>
 
           <div className="mt-8">
@@ -134,16 +149,16 @@ export default async function NewsletterPage({
               width={1920}
               height={1080}
               className="h-auto w-full"
-              sizes="(min-width: 1280px) 1120px, calc(100vw - 48px)"
+              sizes="(min-width: 1024px) 864px, calc(100vw - 48px)"
               priority
             />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
+      <section className="mx-auto max-w-5xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
         <article>
-          <div>{renderIssueBody(issue.body)}</div>
+          <div>{renderIssueBody(issue.body, issue.videoId)}</div>
         </article>
       </section>
 
