@@ -23,7 +23,6 @@ export function WiseFeaturedArticle() {
                 Read Issue
                 <span className="material-symbols-outlined text-base">arrow_forward</span>
               </Link>
-              <span className="text-sm font-semibold text-slate-400">{featuredStratenaWiseIssue.language}</span>
             </div>
           </div>
 

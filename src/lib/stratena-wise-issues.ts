@@ -3,7 +3,6 @@ export type StratenaWiseIssue = {
   issue: string;
   issueNumber: number;
   title: string;
-  language: string;
   image: string;
   slug: string;
   date?: string;
@@ -17,7 +16,6 @@ export const stratenaWiseIssues: StratenaWiseIssue[] = [
     issue: "Issue 1",
     issueNumber: 1,
     title: "The Era of Expensive Growth",
-    language: "English",
     image: "/expensive-growth.png",
     slug: "the-era-of-expensive-growth",
     summary:

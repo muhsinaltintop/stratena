@@ -11,7 +11,7 @@ export function WiseInsightsGrid() {
             category={issue.publication}
             title={`${issue.issue}: ${issue.title}`}
             description={issue.summary}
-            date={issue.language}
+            date={issue.publication}
             href={`/stratena-wise/${issue.slug}`}
           />
         ))}

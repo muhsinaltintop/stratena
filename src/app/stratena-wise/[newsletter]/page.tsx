@@ -112,7 +112,6 @@ export default async function NewsletterPage({
             <div className="mb-5 flex flex-wrap items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-slate-500">
               <span className="rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-primary">{issue.issue}</span>
               <span>{issue.publication}</span>
-              <span>{issue.language}</span>
             </div>
             <h1
               className="max-w-4xl text-4xl font-semibold leading-tight text-navy md:text-6xl"
@@ -132,27 +131,7 @@ export default async function NewsletterPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-14 lg:grid-cols-[220px_minmax(0,1fr)] lg:px-20 lg:py-20">
-        <aside className="lg:sticky lg:top-28 lg:self-start">
-          <div className="rounded-[1.75rem] border border-black/8 bg-white/80 p-6 shadow-sm">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Issue Meta</p>
-            <dl className="mt-5 space-y-4 text-sm text-slate-600">
-              <div>
-                <dt className="font-semibold text-slate-900">Publication</dt>
-                <dd>{issue.publication}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-slate-900">Issue</dt>
-                <dd>{issue.issue}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-slate-900">Language</dt>
-                <dd>{issue.language}</dd>
-              </div>
-            </dl>
-          </div>
-        </aside>
-
+      <section className="mx-auto max-w-4xl px-6 py-14 lg:px-20 lg:py-20">
         <article className="overflow-hidden rounded-[2rem] border border-black/8 bg-white shadow-[0_24px_60px_rgba(20,32,43,0.08)]">
           <div className="px-7 py-10 md:px-12 md:py-14">{renderIssueBody(issue.body)}</div>
         </article>
