@@ -16,8 +16,8 @@ export type StratenaWiseIssue = {
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
   {
     publication: "Stratena Wise",
-    issue: "Issue 28",
-    issueNumber: 28,
+    issue: "Issue 2",
+    issueNumber: 2,
     title: "After the Shock That Never Came",
     image: "/images/newsletters/after-the-shock-that-never-came.png",
     slug: "after-the-shock-that-never-came",
