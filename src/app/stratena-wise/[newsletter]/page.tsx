@@ -7,6 +7,17 @@ import { SiteFooter } from "@/components/organisms/SiteFooter";
 import { SiteHeader } from "@/components/organisms/SiteHeader";
 import { stratenaWiseIssueLookup, stratenaWiseIssues } from "@/lib/stratena-wise-issues";
 
+function calculateReadingTime(body: string) {
+  const words = body
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/^\*\s+/gm, "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  return `${Math.max(1, Math.ceil(words.length / 200))} min read`;
+}
+
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader" });
 
 export const dynamicParams = false;
@@ -29,56 +40,134 @@ export async function generateMetadata({
     };
   }
 
+  const title = `${issue.title} | ${issue.issue} | Stratena Wise`;
+  const url = `/stratena-wise/${issue.slug}`;
+
   return {
-    title: `${issue.issue} | ${issue.title} | Stratena Wise`,
+    title,
     description: issue.summary,
+    alternates: {
+      canonical: url,
+    },
+    category: "Newsletter",
+    openGraph: {
+      title,
+      description: issue.summary,
+      url,
+      siteName: "Stratena",
+      type: "article",
+      images: [
+        {
+          url: issue.image,
+          width: 1920,
+          height: 1080,
+          alt: `${issue.title} cover image`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: issue.summary,
+      images: [issue.image],
+    },
   };
 }
 
-function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: string) {
+function renderEmbeddedVideo(videoId: string, key: string) {
+  return (
+    <div key={key} className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
+      <iframe
+        className="aspect-video w-full"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title="Embedded Stratena Wise video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
+function renderIssueBody(
+  body: string,
+  videoId?: string,
+  videoAfterParagraph?: string,
+  videoBeforeHeading?: string,
+) {
   const bodyLines = body.split("\n");
   const firstContentLine = bodyLines.findIndex((line) => line.trim() !== "");
   const duplicateIntroHeadingIndexes = new Set([firstContentLine, firstContentLine + 1, firstContentLine + 2]);
 
   let renderedParagraphCount = 0;
+  const elements = [];
 
-  return bodyLines.map((line, index) => {
+  for (let index = 0; index < bodyLines.length; index += 1) {
+    const line = bodyLines[index];
     const key = `${index}-${line}`;
 
     if (duplicateIntroHeadingIndexes.has(index)) {
-      return null;
+      continue;
     }
 
     if (line === "---") {
-      return <hr key={key} className="my-7 border-slate-200" />;
+      elements.push(<hr key={key} className="my-7 border-slate-200" />);
+      continue;
     }
 
     if (line.startsWith("## ")) {
-      return (
+      const heading = line.replace(/^## /, "");
+
+      if (videoId && videoBeforeHeading === heading) {
+        elements.push(renderEmbeddedVideo(videoId, `${key}-video`));
+      }
+
+      elements.push(
         <h2
           key={key}
           className="mb-4 mt-9 text-3xl font-semibold leading-tight text-navy md:text-4xl"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
-          {line.replace(/^## /, "")}
-        </h2>
+          {heading}
+        </h2>,
       );
+      continue;
     }
 
     if (line.startsWith("# ")) {
-      return (
+      elements.push(
         <h1
           key={key}
           className="mb-4 mt-8 text-4xl font-semibold leading-tight text-navy md:text-5xl"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
           {line.replace(/^# /, "")}
-        </h1>
+        </h1>,
       );
+      continue;
+    }
+
+    if (line.startsWith("* ")) {
+      const items = [];
+      let itemIndex = index;
+
+      while (itemIndex < bodyLines.length && bodyLines[itemIndex].startsWith("* ")) {
+        items.push(bodyLines[itemIndex].replace(/^\* /, ""));
+        itemIndex += 1;
+      }
+
+      elements.push(
+        <ul key={key} className="mb-6 ml-6 list-disc space-y-2 text-lg leading-8 text-slate-700">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>,
+      );
+      index = itemIndex - 1;
+      continue;
     }
 
     if (line.trim() === "") {
-      return null;
+      continue;
     }
 
     renderedParagraphCount += 1;
@@ -86,23 +175,15 @@ function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: s
     const shouldRenderVideo =
       videoId && (videoAfterParagraph ? line === videoAfterParagraph : renderedParagraphCount === 1);
 
-    return (
+    elements.push(
       <div key={key}>
         <p className="mb-4 text-lg leading-8 text-slate-700">{line}</p>
-        {shouldRenderVideo ? (
-          <div className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
-            <iframe
-              className="aspect-video w-full"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title="Embedded Stratena Wise video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        ) : null}
-      </div>
+        {shouldRenderVideo ? renderEmbeddedVideo(videoId, `${key}-video`) : null}
+      </div>,
     );
-  });
+  }
+
+  return elements;
 }
 
 export default async function NewsletterPage({
@@ -118,6 +199,11 @@ export default async function NewsletterPage({
   }
 
   const relatedIssues = stratenaWiseIssues.filter((entry) => entry.slug !== issue.slug).slice(0, 2);
+  const sortedIssues = [...stratenaWiseIssues].sort((a, b) => a.issueNumber - b.issueNumber);
+  const currentIssueIndex = sortedIssues.findIndex((entry) => entry.slug === issue.slug);
+  const previousIssue = currentIssueIndex > 0 ? sortedIssues[currentIssueIndex - 1] : undefined;
+  const nextIssue = currentIssueIndex >= 0 ? sortedIssues[currentIssueIndex + 1] : undefined;
+  const readingTime = calculateReadingTime(issue.body);
 
   return (
     <main className={`${newsreader.variable} bg-[#f4f0e8] text-slate-900`}>
@@ -134,7 +220,7 @@ export default async function NewsletterPage({
               Back to Stratena Wise
             </Link>
             <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
-              {issue.publication} {issue.issue}
+              {issue.publication} {issue.issue} • {readingTime}
             </div>
             <h1
               className="max-w-3xl text-4xl font-semibold leading-tight text-navy md:text-6xl"
@@ -161,9 +247,36 @@ export default async function NewsletterPage({
 
       <section className="mx-auto max-w-5xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
         <article>
-          <div>{renderIssueBody(issue.body, issue.videoId, issue.videoAfterParagraph)}</div>
+          <div>{renderIssueBody(issue.body, issue.videoId, issue.videoAfterParagraph, issue.videoBeforeHeading)}</div>
         </article>
       </section>
+
+      {(previousIssue || nextIssue) ? (
+        <nav className="mx-auto grid max-w-5xl gap-4 px-6 pb-14 lg:grid-cols-2 lg:px-20" aria-label="Newsletter navigation">
+          {previousIssue ? (
+            <Link
+              href={`/stratena-wise/${previousIssue.slug}`}
+              className="rounded-[1.5rem] border border-black/8 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1"
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Previous Issue</span>
+              <h2 className="mt-3 text-2xl text-navy" style={{ fontFamily: "var(--font-newsreader)" }}>
+                {previousIssue.title}
+              </h2>
+            </Link>
+          ) : <div />}
+          {nextIssue ? (
+            <Link
+              href={`/stratena-wise/${nextIssue.slug}`}
+              className="rounded-[1.5rem] border border-black/8 bg-white p-6 text-left shadow-sm transition-transform duration-300 hover:-translate-y-1 lg:text-right"
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Next Issue</span>
+              <h2 className="mt-3 text-2xl text-navy" style={{ fontFamily: "var(--font-newsreader)" }}>
+                {nextIssue.title}
+              </h2>
+            </Link>
+          ) : null}
+        </nav>
+      ) : null}
 
       {relatedIssues.length > 0 ? (
         <section className="px-6 pb-16 pt-8 lg:px-20">

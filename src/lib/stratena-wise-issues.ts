@@ -9,10 +9,249 @@ export type StratenaWiseIssue = {
   summary: string;
   videoId?: string;
   videoAfterParagraph?: string;
+  videoBeforeHeading?: string;
   body: string;
 };
 
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
+  {
+    publication: "Stratena Wise",
+    issue: "Issue 28",
+    issueNumber: 28,
+    title: "After the Shock That Never Came",
+    image: "/images/newsletters/after-the-shock-that-never-came.png",
+    slug: "after-the-shock-that-never-came",
+    summary:
+      "Financial markets often react not to what happens, but to what investors fear might happen. Throughout much of June, investors were preparing for war-driven energy disruptions, renewed inflation pressure, and a possible economic slowdown. Instead, the global economy proved more resilient than expected. The energy shock never fully materialized, recession fears eased, and capital began searching for new opportunities. The defining story of this moment is not the crisis that occurred, but the one that didn't.",
+    videoId: "CNWkdEmkFHs",
+    videoBeforeHeading: "The Fed Is No Longer the Main Character",
+    body: `# After the Shock That Never Came
+
+## Introduction
+
+Financial markets often react not to events themselves, but to the possibility of those events.
+
+Throughout much of June, investors were focused on a growing list of risks. Could escalating tensions between Israel and Iran trigger a broader energy crisis? Could disruptions in the Strait of Hormuz send oil prices sharply higher? Would rising energy costs reignite inflation and force central banks to maintain restrictive policies for longer?
+
+Alongside these concerns, investors were also monitoring slowing economic growth, weakening consumer spending, and increasing policy uncertainty.
+
+Yet as the month progressed, a different picture emerged.
+
+The global economy did not experience the energy shock many feared. The U.S. economy did not slide into recession. Corporate investment plans remained largely intact. Rather than retreating into defensive positions, markets began looking forward again.
+
+This shift in expectations may prove to be one of the most important developments of the summer.
+
+Investors are increasingly focused not on avoiding risk, but on identifying where future growth and investment opportunities may emerge.
+
+---
+
+## The Crisis Markets Expected
+
+As tensions between Israel and Iran intensified, markets were focused on a single question:
+
+Could this become a new global energy crisis?
+
+The concern was justified. The Strait of Hormuz remains one of the world's most critical energy corridors. Any significant disruption could have affected oil prices, inflation, transportation costs, and central bank policy across the global economy.
+
+However, the expected chain reaction never fully developed.
+
+Energy markets experienced volatility, but oil prices remained well below the levels associated with previous major shocks. Supply disruptions remained manageable. Shipping costs increased, but not enough to significantly disrupt global trade.
+
+More importantly, investors gradually concluded that the conflict was less likely to evolve into a systemic economic event than initially feared.
+
+This change in perception influenced market psychology.
+
+Over the past several years, investors have become conditioned to anticipate the next crisis. Sometimes the crisis that never happens can be just as influential as the one that does.
+
+As geopolitical concerns moderated, capital began flowing back toward growth-oriented opportunities.
+
+The market's message became increasingly clear:
+
+Geopolitical risks remain, but catastrophe is no longer the base case.
+
+---
+
+## An Economy That Refuses to Break
+
+One of the biggest surprises of 2026 has been the resilience of the U.S. economy.
+
+Consumer confidence remains fragile. Households continue to worry about inflation, affordability, and personal finances. Political polarization remains elevated. Businesses continue to operate in an environment characterized by uncertainty.
+
+Yet economic activity continues.
+
+This distinction matters.
+
+The current environment is not one of rapid growth. But neither is it one of economic collapse.
+
+The labor market remains relatively healthy. Corporate investment has not fallen sharply. Capital expenditures continue across multiple sectors. Even in areas where growth has slowed, the anticipated deterioration has failed to appear.
+
+Markets do not require perfect conditions.
+
+They simply require conditions that are better than expected.
+
+That is increasingly what investors are seeing today.
+
+As recession expectations have gradually eased, investors have become more willing to take risk again.
+
+More and more market participants are moving toward a scenario defined by slower growth, but continued growth.
+
+---
+
+## The Fed Is No Longer the Main Character
+
+For the past three years, markets have revolved around a single question:
+
+What will the Federal Reserve do next?
+
+Inflation reports, employment data, and market movements were all interpreted through the lens of future interest-rate decisions.
+
+That era may be changing.
+
+The arrival of a new Federal Reserve Chair and the decision to leave interest rates unchanged at the first meeting under the new leadership can be interpreted as part of a broader transition taking place across financial markets.
+
+The Federal Reserve remains enormously important.
+
+But it is no longer the only force shaping investor behavior.
+
+Many of the most influential forces affecting markets now extend beyond monetary policy:
+
+* Geopolitical realignment
+* Industrial investment
+* Energy security
+* Technology infrastructure spending
+* Labor availability
+* Global capital flows
+
+The central question is no longer when the Fed will support markets.
+
+The question is whether economic growth can continue without extraordinary support from monetary policy.
+
+For now, markets appear to believe the answer is yes.
+
+As a result, investors are increasingly focused on economic fundamentals rather than central bank actions alone.
+
+---
+
+## Capital Is Expanding Beyond Big Tech
+
+During the early stages of the artificial intelligence boom, the investment narrative was relatively simple.
+
+A small number of large technology companies dominated investor attention.
+
+Nvidia became the defining symbol of the era.
+
+Today, investor interest is beginning to spread much further.
+
+Markets are increasingly focusing not only on AI applications, but also on the infrastructure that makes those applications possible:
+
+* Data centers
+* Fiber networks
+* Electrical infrastructure
+* Cooling systems
+* Semiconductor equipment
+* Advanced materials
+
+This shift is significant because it suggests the technology story is entering a new phase.
+
+Historically, major technological transformations follow a similar pattern.
+
+The first stage rewards innovators.
+
+The second stage rewards builders.
+
+The third stage rewards those who enable widespread adoption.
+
+Recent investment announcements and capital spending plans suggest that markets may be entering the second stage.
+
+If so, the current investment cycle could prove more durable than many investors currently expect.
+
+---
+
+## America Still Attracts Capital and Talent
+
+One of the most important yet underappreciated developments of recent weeks occurred not in financial markets, but in the legal system.
+
+A federal judge's decision to block the proposed H-1B wage rule, which would have pushed salary requirements toward the $100,000 level for many positions, may appear technical at first glance.
+
+In reality, it highlights a much larger issue.
+
+The United States is competing simultaneously for two critical resources:
+
+* Capital
+* Talent
+
+Over the past several years, policymakers have worked aggressively to attract investment in semiconductors, manufacturing, energy infrastructure, and advanced technologies.
+
+Yet capital alone is not enough.
+
+These projects require highly skilled engineers, researchers, scientists, and technical professionals.
+
+The H-1B decision illustrates the tension between protecting domestic labor interests and maintaining America's ability to attract global talent.
+
+For investors, this issue matters because productivity, innovation, and long-term economic growth increasingly depend on workforce quality.
+
+Capital can finance growth.
+
+Talent determines whether that growth succeeds.
+
+The countries that win the next decade's investment race will likely be those capable of attracting both.
+
+---
+
+## A Risk the Market May Be Underestimating
+
+Markets are not ignoring risk.
+
+However, they may be underestimating how interconnected those risks have become.
+
+Inflation is connected to energy prices.
+
+Energy prices are connected to the Strait of Hormuz and tensions involving Iran.
+
+The Strait of Hormuz matters to China because China remains one of the world's largest consumers of Middle Eastern energy.
+
+Federal Reserve expectations are influenced by all of these factors.
+
+Equity valuations are influenced by Federal Reserve expectations.
+
+In other words, seemingly separate headlines increasingly form part of the same macroeconomic story.
+
+If corporate earnings remain strong, markets may continue to advance.
+
+But the margin for error is becoming smaller.
+
+Only a few weeks ago, investors could focus primarily on growth.
+
+Today they must also ask:
+
+What inflationary cost might accompany that growth?
+
+---
+
+## Conclusion
+
+The most important story of this period is not what happened.
+
+It is what failed to happen.
+
+The anticipated energy shock never materialized.
+
+The economy did not break.
+
+Corporate investment did not retreat.
+
+Markets did not move into a defensive posture.
+
+As a result, investor attention is shifting.
+
+The focus is moving from crisis management to opportunity selection.
+
+In the second half of 2026, the central question may no longer be whether the economy survives.
+
+The more important question may be where capital, talent, and confidence flow next.
+
+For now, much of that flow continues to point toward the United States.`,
+  },
   {
     publication: "Stratena Wise",
     issue: "Issue 1",
