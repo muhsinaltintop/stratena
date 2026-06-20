@@ -74,7 +74,26 @@ export async function generateMetadata({
   };
 }
 
-function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: string) {
+function renderEmbeddedVideo(videoId: string, key: string) {
+  return (
+    <div key={key} className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
+      <iframe
+        className="aspect-video w-full"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title="Embedded Stratena Wise video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
+function renderIssueBody(
+  body: string,
+  videoId?: string,
+  videoAfterParagraph?: string,
+  videoBeforeHeading?: string,
+) {
   const bodyLines = body.split("\n");
   const firstContentLine = bodyLines.findIndex((line) => line.trim() !== "");
   const duplicateIntroHeadingIndexes = new Set([firstContentLine, firstContentLine + 1, firstContentLine + 2]);
@@ -96,13 +115,19 @@ function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: s
     }
 
     if (line.startsWith("## ")) {
+      const heading = line.replace(/^## /, "");
+
+      if (videoId && videoBeforeHeading === heading) {
+        elements.push(renderEmbeddedVideo(videoId, `${key}-video`));
+      }
+
       elements.push(
         <h2
           key={key}
           className="mb-4 mt-9 text-3xl font-semibold leading-tight text-navy md:text-4xl"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
-          {line.replace(/^## /, "")}
+          {heading}
         </h2>,
       );
       continue;
@@ -153,17 +178,7 @@ function renderIssueBody(body: string, videoId?: string, videoAfterParagraph?: s
     elements.push(
       <div key={key}>
         <p className="mb-4 text-lg leading-8 text-slate-700">{line}</p>
-        {shouldRenderVideo ? (
-          <div className="my-8 overflow-hidden rounded-2xl border border-black/10 bg-black shadow-sm">
-            <iframe
-              className="aspect-video w-full"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title="Embedded Stratena Wise video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        ) : null}
+        {shouldRenderVideo ? renderEmbeddedVideo(videoId, `${key}-video`) : null}
       </div>,
     );
   }
@@ -232,7 +247,7 @@ export default async function NewsletterPage({
 
       <section className="mx-auto max-w-5xl px-6 pb-12 pt-0 lg:px-20 lg:pb-16">
         <article>
-          <div>{renderIssueBody(issue.body, issue.videoId, issue.videoAfterParagraph)}</div>
+          <div>{renderIssueBody(issue.body, issue.videoId, issue.videoAfterParagraph, issue.videoBeforeHeading)}</div>
         </article>
       </section>
 

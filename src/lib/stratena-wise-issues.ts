@@ -9,6 +9,7 @@ export type StratenaWiseIssue = {
   summary: string;
   videoId?: string;
   videoAfterParagraph?: string;
+  videoBeforeHeading?: string;
   body: string;
 };
 
@@ -22,6 +23,8 @@ export const stratenaWiseIssues: StratenaWiseIssue[] = [
     slug: "after-the-shock-that-never-came",
     summary:
       "Financial markets often react not to what happens, but to what investors fear might happen. Throughout much of June, investors were preparing for war-driven energy disruptions, renewed inflation pressure, and a possible economic slowdown. Instead, the global economy proved more resilient than expected. The energy shock never fully materialized, recession fears eased, and capital began searching for new opportunities. The defining story of this moment is not the crisis that occurred, but the one that didn't.",
+    videoId: "CNWkdEmkFHs",
+    videoBeforeHeading: "The Fed Is No Longer the Main Character",
     body: `# After the Shock That Never Came
 
 ## Introduction
