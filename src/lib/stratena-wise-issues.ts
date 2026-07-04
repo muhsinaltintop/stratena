@@ -16,6 +16,61 @@ export type StratenaWiseIssue = {
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
   {
     publication: "Stratena Wise",
+    issue: "Issue 3",
+    issueNumber: 3,
+    title: "Capital Moves Into the Real Economy",
+    image: "/images/newsletters/capital-moves-into-the-real-economy.png",
+    slug: "capital-moves-into-the-real-economy",
+    summary:
+      "AI investments are reshaping energy infrastructure, defense spending is putting production capacity back in focus, and trade pressures are reaching everything from soybeans to restaurant menus. Capital in the U.S. is becoming more physical, more sector-specific and more visible across data centers, factories, supply chains, logistics networks and local economies.",
+    body: `# Capital Moves Into the Real Economy
+
+The U.S. economic agenda is still shaped by the Fed, interest-rate expectations, oil, tariffs and AI. All of these remain important because they affect the cost of capital, corporate production decisions and the prices consumers eventually see. But in this issue, we are looking a little closer to the ground: not just what companies are pricing in, but what they are building.
+
+Data centers, energy deals, defense capacity, automotive supply chains, agricultural products, logistics networks and local economies are becoming more visible. Capital in the U.S. is not moving only across screens and indexes; it is also moving through factories, highways, energy infrastructure and the chain that reaches all the way to grocery shelves.
+
+## The Energy Bill Behind Data Centers
+
+AI is often discussed through chips, tech stocks and the market value of large companies. But as data-center investments grow, it becomes clearer how physical this space really is. Servers need electricity. Electricity needs natural gas, turbines, transmission infrastructure, land and permitting processes.
+
+That is why Microsoft’s plan to receive natural gas support from Chevron for its large data center in Texas stands out. The rise of energy-equipment companies such as GE Vernova points in the same direction. As AI grows, it is not only software that enters the investment agenda; gas turbines, power generation capacity and electricity infrastructure do as well.
+
+The local side of these investments is not simple either. Data centers are becoming a local concern because of electricity consumption, water use, land pressure and environmental impact. On one side, companies such as Meta are opening training programs for data-center jobs; on the other, investors are watching the financing cost of this growth. In short, AI is no longer only a technology issue. It is also an energy, workforce and infrastructure issue.
+
+## Production Capacity Becomes Strategic Again
+
+When looking at real-sector investment in the U.S., it is not enough to focus only on technology and energy. Defense and automotive manufacturing are also moving back to the center. These two sectors may look different, but they lead to the same question: where will production take place, which supply chain will be used, and how will government policy affect corporate decisions?
+
+On the defense side, pressure on missile and ammunition stockpiles has pushed production capacity back into focus. As major defense companies are expected to produce more, states are also competing for new facilities and jobs. This is no longer only a matter of security policy. It is also a matter of regional development and industrial policy.
+
+A similar calculation is taking place in the automotive sector. As the future of USMCA is debated, the North American production chain is being reassessed. Ford’s call for a more level playing field against imports, along with Slate Auto’s goal of producing an affordable electric pickup, shows that both major manufacturers and new players are looking for different paths. In the auto industry, cost, production location and policy are no longer easy to separate.
+
+## Global Competition Reaches Grocery Shelves
+
+Trade and geopolitics can sometimes feel distant. China, tariffs, oil or the Middle East may sound like big-picture issues. But their effects often appear much closer to consumers: in soybeans, fertilizer, beer, restaurant menus and clothing brands.
+
+The competition between U.S. producers and Brazil in China’s soybean market is not just an agricultural export issue. It affects farmers’ income, logistics volume, commodity prices and trade negotiations. On the fertilizer side, energy and geopolitical risks are becoming directly linked to food costs.
+
+Beer tariffs, slower growth at restaurant chains and apparel brands focusing more on women consumers are other sides of the same environment. Consumers are not completely pulling back, but they are becoming more selective. Companies, in turn, are trying to manage a more careful balance between cost, competition and changing demand.
+
+## Logistics, Travel and Local Capital Are Moving
+
+The transformation in the U.S. economy is not visible only in large industrial investments. Transportation, travel, roadside retail and local financial centers are also changing. These may look like smaller topics, but they say a lot about the daily flow of the economy.
+
+The low-cost airline model is struggling to move forward on price alone. Consumers still look for affordable options, but reliability, route networks and service quality are becoming important again. FedEx’s freight performance also reminds us that logistics networks remain one of the key indicators of the U.S. economy.
+
+On the travel side, more niche models such as AutoCamp show that consumers are still spending on experiences, but more selectively. Large roadside retail chains such as Buc-ee’s are turning gas stations into small shopping and dining destinations. The launch of the Texas Stock Exchange in Dallas is another sign that capital is moving toward a more geographically fragmented and competitive structure.
+
+## Conclusion: It Is Time To Look At What Companies Are Building
+
+The Fed, interest rates, oil and tariffs continue to shape the investment environment. But beyond these headlines, there is a more concrete picture: capital in the U.S. is moving toward areas that are more physical, more sector-specific and more visible.
+
+Data centers are creating demand for natural gas and turbines. Defense spending is increasing production competition among states. Automakers are reassessing their supply chains. Agriculture and food-related developments show that global competition reaches grocery shelves. Logistics, travel and local financial centers show that growth is taking shape not only on Wall Street screens, but also on roads, in warehouses, through energy deals and in local business models.
+
+That is why investors need to look not only at what markets are pricing in, but also at what companies are building. The new direction of the U.S. economy can be read not only in charts, but also in data-center sites, factory plans, supply chains and local economies.`,
+  },
+  {
+    publication: "Stratena Wise",
     issue: "Issue 2",
     issueNumber: 2,
     title: "After the Shock That Never Came",
