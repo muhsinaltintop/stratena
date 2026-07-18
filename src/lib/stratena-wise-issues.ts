@@ -16,6 +16,70 @@ export type StratenaWiseIssue = {
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
   {
     publication: "Stratena Wise",
+    issue: "Issue 4",
+    issueNumber: 4,
+    title: "Growth Faces a Field Test",
+    image: "/images/newsletters/growth-faces-a-field-test.png",
+    slug: "growth-faces-a-field-test",
+    summary:
+      "AI investments are making energy needs, land use and local permitting more visible, while global tensions and selective consumers put pressure on the U.S. economy from data centers to grocery shelves.",
+    body: `# Growth Faces a Field Test
+
+**Wise**
+**Issue 4**
+
+As AI investments grow, the pressure around data centers’ energy needs, land use and local permitting is becoming more visible. Global tensions are putting pressure on companies through oil, shipping and import costs, while consumers are becoming more selective from grocery shopping to housing. In this issue, we look at the test the U.S. economy is facing not on screens, but on the ground.
+
+In the U.S. economy, capital is still moving, companies are still investing, and appetite remains strong in areas such as technology and defense. But every investment now comes with a more visible cost. Energy is needed, land is needed, financing is needed, local approval is needed, and the question of how much of these costs consumers can absorb is becoming more important.
+
+## The AI Race Hits Infrastructure Limits
+
+The agenda in AI is no longer limited to which company releases the most advanced model. As data centers expand, electricity, water, land and local permitting processes are becoming more important. Local opposition to planned data centers in Pennsylvania, reactions to major technology companies targeting Native American land, New York’s restrictions on data centers and the debate around Elon Musk’s AI infrastructure in Memphis all point to the same issue: AI investments are growing, but this growth is now directly affecting local communities.
+
+Meta’s data center investment in Louisiana reaching $50 billion shows just how large this scale has become. On one side, companies want more computing power and larger data centers. On the other, local governments, environmental groups and residents are questioning electricity consumption, tax incentives, water use and land pressure more loudly. The infrastructure behind AI is no longer confined to technology pages; it is entering the agenda of state economies, municipalities and neighborhoods.
+
+There is also a new cost calculation inside the AI race. Some companies are beginning to test cheaper Chinese models instead of more expensive American ones. Major players in the chip supply chain such as Nvidia, TSMC, ASML and SK Hynix remain in investors’ focus; but the market is watching not only demand, but also production delays, model costs and how efficiently companies can use this infrastructure. AI is growing, but the question is no longer only “how fast?” The question of “at what cost?” is just as important.
+
+## Energy and Trade Risks Return
+
+Global tensions are once again entering companies’ cost calculations. Attacks on cargo vessels in the Red Sea, rising tensions around the Strait of Hormuz, movements in oil prices and the search for alternative pipelines are bringing energy and shipping security back into focus. Oil prices are not just a chart; they are the starting point of a wider chain that reaches shipping, fertilizer, food, airline costs and consumer prices.
+
+The most important point around the Strait of Hormuz is not only the risk of higher oil prices. Companies and countries are recalculating the cost of relying too heavily on critical passageways. Pipelines that bypass the strait, the revival of the Iraq-Syria route and the risk pricing in Gulf shipping are important for this reason. Global trade is sometimes described through major diplomatic headlines, but its impact is often felt in freight costs, insurance premiums, fuel prices and the products on grocery shelves.
+
+The picture is not calm on the tariff front either. New tariffs on Brazilian goods, rising costs for goods coming from China and the acceleration in Chinese exports all stand out in the same period. For companies, the main issue is not only which country faces what level of tariff. It is also where production will take place, how inventories will be managed and how much of the price increase consumers can tolerate.
+
+## Consumers Are Becoming More Selective
+
+Consumption in the U.S. has not fully slowed, but consumers are now more cautious. Grocery baskets are getting smaller; people are buying fewer items and paying more attention to the balance between price and value. This pressure is forcing grocery chains and food companies into stronger price competition. Consumption remains one of the important pillars of the economy, but it is becoming clearer that this strength is not evenly distributed.
+
+When essential expenses are excluded, spending by the top 10% of income earners comes close to the total spending of the bottom 70%. This shows that seemingly strong consumption is actually supported by a narrower and wealthier segment of the population. On one side, travel, restaurant and experience spending continue. On the other, a broader group is facing more pressure in basic categories such as groceries, rent and bills.
+
+The shift of buy now, pay later usage toward essential expenses such as groceries, rent and bills reinforces this picture. This payment model was long associated mostly with shopping and discretionary purchases; now, for some households, it is becoming a way to manage cash flow. High mortgage rates in the housing sector, home prices that make affordability more difficult and young adults needing more family support complete the same picture. There is income and there is spending, but confidence and room to maneuver are not as wide as before.
+
+## Production, Defense and New Investment Areas Stand Out
+
+Despite all these pressures, investment appetite in the U.S. has not disappeared. Apple’s major chip production agreement with Broadcom, Amazon’s borrowing for AI investments and the activity around Nvidia and other chip companies show that technology continues to attract capital. However, these investments are now increasingly being read through production capacity, energy use and supply security.
+
+There is a similar movement on the defense and security side. NATO defense spending, Ukraine’s use of drones, new defense initiatives in Europe, Saab’s record orders and efforts to support shipbuilding in the U.S. show that the defense industry is again becoming part of a broader industrial agenda. The issue is not only weapons systems; it is also production lines, engineering capacity, supplier networks and the infrastructure stretching from ports to shipyards.
+
+In the automotive sector, Chinese manufacturers are becoming more aggressive in global markets. As Chinese EV companies increase overseas investments, they are beginning to gain traction with consumers in some markets. For the U.S. and Europe, this picture is not only about vehicle sales. It also means competition over production costs, brand perception, supply chains and technology. Chinese manufacturers that can scale quickly and offer lower prices are increasing the pressure on traditional automakers.
+
+## The Local Economy Shows Up in Daily Life
+
+The direction of the economy can be seen not only in major corporate headlines, but also in cities, restaurants, hotels, airports and people’s everyday spending choices. The World Cup became a striking example of this. Bank of America CEO Brian Moynihan said the tournament could generate up to $20 billion in economic impact in the U.S., while card spending data also points to stronger activity in food and beverage, lodging and local retail in host cities. This impact alone will not change the direction of the economy, but it is important because it shows that consumers can still allocate money to social events, travel and experiences.
+
+Still, the picture is not entirely comfortable. Grocery shopping is slowing, the housing market is under pressure and airlines are feeling the impact of fuel costs more clearly. United Airlines’ expectation of billions of dollars in additional fuel costs shows that energy prices do not remain limited to the oil market; they extend to airfares, travel demand and corporate profitability. On one side, major events such as the World Cup support the food and beverage sector. On the other, consumers are becoming more selective in daily spending.
+
+## Conclusion
+
+The U.S. economy continues to produce areas of growth. AI infrastructure is expanding, chip investments are continuing, defense spending is rising, and companies are looking at new markets and new production areas. But the cost of this growth is now more visible: energy needs, land pressure, local opposition, high financing costs, supply risks and a more selective consumer.
+
+That is why investors need to look not only at major headlines, but also at how those headlines play out on the ground. Where a data center will be built, which route oil will travel through, how many items consumers put in their grocery baskets, where automakers shift production and how local economies respond to these changes are now becoming more important.
+
+The new picture of the U.S. economy can be read not only on market screens, but also in data center projects, ports, grocery shelves, the housing market, defense supply chains and the daily life of cities. Growth continues, but this time the bill for that growth is becoming more visible.`,
+  },
+  {
+    publication: "Stratena Wise",
     issue: "Issue 3",
     issueNumber: 3,
     title: "Capital Moves Into the Real Economy",
