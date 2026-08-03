@@ -16,6 +16,66 @@ export type StratenaWiseIssue = {
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
   {
     publication: "Stratena Wise",
+    issue: "Issue 5",
+    issueNumber: 5,
+    title: "The Age of Strategic Selection",
+    image: "/images/newsletters/the_age_of_strategic_selection.png",
+    slug: "the-age-of-strategic-selection",
+    summary:
+      "Companies no longer view every customer, sales channel, or investment as equally valuable. Across logistics, automotive, payments, and capital markets, the central question is shifting from ‘How much can we grow?’ to ‘Which parts of the business are truly worth growing?’",
+    body: `# The Age of Strategic Selection
+
+
+**Companies no longer view every customer, sales channel, or investment as equally valuable. Across logistics, automotive, payments, and capital markets, the central question is shifting from “How much can we grow?” to “Which parts of the business are truly worth growing?”**
+
+At first glance, the latest moves by major U.S. companies appear unrelated. A logistics company is willing to handle fewer packages. A payments giant is eliminating thousands of positions despite maintaining a strong financial position. Automakers are building new revenue streams around the vehicles they sell. Some consumer brands are in no rush to go public, while those entering the stock market are struggling to win over investors.
+
+What connects these developments is not contraction, but **selection**. Companies are reassessing which customers, products, channels, and investments genuinely create value. Instead of pursuing more volume at any cost, they are looking for higher-quality revenue, lower capital requirements, and more predictable cash flow.
+
+## Not Every Sale Has the Same Value
+
+UPS offers one of the clearest examples of this shift. The company is reducing lower-return delivery volumes linked to Amazon while placing greater emphasis on higher-margin areas such as healthcare logistics, international shipments, and business-to-business deliveries. Even with this change, UPS increased its second-quarter revenue to $22.8 billion and raised its full-year revenue outlook to approximately $91.2 billion. The objective is no longer simply to transport more packages, but to generate more sustainable economic value from every package it handles.
+
+This approach differs from the scale-driven logic companies followed for many years. A large customer, a high volume of orders, or an intensive operation does not always represent good business. As the volume of a low-margin customer grows, so can the need for additional vehicles, employees, and facilities. If revenue growth does not compensate for the rising complexity and cost of the operation, scale can become a burden rather than an advantage.
+
+Visa’s decision to eliminate approximately 2,600 positions, representing around 7% of its workforce, reflects a similar reassessment. The fact that the cuts are expected to affect technology and product teams is particularly significant. Artificial intelligence is reducing repetitive work and accelerating product development, although the company has indicated that the decision is not solely driven by AI. Visa also aims to redirect resources toward areas it believes offer greater potential. Strong payment volumes are no longer sufficient on their own to justify preserving the organisation in its current form.
+
+## Revenue That Begins After the Product Is Sold
+
+In the automotive sector, the sale price of a vehicle is increasingly becoming only the first part of the total revenue a company can generate from a customer. Ford wants to expand its accessories, performance parts, and vehicle customisation business to capture a greater share of the roughly $53 billion U.S. vehicle modification and aftermarket market. The idea of launching limited-edition Bronco packages in a way similar to product releases by sneaker brands is also part of this strategy.
+
+Under this model, a vehicle is not simply a product leaving the factory. It becomes a long-term platform for software, accessories, maintenance, performance packages, and special-edition sales. This allows the manufacturer to generate additional revenue without waiting for the same customer to purchase another vehicle. In a market where vehicle prices have risen and continuously increasing unit sales has become more difficult, the length and value of the customer’s relationship with the vehicle become increasingly important.
+
+Rivian is applying a similar calculation to the investment side of its business. Following demand for its more affordable R2 line, the company raised its delivery expectations while reducing its projected 2026 capital expenditure from approximately $2 billion to $1.75 billion. This does not necessarily indicate a retreat from capacity expansion. Instead, it points to an effort to grow while consuming less capital. The success of a new model is no longer measured only by the number of vehicles sold, but also by how much cash production consumes and how quickly it can move the company closer to profitability.
+
+## Going Public Is No Longer the Automatic Goal
+
+The way companies access capital is also changing. As private equity, venture capital, and secondary share transactions develop, companies can provide liquidity to employees and early investors without entering the public markets. Consumer companies, in particular, are therefore less likely to view a stock market listing as the natural destination they must reach as quickly as possible.
+
+Remaining private allows companies to invest without being tied to quarterly market expectations. The disadvantage is that valuations become less transparent and shares remain available to a narrower group of investors. As a result, capital markets are moving in two different directions. Large private companies are delaying public listings, while wealthy investors and financial institutions are developing new ways to gain access to those private businesses.
+
+For companies that do choose to go public, a recognisable brand is no longer enough. Jersey Mike’s raised approximately $1 billion in its initial public offering, but its shares traded below the offering price on their first day. Reformation’s shares, meanwhile, ended their debut largely unchanged. Both companies may offer investors room for expansion, but the market is demanding stronger evidence regarding debt, profitability, the intended use of capital, and the cost of future growth.
+
+This does not mean that the IPO market is closed. Investors may be willing to give technology and industrial companies more time to deliver on future potential, while expecting restaurants and retailers to demonstrate stronger cash generation today. The same promise of “growth” does not carry the same value across every sector or company.
+
+## Trading Continues While the Market Sleeps
+
+While companies are becoming more cautious about entering the stock market, the trading environment for publicly listed assets is accelerating. CME Group’s single-stock futures provide access to 55 major U.S. companies through both standard and micro-sized contracts. Because these products can be traded for almost the entire day, investors can react to company developments without waiting for the regular stock market session to open.
+
+This development is about more than longer trading hours. The boundaries between directly owning a share, using an option, and taking a position through a futures contract are becoming increasingly fluid. Smaller investors can access lower-value micro contracts, while institutional investors can manage their exposure to individual companies with greater precision.
+
+Easier access, however, does not eliminate risk. Longer trading hours and leveraged products may allow information to be reflected in prices more quickly, but they can also amplify sudden losses. A market that remains open for longer does not necessarily give investors more time. In many cases, it simply creates more moments in which a decision must be made.
+
+## Conclusion
+
+The central challenge facing U.S. companies is no longer simply finding demand. What matters increasingly is whether that demand is profitable, whether a customer offers long-term value, whether a product can generate additional revenue, and whether an investment can be completed with less capital.
+
+UPS is choosing lower volume with greater value. Visa is restructuring its organisation. Ford is attempting to build a second economy around every vehicle it sells. Rivian is balancing production targets with capital discipline. Consumer companies are delaying public listings, while investors are demanding stronger financial evidence from those that enter the market.
+
+The defining feature of this period is therefore not unlimited expansion. Companies are beginning to explain not only which areas they intend to grow, but also which businesses they have decided **not to expand**. Competitive advantage is shifting away from companies that simply do more and toward those that understand precisely which activities they perform—and why.`,
+  },
+  {
+    publication: "Stratena Wise",
     issue: "Issue 4",
     issueNumber: 4,
     title: "Growth Faces a Field Test",
