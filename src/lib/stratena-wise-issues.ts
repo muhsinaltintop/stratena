@@ -16,6 +16,65 @@ export type StratenaWiseIssue = {
 export const stratenaWiseIssues: StratenaWiseIssue[] = [
   {
     publication: "Stratena Wise",
+    issue: "Issue 6",
+    issueNumber: 6,
+    title: "The Economic Center of Gravity Is Shifting",
+    image: "/images/newsletters/ekonominin-agirlik-merkezi-degisiyor.png",
+    slug: "the-economic-center-of-gravity-is-shifting",
+    summary:
+      "Household budgets are being squeezed by weaker real income and persistently high essential costs, while production, orders, and investment indicators are strengthening. Consumer spending continues to support the U.S. economy, but manufacturing, productivity, and rerouted trade flows are beginning to play a larger role.",
+    body: `# The Economic Center of Gravity Is Shifting
+
+**Stratena Wise — Issue 6**
+
+Household budgets are being squeezed by weaker real income and persistently high essential costs, while production, orders, and investment indicators are strengthening. Consumer spending continues to support the U.S. economy, but manufacturing, productivity, and rerouted trade flows are beginning to play a larger role.
+
+Listening to the U.S. economy only through the sound of cash registers is becoming increasingly misleading. Consumer spending appetite is weakening, while factories are reporting faster production, stronger new orders, and growing backlogs. Businesses are struggling to fill certain positions, yet nationwide employment growth has nearly stalled.
+
+The defining feature of this issue is not the economy’s overall speed, but where its momentum is coming from. As the household contribution weakens, production capacity, productivity, and external demand are gaining weight. This shift may continue to support economic activity, although it remains unclear how much of the increase in output will translate into higher employment and wages.
+
+## Household Budgets Are Tightening
+
+Retail and food services sales fell 0.6% to $763.6 billion. Sales remained 5% higher than a year earlier in nominal terms, but the short-term direction turned downward. Consumer sentiment also dropped to 51, placing it 12.4% below its level a year ago. More importantly, only 8% of consumers expect their income to grow faster than inflation over the coming year.
+
+Monthly inflation came in at 0.1%, while the annual rate stood at 3.4%. Energy prices were 14.7% higher than a year earlier, with gasoline prices up 24.6%. Real average hourly earnings declined 0.2% over the same period, suggesting that price increases have once again caught up with wage growth. Existing-home sales fell 1.7%, while the median home price rose 2% and mortgage rates remained around 6.5%, continuing to restrict major household purchases.
+
+Weakness is not evenly distributed across spending categories. Clothing stores and restaurants recorded growth, while automotive and online sales declined. In the fast-food industry, inexpensive meal deals are no longer enough to generate traffic on their own. Differences in performance increasingly depend on the product, convenience, and accessibility a brand can offer. Consumers have not stopped spending, but they are reallocating their budgets rather than expanding them.
+
+## The Labor Market Is Losing Momentum
+
+Nonfarm payroll employment declined by 23,000, while the unemployment rate remained at 4.1%. The labor force participation rate fell to 61.4% and has declined by 0.7 percentage point since the beginning of the year. There has been no broad surge in layoffs, but the pace of hiring is no longer strong enough to translate economic activity into meaningful household income growth.
+
+The economy still had 7.4 million job openings at the end of June. Hires stood at 5.3 million, voluntary quits at 3.2 million, and layoffs and discharges at 1.8 million. Business activity and new orders continued to expand across the services sector, yet its employment index dropped to 47.4. Companies are seeing more business, but they are not converting that potential into new jobs at the same pace.
+
+Small businesses report a different problem. Some 36% are unable to fill open positions, while 27% identify the quality or availability of labor as their most important challenge. A net 20% still plan to increase employment. Weak national job growth and local labor shortages are therefore occurring simultaneously: positions exist, but skills, location, and wage expectations do not always align with the available workforce.
+
+## Manufacturing Is Coming Back Online
+
+As consumer indicators lost momentum, manufacturing delivered one of its strongest signals in recent years. The Manufacturing PMI rose to 55.6, the Production Index to 58.5, and the New Orders Index to 56.7. Backlogs reached 55, while manufacturing employment returned to expansion for the first time in 33 months. Low customer inventories also suggest that new orders are not being placed merely to refill warehouses.
+
+Total factory orders declined 0.3%, but orders for non-defense capital goods excluding aircraft—the closely watched core capital goods measure—rose 1.2%, while shipments increased 2%. Unfilled orders have now risen in 23 of the past 24 months, leaving manufacturers with a considerable pipeline of work. The share of small businesses planning capital expenditures reached its highest level since December 2024, while monthly business applications increased 8.1%. Together, these developments suggest that the investment base is not limited to the largest manufacturers.
+
+Manufacturing output increased at an annualized rate of 4.6% in the second quarter, with durable goods output rising 7.3%. A 1.9% increase in manufacturing productivity kept unit labor costs unchanged during the quarter. Across the broader economy, however, labor’s share of output fell to 52.9%, the lowest level in a series dating back to 1947. How much of the gain from higher factory output reaches workers through wages will help determine whether the manufacturing recovery can eventually reinforce consumer demand.
+
+## External Flows Are Reshaping the Domestic Balance
+
+The U.S. trade deficit narrowed by 5.6% to $73.3 billion, as exports declined 0.9% and imports fell 1.8%. Yet inbound container volumes reached the fourth-highest level ever recorded for the month of July. Containers originating in China climbed to their highest level in a year. Businesses pulling merchandise forward ahead of tariff changes are creating concentrated demand across specific products and shipping routes even as overall imports weaken.
+
+The simultaneous increase in container volumes and prices shows how this concentration is affecting logistics companies. Maersk’s ocean shipping volumes rose 4.1%, while average freight rates increased 22%. The company attributed the pricing environment more to port congestion and strong exports from China than to geopolitical conflict. Truck freight prices, meanwhile, declined 1.8%, showing that different parts of the logistics system are not moving through the same pricing cycle.
+
+The shift in energy routes is more direct. Tanker traffic through the Strait of Hormuz has once again slowed to a near standstill, pushing Asian refiners toward U.S. crude. Asian imports of American oil reached a record 2.35 million barrels per day in July. This demand is creating an additional export market for U.S. producers, but high exports and limited imports are also keeping commercial crude inventories below their five-year average. The global supply disruption therefore represents both an export opportunity and a new source of pressure on domestic prices and inventory buffers.
+
+## Conclusion
+
+Recent data does not show an economy moving at a single speed. Consumer spending and service-sector activity continue to support growth, but marginal momentum is increasingly coming from manufacturing, order backlogs, business investment, and rerouted trade flows.
+
+For this shift to develop into lasting economic strength, gains in production and productivity will need to reach employment and real household income. Otherwise, supply could accelerate while domestic demand becomes less able to absorb the additional output.
+
+The current change in the U.S. economy is better understood as a rebalancing of its composition than as a straightforward slowdown. The next important signal will be whether the momentum building on factory floors can travel beyond the factory gates.`,
+  },
+  {
+    publication: "Stratena Wise",
     issue: "Issue 5",
     issueNumber: 5,
     title: "The Age of Strategic Selection",
